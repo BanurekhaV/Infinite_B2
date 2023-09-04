@@ -1,0 +1,164 @@
+Application Development Models:
+  1. Desktop Model
+  2. Client-Server Model (2 tier, 3 tier, n tier)
+  3. Web Model
+
+ip address ipv4, ipv6
+
+Domain Name
+
+Amazon.in              192.172.11.2
+                       192.172.12.23
+                       192.172.45.6
+
+Assembly Lang : Low-level programming lang, intending to communicate with the computers hardware directly
+
+Assembler : is a program that translates commands into machine code. Assemblers gather instructions from the assembly language and translates each action into a series of electrical signals. 
+
+Components of an assebly lang:
+  1. Syntax : forms the basic structure
+  2. Label : Is a word, number or a symbol, which uses refernce point to locate the instructions
+  3. Command : an order to perform
+  4. Operand : Components that help in manipulation
+  5. Directive : Instructions to the assembler to change settings or perform some actions
+  6. Macro : Are statements that function as a short representation of a sequence of instructions and directives
+  7. Mnemonics: Represents abbreviation of a description of the action being performed
+
+Example :
+ 1: MOV eva, 5   --- register 5 in eva
+    MOV evb, 4   --- register 4 in evb
+    ADD eva,evb,evc --- add and strore the result of eva,evb in evc
+
+Machine Code/Language : 
+
+ASCII -Every Character occupies 1 byte
+   1 byte = 8 bits
+   1 bit represents either a 0 / 1
+
+00000000       stop program
+00000001       turn bulb fully on
+00000010       turn bulb fully off
+
+Diff between High level and low-level lang
+
+5 Major Programming Languages:
+
+  - Procedural Prog Lang: A sequence of statements or commands in an order to achieve a desired output
+
+  C and C++
+  Java
+  Pascal
+  Basic
+
+ - Functional Programming Lang: It focuses on the output of a mathematical functions and evaluations. 
+
+  Scala
+  Erlnag
+  Elixir
+  Python
+  F#
+  Haskell
+
+- OOP Lang: This type of Lang. treats a program as a group of objects composed of data and program elements(attributes and methods)
+
+ Java
+ Python
+ C#
+ C++
+ Ruby
+
+- Scripting Languages: To automate repetitive tasks, manage dynamic web content, or support process in larger applications
+
+ PHP
+ Javascript
+ Ruby
+ Python
+ Bash
+ Perl
+ Node.js
+
+- Logic Programming Lang : Instead of telling a computer what to do, a logic prg lang. expresses a series of facts and rules
+to instruct the computer on how to make decisions
+
+ Prolog
+ Absys
+ Datalog
+ Alma-0
+
+- Front End Lang: Concerned about the user interactions and experience of the software. Includes Text, colors, images, buttons, navigation etc
+  
+ HTML
+ CSS
+ Javascript
+ React
+
+- Back-end Lang : Deal with storae and manipulation of the server side software. Does not directly interact with the user. This includes data architecture, scripting and communication between the application and the underlying data
+
+ Javascript
+ PHP
+ Java
+ C#
+ Python
+ Ruby
+
+
+ DotNet Framework : is a sofware component that runs on windows operating system
+- provides a set of tools and libraries to enable developers to create software much faster and easier
+
+Languages
+FCL
+CLR - 
+CTS and CLS
+
+Points to remember:
+
+Assemblies: Any .net application on compilation gives assembly file.
+      - Are a fundamental unit of deployment, version control, reuse and security for a .net application
+      - They contain PE Header, CLR Header, Manifest files and IL
+      - Manifest Files contain meta data(data about data)
+
+      - Assemblies can either be private or shared
+    
+      - Shared Assemblies are placed in GAC (Global Assembly Cache)
+
+      - Assemblies have an extension of either .exe or .dll (Dynamic Link Library)
+
+      - We can use ILDASM / ILASM (executable tools) to peek into the assembly file(Manifest and IL) and or reconstruct the assembly file back
+ILDASM - IL Disassembler
+
+ILASM - IL assembler
+
+1. IL is an intermediate Language aka MSIL,CIL, Managed Code
+
+2. Dot Net applications on execution performs 2 steps
+   - Compilation - Source code to IL
+   - Exceution of JIT Compilation - IL to platform specific native code
+
+3. The native code is not stored permanently anywhere. On execution every time the native code is generated
+
+Kinds of Application:
+  Desktop - deployed in each machine
+       Console, Windows Application
+  
+ Web - internet based Application accessed thru browser
+       ASP.Net MVC, Core
+
+ Mobile - Xamarin
+
+VS 2019 
+
+IDE - Integrated Development Environment
+  Editor
+  Compiler/Intrepeter
+  Output
+
+ 
+
+ 
+
+
+
+
+
+
+
