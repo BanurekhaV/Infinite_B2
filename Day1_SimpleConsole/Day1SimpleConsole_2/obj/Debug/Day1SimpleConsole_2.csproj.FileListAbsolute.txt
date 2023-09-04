@@ -1,0 +1,7 @@
+C:\Banu\Infinite\B2\Day1_SimpleConsole\Day1SimpleConsole_2\bin\Debug\Day1SimpleConsole_2.exe.config
+C:\Banu\Infinite\B2\Day1_SimpleConsole\Day1SimpleConsole_2\bin\Debug\Day1SimpleConsole_2.exe
+C:\Banu\Infinite\B2\Day1_SimpleConsole\Day1SimpleConsole_2\bin\Debug\Day1SimpleConsole_2.pdb
+C:\Banu\Infinite\B2\Day1_SimpleConsole\Day1SimpleConsole_2\obj\Debug\Day1SimpleConsole_2.csproj.AssemblyReference.cache
+C:\Banu\Infinite\B2\Day1_SimpleConsole\Day1SimpleConsole_2\obj\Debug\Day1SimpleConsole_2.csproj.CoreCompileInputs.cache
+C:\Banu\Infinite\B2\Day1_SimpleConsole\Day1SimpleConsole_2\obj\Debug\Day1SimpleConsole_2.exe
+C:\Banu\Infinite\B2\Day1_SimpleConsole\Day1SimpleConsole_2\obj\Debug\Day1SimpleConsole_2.pdb
