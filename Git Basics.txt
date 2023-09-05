@@ -1,0 +1,17 @@
+Git : is an Open Source Tool for collaborations(Software,Piece of code)
+Git Hub: is a common Location where all Repo Exists
+
+Repository : Local and Remote
+
+Step 1: Create a Local Repo( git init)
+Step 2: Create a Remote Repo (By creating an account in github.com)
+Step 3: Next sync both the Local and the Remote Repo 
+  - Copy the URL (https) of the remote repo and type the below command in the command prompt
+  - git remote add <alias name for the remote repo> <remote repo url>
+  - One local repo can have only one Remote Repo at any given point of time
+Step 4: Add the files that are tequired to be pushed into remote (git add .)
+Step 5: Commit the added files by typing git commit -m" <meaningful name for the commit">
+Step 6: To push it to remote (git push origin master)
+Step 7: To get the latest info from the remote (git pull origin master)
+
+Step 4 to 7 is a repeat
