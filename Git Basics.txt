@@ -15,3 +15,5 @@ Step 6: To push it to remote (git push origin master)
 Step 7: To get the latest info from the remote (git pull origin master)
 
 Step 4 to 7 is a repeat
+
+You can collaborate with your Team members for a successfull integrated project
