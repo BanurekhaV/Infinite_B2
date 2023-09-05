@@ -28,7 +28,8 @@ namespace Day2_DotNet
         {
             Console.WriteLine("This func2");
             Console.WriteLine("Enter your Age :");
-            int age = Convert.ToInt32(Console.ReadLine());
+            int age = int.Parse(Console.ReadLine());
+            age = Convert.ToInt32(Console.ReadLine());
             Console.WriteLine($"You are {age} years old");
             Console.WriteLine("Min Value = {0}",int.MinValue);
             Console.WriteLine("Min Value = {0}", int.MaxValue);
