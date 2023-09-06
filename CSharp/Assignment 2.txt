@@ -1,0 +1,14 @@
+Arrays 
+
+Write a  Program to assign integer values to an array  and then print the following
+a.	 Average value of Array elements
+b.	Minimum and Maximum value in an array 
+    
+2.	Write a program in C# to accept ten marks and display the 
+		following
+a.	Total
+b.	Average
+c.	Minimum marks
+d.	Maximum marks
+e.	Display marks in ascending order
+f.	Display marks in descending order
