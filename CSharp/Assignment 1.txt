@@ -1,0 +1,23 @@
+1. Write a C# Sharp program to accept two integers and check whether they are equal or not. 
+
+Test Data :
+Input 1st number: 5
+Input 2nd number: 5
+Expected Output :
+5 and 5 are equal
+
+2. Write a C# Sharp program to check whether a given number is positive or negative. 
+
+Test Data : 14
+Expected Output :
+14 is a positive number
+
+3. Write a C# Sharp program that takes two numbers as input and performs all operations (+,-,*,/) on them and displays the result of that operation. 
+
+Test Data
+Input first number: 20
+Input operation: -
+Input second number: 12
+Expected Output :
+20 - 12 = 8
+

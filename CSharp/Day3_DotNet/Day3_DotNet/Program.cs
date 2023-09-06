@@ -17,7 +17,7 @@ namespace Day3_DotNet
             int total = 0;
             int prod = 0;
             int diff = 0;
-            int div = Program.Calculate_Method(10, 15, out total, out  prod, out diff);
+            int div = Program.Calculate_Method(15, 10, out total, out prod, out diff);
             Console.WriteLine($"Sum is {total}, Product is {prod}, Difference is {diff} and the Division is {div}");
             Console.Read();
         }
@@ -34,12 +34,12 @@ namespace Day3_DotNet
             Console.WriteLine("J is {0}", j);
         }
 
-        public static int Calculate_Method(int a, int b,  out int sum, out int product, out int difference)
+        public static int Calculate_Method(int a, int b, out int sum, out int product, out int difference)
         {           
             sum = a + b;
             product = a * b;
             difference = a - b;
             return a / b;
         }
-    }
+    }   
 }

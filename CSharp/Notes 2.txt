@@ -1,0 +1,30 @@
+Operators:
+  Arithemtic Operators
+  Relational Operators
+  Logical Operators
+  Assignment Operators
+  Null Coalescing Operator
+  Misc. Operators
+     sizeof(), typeof(), ? etc.
+
+Methods and Parameters :
+   .Value : Calling a function by passing a copy of the     		variable.
+      	Any Changes happening at the called function will not 	effect the caller function
+
+   .Reference : Calling a function by passing the refernce and 	not the value
+       We do so by using a keyword 'ref'
+       Any Changes the called function makes will affect the 	caller function
+
+   .Out : When we expect more values from a function)
+       Case: Give 2 nos., we want the addition, subtraction,multiplication and division values
+
+   
+   .Param Array (Parameter Array): Helps to provide zero or varying number of arguments/parameters to a function
+          'params' is the keyword that helps in giving variable number of arguments, seperated by a comma
+           params keyword should be the last in the argument 	  list
+          Only one params keyword is allowed/function
+
+
+
+
+
