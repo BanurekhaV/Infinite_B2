@@ -16,15 +16,15 @@ namespace Day3_DotNet
             grade = Convert.ToChar(Console.ReadLine());
            // Console.WriteLine("enter your Maths Score :");
            // Maths = Convert.ToInt32(Console.ReadLine());
-            if (grade == 'O') 
+            if (grade == 'O'||grade =='o') 
                 Console.WriteLine("Outstanding");
-            else if (grade == 'A')
+            else if (grade == 'A'|| grade =='a')
                 Console.WriteLine("Excellent");
-            else if (grade == 'B')
+            else if (grade == 'B' || grade =='b')
                 Console.WriteLine("Very Good");
-            else if (grade == 'C')
+            else if (grade == 'C' || grade =='c')
                 Console.WriteLine("Good");
-            else if (grade == 'D')
+            else if (grade == 'D' || grade =='d')
                 Console.WriteLine("Can Improve");
             else
                 Console.WriteLine("invalid Grade");
@@ -35,23 +35,28 @@ namespace Day3_DotNet
             char grade; int maths;
             Console.WriteLine("Enter your Grade:");
             grade = Convert.ToChar(Console.ReadLine());
-           // Console.WriteLine("enter maths score:");
-           // maths = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("enter maths score:");
+            maths = Convert.ToInt32(Console.ReadLine());
             switch(grade)
             {
-                case 'O':                
+                case 'O' :
+                case 'o' :  
                     Console.WriteLine("Outstanding");
                     break;
                 case 'A':
+                case 'a':
                     Console.WriteLine("Excellent");
                     break;
                 case 'B':
+                case 'b':
                     Console.WriteLine("Very Good");
                     break;
                 case 'C':
+                case 'c':
                     Console.WriteLine("Good");
                     break;
                 case 'D':
+                case 'd':
                     Console.WriteLine("Can Improve");
                     break;
                 default:
@@ -101,15 +106,15 @@ namespace Day3_DotNet
     {
         static void Main()
         {
-            //DecisionMaking dm = new DecisionMaking();
-            //dm.CheckGrade();
-            //dm.CheckGradeWithSwitch();
+            DecisionMaking dm = new DecisionMaking();
+            dm.CheckGrade();
+            dm.CheckGradeWithSwitch();
             Console.WriteLine("*************");
 
-            Loops loops = new Loops();
-            loops.DoWhileLoop();
-            loops.WhileLoop();
-            loops.ForLoop();
+            //Loops loops = new Loops();
+            //loops.DoWhileLoop();
+            //loops.WhileLoop();
+            //loops.ForLoop();
 
             int[] data = new int[] { 76, 4, 12, 0, 3 };
             Console.WriteLine(data.Length);
@@ -121,17 +126,21 @@ namespace Day3_DotNet
             }
             Console.WriteLine("------After Sort -----");
             Array.Sort(data);
-            foreach(int x in data)
-            {
-                Console.WriteLine(x);
-               
-            }
-            Array.Reverse(data);
 
-            foreach (int x in data)
+            string[] str = new string[2]{"hello", "world"};
+            foreach (var x in str)
             {
                 Console.WriteLine(x);
+
             }
+
+            
+            //Array.Reverse(data);
+
+            //foreach (int x in data)
+            //{
+            //    Console.WriteLine(x);
+            //}
 
             int x1;  //declaring a variable
             x1 = 7; // assing a value to the variable
@@ -141,6 +150,7 @@ namespace Day3_DotNet
             v = 'a';
             Console.WriteLine(v);
             v = 6;
+            
             
             dynamic d;
             d = 'f';
