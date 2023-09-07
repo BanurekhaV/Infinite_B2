@@ -46,7 +46,7 @@ namespace DotNet_Day4
             //let us now set the size for each row
             myjaggedarray[0] = new int[3];
             myjaggedarray[1] = new int[2];
-
+            
             //2. initialize the jagged array
             myjaggedarray[0][0] = 2;
             myjaggedarray[0][1] = 4;
@@ -86,8 +86,9 @@ namespace DotNet_Day4
             //aeg.SingleDimensionArray();
             //Console.WriteLine("+++++++++++");
             //aeg.TwoDimensionArray();
-            aeg.JaggedArray();
-            Console.Read();
+            // aeg.JaggedArray();
+            StringsEg.StringOps();
+             Console.Read();
             }
         }
     

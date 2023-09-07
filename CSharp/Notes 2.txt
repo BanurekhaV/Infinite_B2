@@ -52,7 +52,8 @@ Arrays : are continous memory allocations
  C# supports 3 types of Arrays
       1. Single-Dimension
       2. Two/MultiDimension
-      3. Jagged 
+      3. Jagged - An array of array
+                  An element of a jagged array itsels is an array
 
 Array Instantiation:
      datatype [] <nameofthevariable>=new datatype[size]
@@ -72,6 +73,9 @@ Implicit Data Types :
         We have to assign a value while declaring a var datatype
         once assigned, we cannot change the type
 
-   dynamic :
+   dynamic :Is an object type that is used to assign any type, whose conversion happens at the run time
+           -To minimize the usage of Dynamic types in our applications.
+
+
   
 
