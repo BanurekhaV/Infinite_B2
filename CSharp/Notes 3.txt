@@ -1,0 +1,43 @@
+Strings : Is a collection of Characters, represented within double quotes
+       Memory is allocated on the heap
+       Is  predefined reference type
+       Are Immutable
+       Have Fixed Size
+       Memory cannot be changed dynamically
+
+StringBuilder : Are mutable strings
+    
+Structures are value type and classes are reference type
+
+Enumerations : User defined Value Type
+               It hold a sequence of items known as enumerators
+               The value of the first enumerator is 0, which                 		can be changed
+
+
+Classes and Objects :
+
+Classes are like a blue print of what functionalities and attributes we would want to have
+
+Objects are the instances of the class, using which we can work with the functionalities defined in the class
+
+Constructors : Are Special functions of the class which are meant to initialize the object values(fields)
+               Framework provides a default constructor, if our class does not have one
+               They have to be either public or internal (access specifiers)
+               They have the same name as that of the class
+               They do not have any return type
+               They can have parameters/arguments
+               They can be overloaded (you can have many constructors)
+
+
+
+
+
+
+
+
+
+
+                
+
+
+

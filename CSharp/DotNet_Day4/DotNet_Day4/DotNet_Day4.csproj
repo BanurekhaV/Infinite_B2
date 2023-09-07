@@ -43,9 +43,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Employee.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="StringsEg.cs" />
+    <Compile Include="Struct_Eg.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

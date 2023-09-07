@@ -83,11 +83,19 @@ namespace DotNet_Day4
             static void Main(string[] args)
             {
             Array_Eg aeg = new Array_Eg();
-            //aeg.SingleDimensionArray();
+            // aeg.SingleDimensionArray();
             //Console.WriteLine("+++++++++++");
             //aeg.TwoDimensionArray();
             // aeg.JaggedArray();
-            StringsEg.StringOps();
+             StringsEg.StringOps();
+            //Struct_Eg.structnclass();
+            //Enum_Eg.EnumOps();
+            Employee employee = new Employee();  //constructor
+          //  employee.Accept();
+            employee.ShowDetails();
+
+            Employee employee2 = new Employee(100,"Shilpa",Convert.ToDateTime("12/08/2023"), 50000);
+            employee2.ShowDetails();
              Console.Read();
             }
         }

@@ -30,7 +30,8 @@ namespace DotNet_Day4
             //String Builder - mutable strings
             StringBuilder sb = new StringBuilder("Hello String");
             Console.WriteLine("sb's hash code is {0}", sb.GetHashCode());
-            sb.Append("Builder");
+            sb.Append("Builder programming in CSharp");
+            Console.WriteLine(sb.Capacity);
             Console.WriteLine("sb's hash code after changes is {0}", sb.GetHashCode());
         }
     }
