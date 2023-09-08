@@ -1,0 +1,11 @@
+C:\Banu\Infinite\B2\CSharp\DotNet_Day5\DotNet_Day5_Prj2\bin\Debug\DotNet_Day5_Prj2.exe.config
+C:\Banu\Infinite\B2\CSharp\DotNet_Day5\DotNet_Day5_Prj2\bin\Debug\DotNet_Day5_Prj2.exe
+C:\Banu\Infinite\B2\CSharp\DotNet_Day5\DotNet_Day5_Prj2\bin\Debug\DotNet_Day5_Prj2.pdb
+C:\Banu\Infinite\B2\CSharp\DotNet_Day5\DotNet_Day5_Prj2\obj\Debug\DotNet_Day5_Prj2.csproj.AssemblyReference.cache
+C:\Banu\Infinite\B2\CSharp\DotNet_Day5\DotNet_Day5_Prj2\obj\Debug\DotNet_Day5_Prj2.csproj.CoreCompileInputs.cache
+C:\Banu\Infinite\B2\CSharp\DotNet_Day5\DotNet_Day5_Prj2\obj\Debug\DotNet_Day5_Prj2.exe
+C:\Banu\Infinite\B2\CSharp\DotNet_Day5\DotNet_Day5_Prj2\obj\Debug\DotNet_Day5_Prj2.pdb
+C:\Banu\Infinite\B2\CSharp\DotNet_Day5\DotNet_Day5_Prj2\bin\Debug\DotNet_Day5.exe
+C:\Banu\Infinite\B2\CSharp\DotNet_Day5\DotNet_Day5_Prj2\bin\Debug\DotNet_Day5.pdb
+C:\Banu\Infinite\B2\CSharp\DotNet_Day5\DotNet_Day5_Prj2\bin\Debug\DotNet_Day5.exe.config
+C:\Banu\Infinite\B2\CSharp\DotNet_Day5\DotNet_Day5_Prj2\obj\Debug\DotNet_Day5_Prj2.csproj.CopyComplete

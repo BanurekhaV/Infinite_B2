@@ -93,7 +93,7 @@ namespace DotNet_Day4
             Employee employee = new Employee();  //constructor
           //  employee.Accept();
             employee.ShowDetails();
-
+            
             Employee employee2 = new Employee(100,"Shilpa",Convert.ToDateTime("12/08/2023"), 50000);
             employee2.ShowDetails();
              Console.Read();

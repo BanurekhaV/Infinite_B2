@@ -1,0 +1,7 @@
+C:\Banu\Infinite\B2\CSharp\DotNet_Day5\DotNet_Day5\bin\Debug\DotNet_Day5.exe.config
+C:\Banu\Infinite\B2\CSharp\DotNet_Day5\DotNet_Day5\bin\Debug\DotNet_Day5.exe
+C:\Banu\Infinite\B2\CSharp\DotNet_Day5\DotNet_Day5\bin\Debug\DotNet_Day5.pdb
+C:\Banu\Infinite\B2\CSharp\DotNet_Day5\DotNet_Day5\obj\Debug\DotNet_Day5.csproj.AssemblyReference.cache
+C:\Banu\Infinite\B2\CSharp\DotNet_Day5\DotNet_Day5\obj\Debug\DotNet_Day5.csproj.CoreCompileInputs.cache
+C:\Banu\Infinite\B2\CSharp\DotNet_Day5\DotNet_Day5\obj\Debug\DotNet_Day5.exe
+C:\Banu\Infinite\B2\CSharp\DotNet_Day5\DotNet_Day5\obj\Debug\DotNet_Day5.pdb

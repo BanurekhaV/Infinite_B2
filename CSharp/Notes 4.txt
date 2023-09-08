@@ -1,0 +1,46 @@
+Pseudocode : English like instructions
+   Begin
+     Accept number into x
+     Accept number int y
+     Add x with Y, store into z
+     Display/Print Z
+   End
+
+FlowChart : Visual instruction using symbols
+
+Data Flow Diagrams  DFDs
+
+Use Case Diagrams 
+
+OOPS: WYSIWYG
+  1. Encapsulation : Unit of Information.
+  2. Abstraction : Revelaing the required info. and hiding the not required info.
+  3. Polymorphism : Many Forms
+        - overloading
+        - overriding
+  4. Inheritance : 
+        - Single Inheritance
+        - MultiLevel Inheritance
+
+Abstraction-Encapsulation: Defined as process of enclosing one or more items within a physical or logical package. It is a methodology, that prevents access to implementation details
+
+Encapsulation is implemented by using access specifiers
+
+Access Specifiers : defines the scope and visibility of a class member. C# supports the following access specifiers :
+
+  1. Public : All classes within the assembly or outside the assembly with or without derivation can access the public members
+- We need an object of the class, where public members are declared to access
+
+  2. Private : Accessible only in the class where it is declared. Not accessible anywhere else
+
+  3. Protected
+  4. Internal : It acts exactly like public specifiers, but allows access to the derived or non derived classes of the same assembly
+
+  5. Protected Internal or Internal Protected
+  
+-- All Classes are Internal by Default
+-- All Members of the class are Private by Default
+
+Access Specifiers
+
+Read only and Constant

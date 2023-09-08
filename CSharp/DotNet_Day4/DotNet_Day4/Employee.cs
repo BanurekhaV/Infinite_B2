@@ -13,17 +13,26 @@ namespace DotNet_Day4
         DateTime DOJ;
         Double Salary;
 
+        //constructor 1:
         public Employee()
         {
             Console.WriteLine("Hello from Employee");
         }
 
+        //2.
         public Employee(int empid, double salary)
         {
             EmpId = empid;
             Salary = salary;
         }
 
+        //3.
+        public Employee(string empname, double salary)
+        {
+            EmpName = empname;
+            Salary = salary;
+        }
+        //4.
         public Employee(int EmpId, string EmpName, DateTime DOJ, double sal)
         {
             this.EmpId = EmpId;
@@ -46,6 +55,12 @@ namespace DotNet_Day4
             Console.WriteLine($"Employee ID is :{EmpId} Name is { EmpName}, Date of Joining is {DOJ} " +
                 $"and Salary Earned is {Salary}"
                 );
+        }
+        //destructor
+        ~Employee()
+        {
+            Console.WriteLine("Bye from Employee");
+            Console.Read();
         }
 
     }

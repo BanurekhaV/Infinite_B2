@@ -27,9 +27,14 @@ Constructors : Are Special functions of the class which are meant to initialize 
                They do not have any return type
                They can have parameters/arguments
                They can be overloaded (you can have many constructors)
+               Are Invoked explicitly
 
-
-
+Destructors: Are also function in the class which is used to de-allocate memory
+            It has the same name as that of the class, but prefixed with '~'
+            There can be only one destructor per class
+            They do not take any parameters nor return any type
+            They need no access specifier
+            We cannot invoke explicitly (it is called automatically when the program looses scope)
 
 
 
