@@ -12,8 +12,7 @@ namespace DotNet_Day5
         {
             AccessSpecifier_Eg ag2 = new AccessSpecifier_Eg();
             ag2.SName = "Rama";
-            ag2.Marks = 96;
-
+            ag2.Marks = 96;            
         }
     }
 }

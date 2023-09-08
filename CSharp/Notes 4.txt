@@ -1,3 +1,9 @@
+Day 5 : Pre -Lunch Session
+OOPS programming:
+Access Specifiers:
+Read only and Constant:
+Inheritance:
+
 Pseudocode : English like instructions
    Begin
      Accept number into x
@@ -14,7 +20,7 @@ Use Case Diagrams
 
 OOPS: WYSIWYG
   1. Encapsulation : Unit of Information.
-  2. Abstraction : Revelaing the required info. and hiding the not required info.
+  2. Abstraction : Revealing the required info. and hiding the not required info.
   3. Polymorphism : Many Forms
         - overloading
         - overriding
@@ -33,14 +39,34 @@ Access Specifiers : defines the scope and visibility of a class member. C# suppo
 
   2. Private : Accessible only in the class where it is declared. Not accessible anywhere else
 
-  3. Protected
+  3. Protected : Are accessible to the class where it is declared and also all the derived classes, within the assembly or outside the assembly
+
   4. Internal : It acts exactly like public specifiers, but allows access to the derived or non derived classes of the same assembly
 
-  5. Protected Internal or Internal Protected
+  5. Protected Internal or Internal Protected : Internal to the derived and non-derived classes of the current assembly and protected to all the derived classes of other assemblies
   
 -- All Classes are Internal by Default
 -- All Members of the class are Private by Default
 
-Access Specifiers
+--------------------------------------------------------------
 
-Read only and Constant
+Read Only Variables : are variables that are declared with 'readonly' keyword
+- They are initialized either at the time of Declaration of the variable or in the constructor only
+
+- Constructor initialization is given preference over initialization during declaration
+
+- The behaviour of a readonly variable is similar to non-static variable, in the sense both are available as a seperate copy in each object. The difference is readonly cannot be changed, but non-static can be changed
+
+- Once Initialized with a value, we cannot change it
+
+
+Constant : are fixed values.
+           Have to be initialized during declaration of the constant variable itself
+          It is a fixed value for the complete class, unlike readonly, which is fixed values for each object of the class.
+
+
+Inheritance :  
+Order of Constructor Invocation :
+
+ Base classes get constructed first before the child class in the order
+But destructor will be called from the derived to the base class
