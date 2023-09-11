@@ -1,0 +1,47 @@
+Inheritance : 
+    base keyword
+    Name hiding
+    Invoking base class constructors thru derived class constructor
+    
+Types of Constructors : 
+   private constructor
+   public constructor
+   protected constructor
+  
+   constructor Chain : 'this' keyword is used to call overloaded constructors that belongs to the same class.
+     It is usually used to invoke the parameter less/default constructor through a parameterized constructor
+ 
+ static constructor : C# supports 2 types of constructors
+     1. Instance Constructor (non-static constructor)
+     2. Class Constructor (static constructor)
+-static constructors are executed before instance constructors, and after any static fields/member initialization
+-static constructors does have any modifiers
+-static constructors does not take any parameters
+-They cannot be overloaded
+-They are called automatically unlike instance constructors
+-They are used to initialize static fields/members
+
+
+Polymorphism :
+      OverLoading 
+         1. Function
+            - functions that have the same name but differ either in the no.of arguments or the data type of the arguments are said to be overloaded functions
+            - functions with same type of arguments and same number of arguments , but different return type does not qualify to be overloaded functions
+            - Overloading is always seen within a class
+
+         2. Operator
+            - When we want to achieve the results of Arithmetic,Logical,Relational,Assignment operators of the  Reference types, same as value types,  we need to overload the specific operator
+            
+
+
+      Overriding 
+
+Structures in C# :
+  Are similar to classes
+  Can have Parameterized constructors, static constructors,constants,fields, methods,properties, indexers, events, operators etc.
+  Structures are internal by default and all the members of the structure are private by default
+  Can implement interfaces
+
+
+
+
