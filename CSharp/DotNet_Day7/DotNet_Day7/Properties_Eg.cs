@@ -6,20 +6,35 @@ using System.Threading.Tasks;
 
 namespace DotNet_Day7
 {
+    class Products
+    {
+        //full of automatic property declaration only
+        public int P_Id { get; set; }
+        public string ProductName { get; set; }
+        public double Produt_Price { get; set; }
+        public DateTime ManufacturedDate { get; } = Convert.ToDateTime("2023/09/02");
+    }
     class Student
     {
         //declaring private fields of the class
         private string code = "N.A.";
         private string _Name = "Unknown";
         private int Age = 0;
+        //declaring properties directly without fields
+        //implements automatic properties
+        public float Totalmarks { get; } = 100;
+        public string Address { get; set; }
 
         //declare properties for the code field
         public string Code
         {
-            get {
-                return code ;}
+            get
+            {
+                return code;
+            }
             set {
-                code = value;
+                if(string.IsNullOrEmpty(value))
+                code = "Invalid Data";
             }
         }
 
@@ -30,10 +45,10 @@ namespace DotNet_Day7
             {
                 return _Name;
             }
-            set
-            {
-                _Name = value;
-            }
+            //set
+            //{
+            //    _Name = value;
+            //}
         }
 
         //declare properties for the Age field
@@ -62,11 +77,15 @@ namespace DotNet_Day7
             Console.WriteLine($"Initial Code {student.Code}, Initial Name {student.Name} and Initial Age {student.Years}");
            
             //set accessors are called            
-            student.Code = "S100";  
-            student.Name = "Shahbaz";
+            student.Code = null;  
+           // student.Name = "Shahbaz";
             student.Years = 16;
+            student.Address = "Delhi";
             Console.WriteLine("After Changes thru Properties");
             Console.WriteLine($"Changed Code {student.Code}, Changed Name {student.Name} and Changed Age {student.Years}");
+
+            Products products = new Products();
+            Console.WriteLine(products.ManufacturedDate);
             Console.ReadKey();
         }
     }

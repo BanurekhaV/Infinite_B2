@@ -27,6 +27,13 @@ Properties : are named members of classes, structures, interfaces
    - Manual Implementation of the Properties or Automatic Implementation is possible
 
 
-Indexers
-Types of classes
-Interface
+Indexers : It allows an object to be indexed like an array. It behaves similar to a Virtual Array
+ - We can access the indexers using get and set accessors
+ - Declaration and behaviour of an Indexer is to some extent similar to properties. However, properties return or set a specific data member, whereas indexers return or set a particular value at a particular reference of an object
+ - Indexers are not named members like properties, instead they are referred using the 'this' keyword
+ - Indexers can be overloaded
+
+Interface :
+
+      
+Types of classes :
