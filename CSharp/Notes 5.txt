@@ -38,6 +38,10 @@ Polymorphism :
               - To actually override the method, the derived type marks the method as 'override'
              - To see the polymorphic effect, we use a concept of Co-Variance, where the parent class object is made to point to various derived class.
 
+2 Types of Polymorphism : Static Polymorphism/CompileTime Polymorphism/Static Binding/Early Binding  (Overloading)
+
+- Dynamic Polymorphism/RuntimePolymorphism/Late binding/Dynamic Binding  (Overriding + CoVariance)
+
 
 Structures in C# :
   Are similar to classes

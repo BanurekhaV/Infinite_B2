@@ -1,0 +1,32 @@
+Co-Variance : enables us to pass a derived type when a base type is expected
+
+Constructor calling and assigning type
+
+    class one { }
+    class two : one { }
+    class three : two { }
+
+lets consider initialization
+  one o1= new one(); possible
+  one o2= new two();   ""
+  one o3= new three();  ""
+  two t1= new two();  ""
+  two t2= new three(); ""
+  two t3= new one();  not possible
+
+ContraVariance : Method calling and passing arguments
+
+MethodBase(one o) { }
+
+MethodBase(two t)
+
+
+Properties : are named members of classes, structures, interfaces
+   - are extensions of the fields
+   - they are accessed using the accessors, through which we can write (set) or read (get) private fields of the class
+   - Manual Implementation of the Properties or Automatic Implementation is possible
+
+
+Indexers
+Types of classes
+Interface

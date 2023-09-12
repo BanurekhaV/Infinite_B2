@@ -55,6 +55,12 @@ namespace DotNet_Day7
             R = float.Parse(Console.ReadLine());
         }
 
+        public override float Area()
+        {
+            return 10.5f;
+        }
+
+
         //the type circle has chosen not to override Area() and Circumference()
         //since the logic suits the type, and hence it can call the method as it is
     }
@@ -83,6 +89,10 @@ namespace DotNet_Day7
             shape = new Rectangle(); //when the app. expects shape type, we are providing rectangle type
             Console.WriteLine("Area of Rectangle : {0}",shape.Area());
             Console.WriteLine("Circumference of Rectangle {0}",shape.Circumference());
+            Console.WriteLine("Circles Details ..");
+            shape = new Circle(); //when the app. expects shape type, we are providing rectangle type
+            Console.WriteLine("Area of Circle : {0}", shape.Area());
+            Console.WriteLine("Circumference of Circle {0}", shape.Circumference());
             Console.Read();
         }
     }
