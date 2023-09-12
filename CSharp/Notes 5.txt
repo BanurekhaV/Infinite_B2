@@ -32,9 +32,12 @@ Polymorphism :
          2. Operator
             - When we want to achieve the results of Arithmetic,Logical,Relational,Assignment operators of the  Reference types, same as value types,  we need to overload the specific operator
             
+      Overriding : A concept of polymorphism that is between the related classes. Redefining the method differently from the inherited type 
+              - When overriding a method, the signature of the method has to be the same as that of the base class
+              - To allow overriding the base type marks the method as 'virtual'
+              - To actually override the method, the derived type marks the method as 'override'
+             - To see the polymorphic effect, we use a concept of Co-Variance, where the parent class object is made to point to various derived class.
 
-
-      Overriding 
 
 Structures in C# :
   Are similar to classes

@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{6A4BDEE8-F167-41BC-A2D3-CD29EAB56490}</ProjectGuid>
+    <ProjectGuid>{E71ADE7D-7F36-4B6B-A86A-BA14B16E4115}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>DotNet_Day6</RootNamespace>
-    <AssemblyName>DotNet_Day6</AssemblyName>
+    <RootNamespace>DotNet_Day7</RootNamespace>
+    <AssemblyName>DotNet_Day7</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -32,9 +32,6 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
-  <PropertyGroup>
-    <StartupObject>DotNet_Day6.Name_Method_Hiding</StartupObject>
-  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -46,13 +43,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Constructor_Chain.cs" />
-    <Compile Include="function_overloading.cs" />
-    <Compile Include="Name_Method_Hiding.cs" />
-    <Compile Include="Operator_Overloading.cs" />
-    <Compile Include="Program.cs" />
+    <Compile Include="Overriding_Eg.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="static Constructor.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
