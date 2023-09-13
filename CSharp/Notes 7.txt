@@ -95,3 +95,22 @@ sealed class MySeal
 What are Abstract Methods() : Methods that do not have implmentation
    - Methods that are marked as abstract
    - the Class in which we have atleast 1 abstract method will force the class to be declared as abstract class
+
+
+Exceptions : An unwanted or unexpected event, which occurs during the program execution, that disrupts the normal flow of the program
+
+Handle Exceptions : 
+  try{} - Code that can be anticipated to activate exceptions are placed inside the try block. Is followed by one or more catch blocks
+  catch{} - catches the exeption and handles the execption 
+  finally{} - is used to execute any statements/instructions whether there is an exception thrown or not (eg. disposing an object, closing a file, closing a database connection etc..)
+  throw - keyword/jump statement that allows a program to throw an exception
+
+The exceptions are all C# classes, that directly or indirectly derived from System.Exception class
+
+
+line 1
+line 2 open a file 
+line 3 write into the file  (no permission to write)
+..
+..
+line 10 close the file

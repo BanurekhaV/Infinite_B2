@@ -1,0 +1,18 @@
+General:
+--------
+
+1. Create a Class Program which would be used to accepts two  Strings - FirstName and LastName and call the static method Display() that displays the first name in one line and the LastName in the second line after converting the same to upper case.
+
+2. Create a Program to count the no. of occurrences of a letter in a given string (for example in a string called “OOPS PROGRAMMING”, O appears 3 times)
+Hint : Accept a string and also the letter to be counted
+
+Strengthning OOPS:
+------------------
+
+3. Create a class called Saledetails which has data members like Salesno,  Productno,  Price, dateofsale, Qty, TotalAmount
+Create a method called Sales() that takes qty, Price details of the object and updates the TotalAmount as Qty *Price
+Pass the other information like SalesNo, Productno, Price,Qty and Dateof sale through constructor
+call the show data method to display the values.
+Hint : Use This pointer 
+
+4. Create a class called Customer with Customerid, Name, Age, Phone,City. Write a constructor with no arguments and another constructor with all information.  Write a method called DisplayCustomer(), which is called directly without any object. Also  include destructor
