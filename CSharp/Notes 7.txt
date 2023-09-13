@@ -14,6 +14,7 @@ Interface : Interfaces are like classes, which contains properties, methods, del
  - A class can inherit from one or more Interfaces
  - An interface can inherit from other interfaces
  - The class that inherits from an interface, will have to provide implementation to all the members of the interface
+ - The class that inherits form one interface and if that interface has its own oarent, then the class will have to implement all the methods of its base, and the base's base. Interface Chaining
  - We cannot instantiate an instance of an interface, but we can create objects and refer to the derived class/classes
 
 Advantages of Interfaces :
@@ -22,6 +23,8 @@ Advantages of Interfaces :
    - component-based programming
    - They act like plug and play features of the application
  
+Explicit Implementation of Interface Methods
+
 
 
       

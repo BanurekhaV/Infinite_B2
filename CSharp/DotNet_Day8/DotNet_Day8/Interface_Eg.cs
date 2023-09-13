@@ -12,7 +12,7 @@ namespace DotNet_Day8
         int AddNos(int x, int y);        
     }
 
-    interface ISupplier
+    interface ISupplier : ICustomer
     {
         void PrintSupplier();
     }
@@ -31,6 +31,24 @@ namespace DotNet_Day8
         public void PrintSupplier()
         {
             Console.WriteLine("Interface ISupplier Print");
+        }
+    }
+    //Interface Chaining
+    class Supplier : ISupplier
+    {
+        public int AddNos(int x, int y)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void PrintCustomer()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void PrintSupplier()
+        {
+            throw new NotImplementedException();
         }
     }
     class Interface_Eg
