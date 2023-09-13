@@ -23,9 +23,75 @@ Advantages of Interfaces :
    - component-based programming
    - They act like plug and play features of the application
  
-Explicit Implementation of Interface Methods
-
-
+Explicit Implementation of Interface Methods :
+Property Implementation in Interface :
 
       
 Types of classes :
+  - Normal Class - Can be inherited, instantiated, can have a combination of static and non-static members
+ 
+ - static class - cannot be inherited and cannot be instantiated
+                   should have all static members only
+                   Accessing the members using the class name
+
+Eg :
+
+static class myStatic
+    {
+        public static int x;
+        static string  y;
+        static float  f;
+
+       public static void Method1()
+        {
+
+        }
+        static myStatic()
+        {
+
+        }
+
+    }
+
+- Sealed Class - Can be instantiated but cannot be inherited. It is like a final /concrete class. Does not allow extension
+
+Eg : 
+sealed class MySeal
+    {
+        public string sealeddata;
+
+        public void sealedMethod()
+        {
+
+        }
+
+        public MySeal() { }
+    } 
+
+- Partial Class - Are classes that are defined in Multiple Files, to enable multiple developers to work simultaneously
+
+  Eg : the below class can be available in different files
+
+ public partial class OurProject
+    {
+
+    }
+
+ - Abstract Class - Classes that can be inherited, but cannot be instantiated
+                - Can have both abstract and non-abstract methods
+                - If a class has atleast one abstract method, then the class has to be declared abstract
+                - The derived class/classes have to implement the abstract method using 'override' keyword
+
+  Eg :
+
+   abstract class myAbstract
+    {
+        void Mymethod()
+        {
+
+        }
+    }
+
+What are Abstract Methods() : Methods that do not have implmentation
+   - Methods that are marked as abstract
+   - the Class in which we have atleast 1 abstract method will force the class to be declared as abstract class

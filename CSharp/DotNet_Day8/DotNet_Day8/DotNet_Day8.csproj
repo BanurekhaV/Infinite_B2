@@ -33,7 +33,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>DotNet_Day8.Properties_in_Interface</StartupObject>
+    <StartupObject>DotNet_Day8.Abstract_Eg</StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Abstract_Eg.cs" />
     <Compile Include="Explicit_Interface_Eg.cs" />
     <Compile Include="Interface_Eg.cs" />
     <Compile Include="Program.cs" />

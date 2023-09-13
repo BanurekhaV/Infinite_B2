@@ -20,7 +20,7 @@ namespace DotNet_Day8
     class Company : IGeneral
     {
         string CompanyName { get; set; }
-        public int EstablishedYears { get; set; } 
+        public int EstablishedYears { get; set; }
         //manual implementation of the interface property
         public string Name
         {
@@ -34,7 +34,8 @@ namespace DotNet_Day8
             }
         }
 
-    }
+    }   
+
     class Properties_in_Interface
     {
         static void Main()
@@ -49,7 +50,12 @@ namespace DotNet_Day8
             c.EstablishedYears = 13;
             
             Console.WriteLine("Employee {0} Works for the Company {1}, which is Established in the year {2}", ig.Name, ig2.Name, c.EstablishedYears);
+            
+            
             Console.Read();
         }
     }
+    
+    
+    
 }
