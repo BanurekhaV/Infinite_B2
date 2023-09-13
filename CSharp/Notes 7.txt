@@ -1,0 +1,28 @@
+Inheritance Types : 1. Single, 2. MultiLevel, 3. Hierarchial, 4. Hybrid
+Inheritance Options: 'Is a Relationship'
+            Eg : Circle is a Shape
+                 Car is a Vehicle
+                 
+               'Has a Relationship' - aggregation/composition 
+            Eg : Car has an Engine 
+                 Humans have Heart
+
+
+Interface : Interfaces are like classes, which contains properties, methods, delegates, events etc - but only declarations and no implementation
+ - Interface members are public by default
+ - They do not allow explicit modifiers
+ - A class can inherit from one or more Interfaces
+ - An interface can inherit from other interfaces
+ - The class that inherits from an interface, will have to provide implementation to all the members of the interface
+ - We cannot instantiate an instance of an interface, but we can create objects and refer to the derived class/classes
+
+Advantages of Interfaces :
+   - Loose coupling
+   - Total abstraction
+   - component-based programming
+   - They act like plug and play features of the application
+ 
+
+
+      
+Types of classes :

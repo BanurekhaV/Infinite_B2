@@ -33,7 +33,4 @@ Indexers : It allows an object to be indexed like an array. It behaves similar t
  - Indexers are not named members like properties, instead they are referred using the 'this' keyword
  - Indexers can be overloaded
 
-Interface :
 
-      
-Types of classes :
