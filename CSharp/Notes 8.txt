@@ -1,0 +1,24 @@
+ Limitations of Arrays are that, they belong to the same data type, and they have a fixed size, which is determined initially. 
+
+Collections : Are classes in C# which are specialized for data storage and retrieval.
+They are not size constrained
+They get allocated with dynamic memory
+They can add or remove elements dynamically wuthout any logic for shifting
+
+Common Collection Classes :
+   1. ArrayList : Similar to Arrays, but can be used to store values of different types. No Specific size.
+   2. HashTables : generally used in Search Operation of huge data
+       Stores Key/Vaue pairs, where the key can be of any data type and value can be of any data type
+       Uses a Hashing technique to sort and store the keys, which is neither in the sorted order nor in inserted order
+       Key cannot be null or duplicate, but values can be
+       The collection iterate either with the key or with value
+       If we have to iterate the entire collection, then we use DictionaryEntry structure 
+   3. SortedList : Similar to HashTable, but it sorts the key alpahbetically or numerically
+       The collection iterate either with the key or with value
+       If we have to iterate the entire collection, then we use DictionaryEntry structure 
+   4. Stacks : Last-in-First-Out mechanism
+   5. Queues : First-in-First-out ""
+     
+
+
+Generics

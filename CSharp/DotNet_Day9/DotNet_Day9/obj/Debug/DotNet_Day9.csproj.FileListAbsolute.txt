@@ -1,0 +1,7 @@
+C:\Banu\Infinite\B2\CSharp\DotNet_Day9\DotNet_Day9\bin\Debug\DotNet_Day9.exe.config
+C:\Banu\Infinite\B2\CSharp\DotNet_Day9\DotNet_Day9\bin\Debug\DotNet_Day9.exe
+C:\Banu\Infinite\B2\CSharp\DotNet_Day9\DotNet_Day9\bin\Debug\DotNet_Day9.pdb
+C:\Banu\Infinite\B2\CSharp\DotNet_Day9\DotNet_Day9\obj\Debug\DotNet_Day9.csproj.AssemblyReference.cache
+C:\Banu\Infinite\B2\CSharp\DotNet_Day9\DotNet_Day9\obj\Debug\DotNet_Day9.csproj.CoreCompileInputs.cache
+C:\Banu\Infinite\B2\CSharp\DotNet_Day9\DotNet_Day9\obj\Debug\DotNet_Day9.exe
+C:\Banu\Infinite\B2\CSharp\DotNet_Day9\DotNet_Day9\obj\Debug\DotNet_Day9.pdb
