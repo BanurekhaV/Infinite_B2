@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DotNet_Day9
 {
-    class Genic_Eg
+    class Generic_Eg
     { 
         static void ListEg()
         {
@@ -72,9 +72,43 @@ namespace DotNet_Day9
          static void Main()
         {
             // ListEg();
-            DictionaryEg();
+            // DictionaryEg();
+            List<Employee> emplist = new List<Employee>();
+            emplist.Add(new Employee(101, "Shreya", "Infinite", 22000));
+            emplist.Add(new Employee(102, "Meghana", "Infinite", 22000));
+            emplist.Add(new Employee(103, "Muthu", "Infinite", 22000));
+
+            foreach(Employee item in emplist)
+            {
+                Console.WriteLine(item.EId + " "+ item.EName);
+                Console.WriteLine("---------------");
+                Console.WriteLine(item.ToString());
+            }
             Console.Read();
         }
 
+    }
+    class Employee
+    {
+       public int EId { get; set; }
+        public string EName { get; set; }
+        string CompanyName;
+        float Sal;
+
+        public Employee(int id, string ename, string cname,float sal)
+        {
+            EId = id;
+            EName = ename;
+            CompanyName = cname;
+            Sal = sal;
+        }
+
+        //we can override the ToString() of the object class to print all the info. of the employee class
+        public override string ToString()
+        {
+            //  return string.Format("Employee with Id :" + " " + EId + " " + " and Name :" + " " + EName + " " + "Works with" + CompanyName
+            //   + " " + "and Earns " + " " + Sal);
+            return EId + " " + EName + " " + CompanyName + " " + Sal;
+        }
     }
 }
