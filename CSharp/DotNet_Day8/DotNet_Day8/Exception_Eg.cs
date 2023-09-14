@@ -17,25 +17,37 @@ namespace DotNet_Day8
                 a = Convert.ToInt32(Console.ReadLine());
                 b = Convert.ToInt32(Console.ReadLine());
                 c = a / b;
+                int[] arr = { 1, 2, 3, 4 };
+                Console.WriteLine(arr[6]);
                 Console.WriteLine(c);
-                Console.Read();
+               // Console.Read();
             }
             
             catch (FormatException fe)
             {
-                //  Console.WriteLine(fe.Message + " " + fe.StackTrace);
+                Console.WriteLine(fe.Message);// " " + fe.StackTrace);
                 Console.WriteLine("Enter only numbers..");
-                Console.Read();
+              //  Console.Read();
             }
             catch (DivideByZeroException de)
             {
+                Console.WriteLine(de.Message);
                 Console.WriteLine("You cannot divide a number by Zero");
-                Console.Read();
+               // Console.Read();
             }
-
+            catch(IndexOutOfRangeException ie)
+            {
+                Console.WriteLine("You are trying to access beyond the range");
+            }
             catch (Exception e)
             {
                 Console.WriteLine("Something went wrong ...");
+                //  Console.Read();
+            }
+
+            finally
+            {
+                Console.WriteLine("Reached Finally ..");
                 Console.Read();
             }
 

@@ -14,7 +14,7 @@ Interface : Interfaces are like classes, which contains properties, methods, del
  - A class can inherit from one or more Interfaces
  - An interface can inherit from other interfaces
  - The class that inherits from an interface, will have to provide implementation to all the members of the interface
- - The class that inherits form one interface and if that interface has its own oarent, then the class will have to implement all the methods of its base, and the base's base. Interface Chaining
+ - The class that inherits form one interface and if that interface has its own Parent, then the class will have to implement all the methods of its base, and the base's base. Interface Chaining
  - We cannot instantiate an instance of an interface, but we can create objects and refer to the derived class/classes
 
 Advantages of Interfaces :
@@ -101,16 +101,26 @@ Exceptions : An unwanted or unexpected event, which occurs during the program ex
 
 Handle Exceptions : 
   try{} - Code that can be anticipated to activate exceptions are placed inside the try block. Is followed by one or more catch blocks
+
   catch{} - catches the exeption and handles the execption 
+
   finally{} - is used to execute any statements/instructions whether there is an exception thrown or not (eg. disposing an object, closing a file, closing a database connection etc..)
+
   throw - keyword/jump statement that allows a program to throw an exception
 
-The exceptions are all C# classes, that directly or indirectly derived from System.Exception class
+The exceptions are all C# classes, that directly or indirectly derive from Exception class. This has 2 derived classes viz SystemException and ApplicationException
+
+SystemException: acts as a base class to all the predefined exception classes (Eg, FormatException, NullReferenceException, DivideByZeroException, IndexOutOfRangeException etc...)
+
+ApplicationException : acts as a base class to all the user defined exception classes. So if we want to write our own exceptions in our application, we have to inherit from the ApplicationException Class
 
 
-line 1
-line 2 open a file 
-line 3 write into the file  (no permission to write)
-..
-..
-line 10 close the file
+Exceptions provide a consistent mechanism to identify and respond to errors.
+
+They aid in answering : a) what went wrong : is answered by the type of exception thrown 
+
+ b) where did it go wrong : is answered by the excpetions stack trace property
+
+ c) why did it go wrong : is answered by the message of the exception
+
+checked and unchecked keywords: are used to control the arithmetic overflow of integral datatypes

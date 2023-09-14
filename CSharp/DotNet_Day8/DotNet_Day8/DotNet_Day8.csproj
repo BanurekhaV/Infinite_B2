@@ -33,7 +33,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>DotNet_Day8.Exception_Eg</StartupObject>
+    <StartupObject>DotNet_Day8.Checked_UnChecked</StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -47,12 +47,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Abstract_Eg.cs" />
+    <Compile Include="Checked_UnChecked.cs" />
     <Compile Include="Exception_Eg.cs" />
     <Compile Include="Explicit_Interface_Eg.cs" />
     <Compile Include="Interface_Eg.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties_in_Interface.cs" />
+    <Compile Include="VotingException.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
