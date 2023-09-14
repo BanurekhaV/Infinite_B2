@@ -20,5 +20,15 @@ Common Collection Classes :
    5. Queues : First-in-First-out ""
      
 
+Generics : A Concept that allows to create classes and Methods decoupled with data types
+         - It allows us to define type-safe classes without compromising - type safety, performance, productivity
 
-Generics
+   Non-Generic                     Generic
+  -------------                   ---------
+    ArrayList				List
+    HashTable				Dictionary
+    SortedList				SortedList
+    Stack				Stack
+    Queue				Queue
+   
+            
