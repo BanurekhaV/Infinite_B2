@@ -25,4 +25,12 @@ Equality Operations : ==, Equals(), ReferenceEquals, CompareTo
 
 ReferenceEquals() checks for instance references
 
-Delegates :  
+Delegates :  Are similar to function pointers of C/C++.
+ - Are reference types that holds the reference to a function/method, that can be changed at runtime
+ - Are used for implementing events and call backs
+ - It encourages abstraction
+ - Declaration of delegates with signature determines the method whose reference it can hold (The signatures of both the delegate as well as the dunction should match)
+
+Delegates can be passed to functions as arguments
+Delegates can be created as generic delegates
+Delegates ensure polymorphism
