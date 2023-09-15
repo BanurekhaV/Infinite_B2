@@ -6,7 +6,23 @@ IEnumerator has 1 property called current that gives the data at the current pos
 
 Both the above interfaces are meant for iterating a collection. IEnumerable is simpler than IEnumerator.
 
+IComparable : interface has one method called CompareTo(Object o) that takes an object to compare with and return an int
+     0 = both are equal
+     -1 = first object is smaller than the second
+     1 = first object is larger than the second
 
-Equality Operations : ==, Equals(), CompareTo
+IComparer : is another interface used to compare objects. This interface has a method called compare(obj1, obj2) that takes 2 objects and return an int as above
+
+is and as statements
+
+is =  a is b ? = checking if a and b are same
+as = a as b = making a as a b type
+
+
+Equality Operations : ==, Equals(), ReferenceEquals, CompareTo
+
+== operator and Equals() function check for the values
+
+ReferenceEquals() checks for instance references
 
 Delegates :  
