@@ -1,0 +1,12 @@
+Various Interfaces that aid in collections :
+
+IEnumerable is an Interface which has one method called GetEnumerator(). This method returns a type of IEnumerator, which is another interface
+
+IEnumerator has 1 property called current that gives the data at the current position, and 2 fumctions viz MoveNext(), and Reset(). These 2 functions help in navigating the collections. MoveNext() function returns true if there are elements in the collection, else false.
+
+Both the above interfaces are meant for iterating a collection. IEnumerable is simpler than IEnumerator.
+
+
+Equality Operations : ==, Equals(), CompareTo
+
+Delegates :  
