@@ -33,7 +33,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>DotNet_Day11.Disposable_Eg</StartupObject>
+    <StartupObject>DotNet_Day11.Deep_Shallow_Copy</StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Deep_Shallow_Copy.cs" />
     <Compile Include="Disposable_Eg.cs" />
     <Compile Include="EventsEg1.cs" />
     <Compile Include="EventsEg2.cs" />

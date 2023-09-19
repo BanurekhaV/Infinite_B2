@@ -72,5 +72,7 @@ Dispose() is usually called by our code. This is the only method inside an IDisp
 
 Finalize() : is called by the GC 
 
+Object cloning : Creating duplicates
+   Shallow Copy  : Creating a new object and then copying the value type fields of the first object to the new object. For refernce types, only the reference is copied. Hence the first and the clone refer to the same object.
 
-Files :
+   Deep Copy : Creating a new object and then copying the fields of the current to the new object. For reference type, it creates a complete new reference different from the first object
