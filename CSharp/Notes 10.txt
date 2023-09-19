@@ -1,0 +1,53 @@
+Anonymous Methods: Are Methods that do not have any name associated.
+  -- In order to call such methods, we use delegates
+  -- Delegates are of 3 types
+          - Action Delegate : May or may not take parameters
+              They do not return any value
+
+   eg:  Action<int> ExampleActionDelegate = delegate (int s)
+               {
+                   Console.WriteLine(s);
+               };
+            ExampleActionDelegate(25);
+
+          - Function Delegate : 
+              Func is a built-in delegate type
+              It must return a value
+              Can take between 0 and 16 parameters
+
+    eg: Func<int> getRnumber= delegate()
+             { 
+                Random r= new Random();
+                return r.Next(1, 100);
+             };
+
+         int rand=getRnumber();
+         cw(rand);
+
+          - Predicate Delegate : Takes one input, and returns a boolean value. 
+              Used to filter from list of values
+   Eg : Predicate<string> chkupper=delegate(string s)
+           {
+              return s.Equals(s.ToUpper());
+           };
+          bool res= chkupper("Hello World");
+
+Events : User-->Events-->Delegates-->Functions
+  Works on a Model Publisher/Subscriber
+
+-Event enables a class or an object to notify other class when something occurs/happens
+
+- The class that raises the event is publisher
+- The class that handles the event is subscriber
+
+- Publisher determines when an event is raised
+- Subscribers subscribe for various publishers
+- Subscribers can handle events from multiple publishers
+
+- Events can have multiple subscribers
+
+Events-delegates Association : create events of type delegate(particular)
+
+Resource Management :
+
+Files :
