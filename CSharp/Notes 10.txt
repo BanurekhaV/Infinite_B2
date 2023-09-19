@@ -46,8 +46,31 @@ Events : User-->Events-->Delegates-->Functions
 
 - Events can have multiple subscribers
 
-Events-delegates Association : create events of type delegate(particular)
+Events-delegates Association : create events of type delegate(particular) and register them with the class where we are handling the event
 
-Resource Management :
+Resource Management : Memory Management which is done through Garbage Collection class of the Managed Heap thru an internal engine known as Optimization Engine
+
+GC occurs if atleast one of the multiple conditions is satisfied
+  1. If the system has low physical memory
+  2. If the memory allocated to various objects in the heap exceeds a particular threshold 
+  3. Forceful invocation of the Collect() of the GC
+
+GC has 3 Phases of transition
+ 1. Marking Phase : A list of all live objects is created
+ 2. Relocating Phase : The references of all the objects in the live object list will be updated in this phase, so that they can be moved to the next phase
+ 3. Compacting Phase : Here the compacting of space happens by releasing the memory occupied by the Dead Objects
+
+The Heap memory is organized into 3 generations
+  Generation 0 : all short lived and temporary objects
+  Generation 1
+  Generation 2
+
+Dispose()   vs. Finalize()
+
+Dispose() is usually called by our code. This is the only method inside an IDisposable interface. When we call the Dispose(), the resources allocated are freed immediately. Since we may forget to call dispose(), there is using(){ } statement block that calls the dispose() method at the end of the block automatically
+
+
+Finalize() : is called by the GC 
+
 
 Files :
