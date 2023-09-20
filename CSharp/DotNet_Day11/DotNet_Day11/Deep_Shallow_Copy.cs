@@ -46,13 +46,23 @@ namespace DotNet_Day11
         static void Main()
         {
             Person p1 = new Person(20, "Amithabh", "Bacchan");
-            Person p2 = (Person)p1.ShallowCopy();
+            Person p2 = (Person)p1.ShallowCopy(); //clonned object
             Console.WriteLine(p1.Age + " " + p1.desc.FirstName + " " +p1.desc.LastName);
 
             Console.WriteLine(p2.Age + " " + p2.desc.FirstName + " " + p2.desc.LastName);
             p2.desc.LastName = "Ganguly";
             Console.WriteLine(p1.desc.LastName);
             Console.WriteLine(p2.desc.LastName);
+
+            Console.WriteLine("------Deep Copy-------");
+
+            Person p3 = p1.DeepCopy();
+            Console.WriteLine($"P3's Age {p3.Age}, p3's FName {p3.desc.FirstName} and p3's LName {p3.desc.LastName}");
+
+            p3.desc.FirstName = "Roopa";
+
+            Console.WriteLine(p1.desc.FirstName);
+            Console.WriteLine(p3.desc.FirstName);
             Console.Read();
             
         }

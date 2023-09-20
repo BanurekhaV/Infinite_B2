@@ -1,0 +1,17 @@
+Files : A Physical format that stores data permanently on the hard disk. Managed by the OS. In order to persist the data (save the data)
+  Serialization : It is the process of converting an objects data into a form that can be stored on a file, database, memory, or transferred thru the network. 
+To be able to reuse.
+   
+   DeSerialization : It is the reverse process of serialization, Where stream of bytes are converted back into an object
+
+  Type of Serialization :
+1. Binary Serialization
+2. XML Serialization
+3. Soap Serialization
+4. JSON Serialization
+   
+
+Threads :
+
+
+Windows Application :

@@ -69,7 +69,6 @@ Dispose()   vs. Finalize()
 
 Dispose() is usually called by our code. This is the only method inside an IDisposable interface. When we call the Dispose(), the resources allocated are freed immediately. Since we may forget to call dispose(), there is using(){ } statement block that calls the dispose() method at the end of the block automatically
 
-
 Finalize() : is called by the GC 
 
 Object cloning : Creating duplicates
