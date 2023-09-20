@@ -33,7 +33,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>DotNet_Day12.BinarySerialization_Eg</StartupObject>
+    <StartupObject>DotNet_Day12.Thread_Sync</StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -50,6 +50,10 @@
     <Compile Include="Directory_File_Eg.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Threads1.cs" />
+    <Compile Include="ThreadStates.cs" />
+    <Compile Include="Thread_Sync.cs" />
+    <Compile Include="XMLSerialization.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

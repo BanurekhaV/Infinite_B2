@@ -8,10 +8,33 @@ To be able to reuse.
 1. Binary Serialization
 2. XML Serialization
 3. Soap Serialization
-4. JSON Serialization
-   
+4. JSON Serialization " name/value
+       Eid, Ename  {"Eid" : 12, "Ename" : "Infinite"}
+Namespaces : Sustem.IO
 
-Threads :
+Threads : System.Threading namespace
+
+States of a Thread : 1. Unstarted, 2. Runnable, 3. Running, 4, Not Runnable, 5 Dead 
+
+Important properties and Methods:
+ - CurrentThread
+ - IsAlive
+ - Name
+ - ThreadState
+
+Sleep()
+Join()
+Abort()
+Suspend()
+Resume()
+Start()
+
+Thread Synchronization : Protecting access of critical/crucial data by using various methods as below : 
+  - Blocking 
+  - Locking
+  - Signalling
+  - Join
+  - lock
 
 
 Windows Application :
