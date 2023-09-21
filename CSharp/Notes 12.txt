@@ -1,0 +1,30 @@
+Windows Application : Creates an .exe assembly
+
+Class Library Project : Creates a .dll assembly. It cannot execute directly. It needs a host exe application to test and debug
+- We need to add reference of the .dll in the.exe application and use it
+
+Extensions : are additional functions that are provided as a part of the original class. In order to create extensions we need to follow the below steps : 
+ 1. Create a class Library project (CalculatorDLL)
+ 2. Inside the class, write methods viz. (WelcomeFunc(){ }, Add2Nos(){ })
+ 3. Build the project  (.dll assembly created)
+ 4. Create a console application and add references to the CalculatorDLL.
+ 5. Use the namespace (using CalculatorDLL)
+ 6. Create object of the class (CalculatorClass)
+ 7. Thru the object access the methods of the class
+ 
+Inorder to have extension methods to the CalculatorClass, we have to 
+ 1. Create another class library project (Calculator2)
+ 2. Change the modifier of the class to static (AddonCalculator)
+ 3. Create static Method/s (Subtract2Nos() { }, Multiply2Nos(){ } )
+ 4. Pass the object of that class, to which we want extension methods using 'this' keyword inside the static method as a first parameter (this CalculatorClass object)
+ 5. Build the project
+ 6. In the client/console/exe project, we have to add reference to the 2nd DLL
+ 7. Use the namespace
+ 8. Call the extension methods with the help of the FistDLL's Class object itself (CalculatorClass)
+
+
+Enhancements : 
+1. Anonymous Type : A combination of data types that are not specific
+2. Literal Improvement : Gives option for better readabilty of values with a digit seperator '_'
+3. Nullable types ( using '?'. Nullable<T>)
+4. Null Conditional Operator ('?')

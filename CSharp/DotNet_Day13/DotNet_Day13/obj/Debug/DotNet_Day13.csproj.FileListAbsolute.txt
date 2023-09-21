@@ -1,7 +1,12 @@
 C:\Banu\Infinite\B2\CSharp\DotNet_Day13\DotNet_Day13\bin\Debug\DotNet_Day13.exe.config
 C:\Banu\Infinite\B2\CSharp\DotNet_Day13\DotNet_Day13\bin\Debug\DotNet_Day13.exe
 C:\Banu\Infinite\B2\CSharp\DotNet_Day13\DotNet_Day13\bin\Debug\DotNet_Day13.pdb
-C:\Banu\Infinite\B2\CSharp\DotNet_Day13\DotNet_Day13\obj\Debug\DotNet_Day13.csproj.AssemblyReference.cache
 C:\Banu\Infinite\B2\CSharp\DotNet_Day13\DotNet_Day13\obj\Debug\DotNet_Day13.csproj.CoreCompileInputs.cache
 C:\Banu\Infinite\B2\CSharp\DotNet_Day13\DotNet_Day13\obj\Debug\DotNet_Day13.exe
 C:\Banu\Infinite\B2\CSharp\DotNet_Day13\DotNet_Day13\obj\Debug\DotNet_Day13.pdb
+C:\Banu\Infinite\B2\CSharp\DotNet_Day13\DotNet_Day13\bin\Debug\CalculatorDLL.dll
+C:\Banu\Infinite\B2\CSharp\DotNet_Day13\DotNet_Day13\bin\Debug\CalculatorDLL.pdb
+C:\Banu\Infinite\B2\CSharp\DotNet_Day13\DotNet_Day13\obj\Debug\DotNet_Day13.csproj.AssemblyReference.cache
+C:\Banu\Infinite\B2\CSharp\DotNet_Day13\DotNet_Day13\obj\Debug\DotNet_Day13.csproj.CopyComplete
+C:\Banu\Infinite\B2\CSharp\DotNet_Day13\DotNet_Day13\bin\Debug\Calculator2.dll
+C:\Banu\Infinite\B2\CSharp\DotNet_Day13\DotNet_Day13\bin\Debug\Calculator2.pdb

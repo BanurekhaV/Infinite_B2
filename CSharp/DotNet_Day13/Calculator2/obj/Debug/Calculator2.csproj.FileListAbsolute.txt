@@ -1,0 +1,9 @@
+C:\Banu\Infinite\B2\CSharp\DotNet_Day13\Calculator2\bin\Debug\Calculator2.dll
+C:\Banu\Infinite\B2\CSharp\DotNet_Day13\Calculator2\bin\Debug\Calculator2.pdb
+C:\Banu\Infinite\B2\CSharp\DotNet_Day13\Calculator2\bin\Debug\CalculatorDLL.dll
+C:\Banu\Infinite\B2\CSharp\DotNet_Day13\Calculator2\bin\Debug\CalculatorDLL.pdb
+C:\Banu\Infinite\B2\CSharp\DotNet_Day13\Calculator2\obj\Debug\Calculator2.csproj.AssemblyReference.cache
+C:\Banu\Infinite\B2\CSharp\DotNet_Day13\Calculator2\obj\Debug\Calculator2.csproj.CoreCompileInputs.cache
+C:\Banu\Infinite\B2\CSharp\DotNet_Day13\Calculator2\obj\Debug\Calculator2.csproj.CopyComplete
+C:\Banu\Infinite\B2\CSharp\DotNet_Day13\Calculator2\obj\Debug\Calculator2.dll
+C:\Banu\Infinite\B2\CSharp\DotNet_Day13\Calculator2\obj\Debug\Calculator2.pdb
