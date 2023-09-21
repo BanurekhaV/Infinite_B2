@@ -1,0 +1,10 @@
+C:\Banu\Infinite\B2\CSharp\DotNet_Day13\WindowsProject\bin\Debug\WindowsProject.exe.config
+C:\Banu\Infinite\B2\CSharp\DotNet_Day13\WindowsProject\bin\Debug\WindowsProject.exe
+C:\Banu\Infinite\B2\CSharp\DotNet_Day13\WindowsProject\bin\Debug\WindowsProject.pdb
+C:\Banu\Infinite\B2\CSharp\DotNet_Day13\WindowsProject\obj\Debug\WindowsProject.Form1.resources
+C:\Banu\Infinite\B2\CSharp\DotNet_Day13\WindowsProject\obj\Debug\WindowsProject.Properties.Resources.resources
+C:\Banu\Infinite\B2\CSharp\DotNet_Day13\WindowsProject\obj\Debug\WindowsProject.csproj.GenerateResource.cache
+C:\Banu\Infinite\B2\CSharp\DotNet_Day13\WindowsProject\obj\Debug\WindowsProject.csproj.CoreCompileInputs.cache
+C:\Banu\Infinite\B2\CSharp\DotNet_Day13\WindowsProject\obj\Debug\WindowsProject.exe
+C:\Banu\Infinite\B2\CSharp\DotNet_Day13\WindowsProject\obj\Debug\WindowsProject.pdb
+C:\Banu\Infinite\B2\CSharp\DotNet_Day13\WindowsProject\obj\Debug\WindowsProject.csproj.AssemblyReference.cache
