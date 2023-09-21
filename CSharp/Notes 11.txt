@@ -36,5 +36,25 @@ Thread Synchronization : Protecting access of critical/crucial data by using var
   - Join
   - lock
 
+Thread Pool :is a collection of threads that can be reused to perform job/activity. ThreadPool class with one of its method called QueueUserWorkItem(WaitCallBack(SomeMethod) will help in getting a thread from the pool to execute. If there are no threads available in the pool, then it queues the method to be executed until a thread is available.
 
-Windows Application :
+
+Task : Are program components(functions/methods) that make the application more responsive. Task objects typically are executed asynchronously on a thread pool, rather than synchronously on the main thread.
+
+
+Task Parallel Library : is a set of public types and API's (TPL).
+They simplify the job of developers, and allow parallel programming
+  - is a type of programming in which executions are carried out simultaneously
+  - The task must be independent
+  - Order of execution does not matter
+
+Thread                     Vs                  		     Task 
+- A class for creating and 				is an asynchronous operation as a part of TPL
+   manipulating work flow
+- No direct mechanism to return the 			The task can return a result
+  result from a thread
+- They can have only one task running at a time		They can have multiple tasks happening at the same time
+                                                        
+                                                        Implementation using async and await keywords
+							Task is a higher level concept of threads
+
