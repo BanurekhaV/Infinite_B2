@@ -18,3 +18,20 @@ Enhancements :
 
  - Local Functions : Whenever we want to execute some piece of code multiple times, then we can put those codes in an inner function known as Local Function. 
  - We can then call the inner function from the parent/outer function again and again
+ - We cannot overload local functions
+ - Access Specifiers are not allowed
+ - All variables in the enclosing scope, can be accessed.
+
+ - NameofExpression : is an operator which is essential whenever
+ there is error in the code, which is notified by the compiler.
+-  Names of different code artifacts are returned using nameof operator
+
+ - Exception Filters : allows us to specify a conditional clause for each catch block
+ - we need declare the filters in the same line as that of the catch block
+
+
+
+-Await in catch and Finally blocks : await a keyword is used to suspend the execution of the method until the awaited task is complete
+
+
+ 
