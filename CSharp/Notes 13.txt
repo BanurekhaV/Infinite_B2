@@ -1,0 +1,20 @@
+Enhancements :
+ - AutoProperty Initializers n Getter only property
+
+ - Dictionary Initializers 
+
+ - Throws  - throw
+
+ - Iterators : is a method which is used in an array or collections to retrieve the elements one by one. 
+- it uses the yield statement along with return to return the element.
+- If we want to stop the iteration, we use yield break
+- The return type of the Iterator is IEnumerable, IEnumerable<T>, IEnumerator, IEnumerator<T>
+- Points to remember :
+    1. Iterators can be used as a method, or as a property (get accessor)
+    2. Cannot use iterators in evenst, constructors, finalizers
+    3. yield is not a reserved word, but when we use it along the return or break statements, it conveys a special meaning
+    4. We can use multiple yield statements
+    5. Can be used with generic and non-generic collections
+
+ - Local Functions : Whenever we want to execute some piece of code multiple times, then we can put those codes in an inner function known as Local Function. 
+ - We can then call the inner function from the parent/outer function again and again
