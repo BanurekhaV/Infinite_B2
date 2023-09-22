@@ -34,4 +34,21 @@ Enhancements :
 -Await in catch and Finally blocks : await a keyword is used to suspend the execution of the method until the awaited task is complete
 
 
+
+- Expression Bodied Members : helps to define properties, methods etc by providing minimal and concise coding. It helps in achieving readability. It uses =>(fat arrow)operator to define the body of the method/property by getting rid of the curly braces, return keyword 
+
+Syntax
+[access specifiers][modifiers] <return type> <method name> <parameters> => expression
+
+ public int GetRectArea(int l, int b)=>l*b;
+
+- Query Expressions : 
+
+- Lambda Expressions :
+
+  int c= int a + int b;  c=Sum(a,b);
+int Sum(int a, int b)
+{
+  return a+b;
+}
  

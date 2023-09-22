@@ -33,7 +33,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>DotNet_Day14.Await_in_CatchnFinally</StartupObject>
+    <StartupObject>DotNet_Day14.LambdaExpressions</StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -49,9 +49,12 @@
     <Compile Include="Await_in_CatchnFinally.cs" />
     <Compile Include="Enhancements2.cs" />
     <Compile Include="ExceptionFilter_eg.cs" />
+    <Compile Include="Expression_Bodied.cs" />
+    <Compile Include="LambdaExpressions.cs" />
     <Compile Include="nameof_eg.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QueryExpressions.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
