@@ -1,0 +1,29 @@
+Tuples :is a data structure that contains a sequence of elements of different data types.
+ - While there are other ways to return multiple values from a method viz: 
+  1. Using Custom Types : Creating class with fields/properties and returning the object with multiple data to the caller
+  2. Ref and Out: Using ref and out might be a bit complex to understand and implement with good performance. Also they cannot be used with async tasks/methods
+  3. Using Dynamic Keyword : Since it is resolved only at the runtime, there will be performance issues due to conversions
+
+  4. Tuple way of returning is more convinient and logical to ensure clean coding and performance
+
+Deconstruction : is splitting up of tuple object into different types and use it later for other function calls/calculations
+
+
+Patter matching : is a feature introduced in c# 7.0, that allows us to test an expression for the given pattern. It is Boolean in nature. Either Yes or a No.
+
+ - It allows operations like :
+     type checking
+     null checking
+     comparision
+     object deconstruction
+     reuse creation (creation pattern)
+
+ is operator : earlier was only used to check compatability of 2 objects
+
+switch pattern : used like a regular switch to branch off logically
+
+case pattern 1:  { }; break;
+pattern1=>do somerhing
+
+
+

@@ -11,7 +11,7 @@ Enhancements :
 - The return type of the Iterator is IEnumerable, IEnumerable<T>, IEnumerator, IEnumerator<T>
 - Points to remember :
     1. Iterators can be used as a method, or as a property (get accessor)
-    2. Cannot use iterators in evenst, constructors, finalizers
+    2. Cannot use iterators in events, constructors, finalizers
     3. yield is not a reserved word, but when we use it along the return or break statements, it conveys a special meaning
     4. We can use multiple yield statements
     5. Can be used with generic and non-generic collections
