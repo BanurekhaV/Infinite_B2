@@ -9,7 +9,7 @@ Tuples :is a data structure that contains a sequence of elements of different da
 Deconstruction : is splitting up of tuple object into different types and use it later for other function calls/calculations
 
 
-Patter matching : is a feature introduced in c# 7.0, that allows us to test an expression for the given pattern. It is Boolean in nature. Either Yes or a No.
+Pattern matching : is a feature introduced in c# 7.0, that allows us to test an expression for the given pattern. It is Boolean in nature. Either Yes or a No.
 
  - It allows operations like :
      type checking
@@ -21,9 +21,25 @@ Patter matching : is a feature introduced in c# 7.0, that allows us to test an e
  is operator : earlier was only used to check compatability of 2 objects
 
 switch pattern : used like a regular switch to branch off logically
-
+switch with when 
 case pattern 1:  { }; break;
-pattern1=>do somerhing
+pattern1=>do something
+
+
+Extern Aliases : The extern keyword with an alias name is used to avoid conflicts. Give an alias name to the referenecd library assembly and use it with extern alias keyword above the namespaces inclusion
+
+extern alias L1;
+extern alias L2;
+
+using System;
+--
+--
+
+Non-Nullable Reference Types / Nullable References : Making the reference types also non-nullable there by avoiding NullReferenceExceptions. It is introduced from C# 8.0 
+
+If we want to give nulls to reference types, then we need use '?' operator to specify the same
+
+Employee ? e = null;
 
 
 

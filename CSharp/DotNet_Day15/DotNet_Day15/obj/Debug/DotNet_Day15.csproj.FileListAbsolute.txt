@@ -5,3 +5,8 @@ C:\Banu\Infinite\B2\CSharp\DotNet_Day15\DotNet_Day15\obj\Debug\DotNet_Day15.cspr
 C:\Banu\Infinite\B2\CSharp\DotNet_Day15\DotNet_Day15\obj\Debug\DotNet_Day15.csproj.CoreCompileInputs.cache
 C:\Banu\Infinite\B2\CSharp\DotNet_Day15\DotNet_Day15\obj\Debug\DotNet_Day15.exe
 C:\Banu\Infinite\B2\CSharp\DotNet_Day15\DotNet_Day15\obj\Debug\DotNet_Day15.pdb
+C:\Banu\Infinite\B2\CSharp\DotNet_Day15\DotNet_Day15\bin\Debug\ClassLibrary1.dll
+C:\Banu\Infinite\B2\CSharp\DotNet_Day15\DotNet_Day15\bin\Debug\ClassLibrary2.dll
+C:\Banu\Infinite\B2\CSharp\DotNet_Day15\DotNet_Day15\bin\Debug\ClassLibrary1.pdb
+C:\Banu\Infinite\B2\CSharp\DotNet_Day15\DotNet_Day15\bin\Debug\ClassLibrary2.pdb
+C:\Banu\Infinite\B2\CSharp\DotNet_Day15\DotNet_Day15\obj\Debug\DotNet_Day15.csproj.CopyComplete

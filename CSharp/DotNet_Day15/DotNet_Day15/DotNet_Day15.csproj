@@ -33,7 +33,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>DotNet_Day15.PatternMatching2</StartupObject>
+    <StartupObject>DotNet_Day15.Extern_Aliases</StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -47,6 +47,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Deconstruction_eg.cs" />
+    <Compile Include="Extern_Aliases.cs" />
     <Compile Include="PatternMatching.cs" />
     <Compile Include="PatternMatching2.cs" />
     <Compile Include="Program.cs" />
@@ -54,6 +55,18 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ClassLibrary1\ClassLibrary1.csproj">
+      <Project>{084b2a81-01a9-46f8-90aa-2f6cd54d8a0a}</Project>
+      <Name>ClassLibrary1</Name>
+      <Aliases>L1</Aliases>
+    </ProjectReference>
+    <ProjectReference Include="..\ClassLibrary2\ClassLibrary2.csproj">
+      <Project>{b4409bbd-b7ac-48cd-af93-0bc88312f669}</Project>
+      <Name>ClassLibrary2</Name>
+      <Aliases>L2</Aliases>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

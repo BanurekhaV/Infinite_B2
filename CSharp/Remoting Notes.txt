@@ -1,0 +1,35 @@
+Remoting : Is a mechanism for communication between objects of various applications that are not in the same process
+
+Microsoft provides  a framework for communication between remote objects.
+It is designed to hide various aspects like managing connections, marshalling data, reading writing xml, soap(Simple object access protocol) data
+The framework also provides services like 
+   - object activation
+   - life time support of objects
+   - communication channels
+   - transport messages
+   
+Types of Remotable Objects :
+1. Single Call :  Objects that serve one request
+2. Singleton : Objects that serve multiple clients. The server maintains the state of each client request.
+3. Client Activated Objects : Upon clients request for the remote object, the instance of the requested object is activated and the reference of the object is sent back to the client. A proxy gets created on the client side, using this reference. All calls will be executed on this proxy
+
+Domain : When an application is loaded in the memory, a process is created and within that an application domain is created
+
+Contexts : Application domain is divided into various contexts. A context is a set of common constraints, usage,access, functionalities within the object. A domain acts as a boundry. Request across context will be marshalled
+
+Marshaling: Specifies how a remote object is exposed to the client. Marshal by value and marshal by reference
+
+Proxies : is an instance of the remote object directly available to the client. It does all the marshalling across context and then forwards the request to the actual remote object
+
+Channel : a mechanism that allows data transfers through a stream of bytes.
+  httpChannel, tcpchannel
+
+Serialization and Deserialization : 
+
+2 tier arch - client and server
+3 tier arch - (Client -UI ), (MiddleLayer - Business Logic), (Data Layer - actual data)
+n tier arch
+
+Steps : Class Library (of which remote objects will be created)
+        Console Application - Server (Host for the Library)
+        Client Application 
