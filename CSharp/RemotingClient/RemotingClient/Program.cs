@@ -24,11 +24,11 @@ namespace RemotingClient
             Service service = (Service)Activator.GetObject(typeof(Service),
                 "http://localhost:85/OurFirstRemoteService");
 
+            //"tcp://localhost:8089/OurFirstRemoteService"
             //start calling the functions of the service class
             Console.WriteLine(service.SayHello("  Remote"));
             Console.WriteLine(service.HighestNumber(20,25));
             Console.Read();
-
         }
     }
 }

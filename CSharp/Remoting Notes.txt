@@ -32,4 +32,23 @@ n tier arch
 
 Steps : Class Library (of which remote objects will be created)
         Console Application - Server (Host for the Library)
-        Client Application 
+        Client Application
+
+Lease Management : Eg : Singleton object (by default has 5 minutes initial time to live, polling after every 10 seconds happens, and the lease can be increased by 2 minutes
+
+Lease time can be configured using 
+
+public override object InitializeLifetimeService()
+{
+Ilease lease= (ILease)base.InitialLifetimeService();
+if(lease.CurrentState==LeaseState.Initial)
+{
+  lease.InitialLeaseTime=TimeSpan.FromSeconds(25);
+  lease.SponsorshipTimeout= TimeSpan.FromSeconds(25);
+  lease.RenewOnCallTime = TimeSpan.FromSeconds(25);
+}
+return lease;
+}
+
+
+

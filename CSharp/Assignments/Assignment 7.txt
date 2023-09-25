@@ -1,0 +1,6 @@
+Assignment  :
+
+For the Remoting Server created in the class,  Create a Windows Client and use TcpChannel to register and render services of the Remote object.
+
+Hint : Use relevant controls in the client
+
