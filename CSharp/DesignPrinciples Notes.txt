@@ -1,0 +1,65 @@
+Software Engineering Principles :
+
+1. Seperation of Concern
+2. Modularization 
+3. Abstractions -(what rather than how)
+4. Anticipation of Changes :
+     - Genarality (non-coupled/de-coupled)
+     - Incremental Development 
+     - Consistency of Look and Feel
+5. DRY : Do Not Repeat Yourself
+6. KISS : Keep it Simple Stupid
+7. YAGNI: You Aren't Gonna Need It (Avoid Features and Functions that are not required)
+8. SOLID : Are Design Principles
+
+S : Single Responsibility Principle (SRP): Every class or a structure in the code should always have only one job to do
+
+O : Open Close principle (OCP) :A s/w module or a class is open to extension but closed for modification
+
+L : Liskov Substitution Principle (LSP) : It is an extionsion of OCP, where derived classes extend the base class without changing the behaviour of the base class (Usage of Interface Methods)
+
+I : Interface Seggregation Principle (ISP) : Clients should not be forced to implement interfaces that they do not want. Instead of one fat interface, many small/thin interfaces, based on set of methods, each one serving a single purpose
+
+D : Dependency Inversion Principle (DIP) : States that high level modules/classes (consuming class) should not depend on the low level modules/class (concrete implenting class). Both should depend on Abstraction (layered architecture)
+
+ DIP as a design principle suggests a solution to the dependency problem, but does not say how or the techniques for the same
+
+Inversion of Control (Ioc) :isthe actual mechanism that allows high level components to depend on the abstraction rather than the low level 
+
+"Inversion of Control" is a principle, and DI is Implementation
+
+Dependency Injection (DI) : is the design pattern to inject concrete implemention of the low level component into the high level component
+
+Ioc Container : is a programming framework that provides automatic DI of the components. It is also responsible for
+   1. Registration of a specific dependency type
+   2. Resolution : Creating and injection the dependency object into the actual requesting class
+   3. Disposition : Managing the lifetime of the dependencies
+
+DI can be used in the below manner :
+1. Constructor Injection : Instance of the dependency type can be passed as an argument to the constructor of the dependant class
+
+2. Method Injection : Instance of the dependency type can be passed as an argument to the method of the dependant class
+
+3. Property Injection : Instance of the dependency type can be injected to the specific property
+
+Software Design Patterns : 4 authors of the book named " Elements of Reusable Object Oriented Software were the ones, who had brought the concepts of Design Pattern. They are generally refereed to as GOF(Gang of Four) - Erich Gamma, Ralph, John, Richard Helm
+
+Design patterns are documented and tested solutions for recurring problems during development. These design patterns solve the problems of Object Creation and integration :
+   1. Object Creation and initialization, structural changes of classes and interfaces, Relationships between objects, Communication between objects. Based on these requirements, we broadly have 3 patterns
+
+1. Creational Design Pattern : (Object Creation and Initialization)
+ 
+   Eg :  Singleton, Factory, AbstractFactory, Builder,Prototype, Fluent Interface
+
+2. Structural Design Pattern :(changes of classes and interfaces, Relationships between classes)
+
+Eg: Adapter,Composite, Proxy, Bridge, Decorator
+
+3. Behavioural Design Pattern : (Communication between objects)
+
+Eg : Observer, Iterator, Command, Interpreter 
+
+
+
+
+
