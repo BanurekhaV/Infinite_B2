@@ -10,6 +10,7 @@ namespace FactoryPattern
     {
         string GetCardType();
         int GetCardLimit();
-        double GetAnnualCharges();
+        double GetAnnualCharges();        
     }
+        
 }

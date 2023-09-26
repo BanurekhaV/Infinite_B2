@@ -49,7 +49,7 @@ Design patterns are documented and tested solutions for recurring problems durin
 
 1. Creational Design Pattern : (Object Creation and Initialization)
  
-   Eg :  Singleton, Factory, AbstractFactory, Builder,Prototype, Fluent Interface
+   Eg :  Singleton, Factory, AbstractFactory, Builder,Prototype, Fluent Interface, Fcatory Method Pattern
 
 2. Structural Design Pattern :(changes of classes and interfaces, Relationships between classes)
 

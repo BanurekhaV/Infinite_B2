@@ -43,13 +43,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CreditCard.cs" />
-    <Compile Include="CreditCardFactory.cs" />
-    <Compile Include="MoneyBack.cs" />
-    <Compile Include="Platinum.cs" />
+    <Compile Include="AbstractDetails\CreditCard.cs" />
+    <Compile Include="AbstractDetails\CreditCardFactory.cs" />
+    <Compile Include="ProductFactory\MoneyBackFactory.cs" />
+    <Compile Include="ProductFactory\PlatinumFactory.cs" />
+    <Compile Include="ProductFactory\TitaniumFactory.cs" />
+    <Compile Include="Products\MoneyBack.cs" />
+    <Compile Include="Products\Platinum.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Titanium.cs" />
+    <Compile Include="Products\Titanium.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
