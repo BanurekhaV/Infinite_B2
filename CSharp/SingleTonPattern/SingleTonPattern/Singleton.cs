@@ -9,6 +9,7 @@ namespace SingleTonPattern
     //Sealed to avoid inheritance, public to be able to work with the class
     //dependency class
     public sealed class Singleton
+   // public class Singleton
     {
         //This variable will be incremented by 1 each time an object is created
         private static int counter = 0;
@@ -38,5 +39,16 @@ namespace SingleTonPattern
         {
             Console.WriteLine(msg);
         }
+
+        //class within class, nested class
+        //public class DerivedSingleton : Singleton
+        //{
+
+        //}
+
     }
+
+    
+
+
 }

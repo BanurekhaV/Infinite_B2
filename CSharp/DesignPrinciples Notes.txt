@@ -20,7 +20,7 @@ L : Liskov Substitution Principle (LSP) : It is an extionsion of OCP, where deri
 
 I : Interface Seggregation Principle (ISP) : Clients should not be forced to implement interfaces that they do not want. Instead of one fat interface, many small/thin interfaces, based on set of methods, each one serving a single purpose
 
-D : Dependency Inversion Principle (DIP) : States that high level modules/classes (consuming class) should not depend on the low level modules/class (concrete implenting class). Both should depend on Abstraction (layered architecture)
+D : Dependency Inversion Principle (DIP) : States that high level modules/classes (consuming class) should not depend on the low level modules/class (concrete implementing class). Both should depend on Abstraction (layered architecture)
 
  DIP as a design principle suggests a solution to the dependency problem, but does not say how or the techniques for the same
 
@@ -59,7 +59,23 @@ Eg: Adapter,Composite, Proxy, Bridge, Decorator
 
 Eg : Observer, Iterator, Command, Interpreter 
 
+SingleTon Pattern : Declaring a class with private parameter less constructor 
+ Declaring the class as sealed class
+ Declare private static variables,fields
+ Declare other public property, methods etc
+
+//Note: If we do not make our dependency class as sealed, then there are possibilities of derivation inside the parent class, even though the constructor of the parent is private(). This will create multiple instances of the parent class violating the Singleton pattern. Hence make the class sealed
+
+Comparision between Static class and Singleton
+
+Static                vs             		    Singleton
+- Is a class                         		  	 - is a Design pattern
+- static constructor                 		  	 - private constructor
+- Cannot inherit by default         		  	 - Unless we use the sealed modifier, it can be inherited 
+- cannot pass the static class object as a parameter     - We can pass the dependency class object as a parameter
+- has only one instance                                  - has only one instance                 
 
 
+Factory Pattern : As GOF, factory is an object used to create other objects. In technical terms, factory is a class with a method. This method is used to create and return other objects based on the input received.
 
-
+This design creates and initializes the object without exposing the logic of creation to the client
