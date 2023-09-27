@@ -1,0 +1,14 @@
+C:\Banu\Infinite\B2\CSharp\WindowsRemotingClient\WindowsRemotingClient\bin\Debug\WindowsRemotingClient.exe.config
+C:\Banu\Infinite\B2\CSharp\WindowsRemotingClient\WindowsRemotingClient\bin\Debug\WindowsRemotingClient.exe
+C:\Banu\Infinite\B2\CSharp\WindowsRemotingClient\WindowsRemotingClient\bin\Debug\WindowsRemotingClient.pdb
+C:\Banu\Infinite\B2\CSharp\WindowsRemotingClient\WindowsRemotingClient\bin\Debug\RemotingServer.exe
+C:\Banu\Infinite\B2\CSharp\WindowsRemotingClient\WindowsRemotingClient\bin\Debug\RemotingServer.pdb
+C:\Banu\Infinite\B2\CSharp\WindowsRemotingClient\WindowsRemotingClient\bin\Debug\RemotingServer.exe.config
+C:\Banu\Infinite\B2\CSharp\WindowsRemotingClient\WindowsRemotingClient\obj\Debug\WindowsRemotingClient.csproj.AssemblyReference.cache
+C:\Banu\Infinite\B2\CSharp\WindowsRemotingClient\WindowsRemotingClient\obj\Debug\WindowsRemotingClient.Form1.resources
+C:\Banu\Infinite\B2\CSharp\WindowsRemotingClient\WindowsRemotingClient\obj\Debug\WindowsRemotingClient.Properties.Resources.resources
+C:\Banu\Infinite\B2\CSharp\WindowsRemotingClient\WindowsRemotingClient\obj\Debug\WindowsRemotingClient.csproj.GenerateResource.cache
+C:\Banu\Infinite\B2\CSharp\WindowsRemotingClient\WindowsRemotingClient\obj\Debug\WindowsRemotingClient.csproj.CoreCompileInputs.cache
+C:\Banu\Infinite\B2\CSharp\WindowsRemotingClient\WindowsRemotingClient\obj\Debug\WindowsRemotingClient.csproj.CopyComplete
+C:\Banu\Infinite\B2\CSharp\WindowsRemotingClient\WindowsRemotingClient\obj\Debug\WindowsRemotingClient.exe
+C:\Banu\Infinite\B2\CSharp\WindowsRemotingClient\WindowsRemotingClient\obj\Debug\WindowsRemotingClient.pdb
