@@ -24,7 +24,7 @@ namespace AbstractFactoryPattern
             animal = animalfactory.GetAnimal("Shark");
             Console.WriteLine("Animal Chosen by you ? :" + animal.GetType().Name);
             sound = animal.speak();
-            Console.WriteLine($" The {animalfactory} animal {animal} sounds {sound}");
+            Console.WriteLine($" The Factory is :{animalfactory}, the Animal is :{animal} and the sound of the Animal is : {sound}");
             Console.WriteLine("----------------------------");
 
             //create respective factory class objects
@@ -36,7 +36,7 @@ namespace AbstractFactoryPattern
             animal = animalfactory.GetAnimal("Dog");
             Console.WriteLine("Animal Chosen by you ? :" + animal.GetType().Name);
             sound = animal.speak();
-            Console.WriteLine($" The {animalfactory} animal {animal} sounds {sound}");
+            Console.WriteLine($" The Factory is :{animalfactory}, the Animal is :{animal} and the sound of the Animal is : {sound}");
             Console.Read();
         }
     }

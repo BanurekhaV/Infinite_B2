@@ -24,7 +24,7 @@ D : Dependency Inversion Principle (DIP) : States that high level modules/classe
 
  DIP as a design principle suggests a solution to the dependency problem, but does not say how or the techniques for the same
 
-Inversion of Control (Ioc) :isthe actual mechanism that allows high level components to depend on the abstraction rather than the low level 
+Inversion of Control (Ioc) :is the actual mechanism that allows high level components to depend on the abstraction rather than the low level 
 
 "Inversion of Control" is a principle, and DI is Implementation
 
@@ -83,4 +83,26 @@ This design creates and initializes the object without exposing the logic of cre
 
 Factory Method : Creating an abstract factory and initializing the object
 
-Abstract factory Pattern : 
+Abstract factory Pattern : Grouping of common themed objects under a factory
+
+DI pattern: 
+
+Layered Arch :
+
+ User Interface (UI)
+ Business Logic - Business Access layer (BAL)
+ Data Layer - Data Access Layer (DAL)
+
+DI thru Unity Ioc Framework:
+- Tools->Nuget Package Manger -> Manage nuget Packages for Solution>
+
+In the Dialog box that opens up, go to browse and type unity.ioc.framework
+- Select the package and click install and wait for the installation by giving required approvals (click ok)
+- After Installation, we are ready to work with the Unity Ioc container
+- Create Ioc object, 
+- Register the service types. 
+- Resolve the Dependencies
+- start calling the methods
+
+
+
