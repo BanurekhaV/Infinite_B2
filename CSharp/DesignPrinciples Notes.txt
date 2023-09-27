@@ -94,7 +94,7 @@ Layered Arch :
  Data Layer - Data Access Layer (DAL)
 
 DI thru Unity Ioc Framework:
-- Tools->Nuget Package Manger -> Manage nuget Packages for Solution>
+- Tools->Nuget Package Manager -> Manage nuget Packages for Solution>
 
 In the Dialog box that opens up, go to browse and type unity.ioc.framework
 - Select the package and click install and wait for the installation by giving required approvals (click ok)
@@ -103,6 +103,8 @@ In the Dialog box that opens up, go to browse and type unity.ioc.framework
 - Register the service types. 
 - Resolve the Dependencies
 - start calling the methods
+
+
 
 
 

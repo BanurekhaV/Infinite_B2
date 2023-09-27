@@ -1,0 +1,7 @@
+C:\Banu\Infinite\B2\CSharp\DI_pattern2\DI_pattern2\bin\Debug\DI_pattern2.exe.config
+C:\Banu\Infinite\B2\CSharp\DI_pattern2\DI_pattern2\bin\Debug\DI_pattern2.exe
+C:\Banu\Infinite\B2\CSharp\DI_pattern2\DI_pattern2\bin\Debug\DI_pattern2.pdb
+C:\Banu\Infinite\B2\CSharp\DI_pattern2\DI_pattern2\obj\Debug\DI_pattern2.csproj.AssemblyReference.cache
+C:\Banu\Infinite\B2\CSharp\DI_pattern2\DI_pattern2\obj\Debug\DI_pattern2.csproj.CoreCompileInputs.cache
+C:\Banu\Infinite\B2\CSharp\DI_pattern2\DI_pattern2\obj\Debug\DI_pattern2.exe
+C:\Banu\Infinite\B2\CSharp\DI_pattern2\DI_pattern2\obj\Debug\DI_pattern2.pdb
