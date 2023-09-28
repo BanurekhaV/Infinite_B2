@@ -34,4 +34,19 @@ Test cases are always public (No other modifier is allowed)
 Test Cases do not have any return type
 The names of the test cases should be meaningful even if it is lengthy.
 
-Test Fixture : 
+[TestFixture] : Enbales the Class for testing
+
+[Test] : Marks the methods to be tested by the test runner
+
+[SetUp] : Is called everytime before running a test method
+
+[Ignore("<string values>")] : The marked method for testing is ignored by the test runner with a warning
+
+
+MSTest : An utility for running unit test in Visual studio
+- Provides lot of attributes
+- is similar to Testng (java framework)
+
+[TestClass] : Declaring a class as Test class
+[TestMethod] : Marks a method for testing
+[TestInitialize] : Will execute before the execution of all test methods
