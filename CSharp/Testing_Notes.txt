@@ -50,3 +50,12 @@ MSTest : An utility for running unit test in Visual studio
 [TestClass] : Declaring a class as Test class
 [TestMethod] : Marks a method for testing
 [TestInitialize] : Will execute before the execution of all test methods
+[TestCleanup]:
+[ClassInitialize]: will have to have the method marked as public static void <method name>(TestContext obj){}
+
+[ClassCleanUp]: will have to have only public static void <MethodName>()
+
+[AssemblyInitialize]: will have to have the method marked as public static void <method name>(TestContext obj){}
+
+[AssemblyCleanup]:will have to have only public static void <MethodName>()
+

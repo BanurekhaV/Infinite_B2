@@ -9,7 +9,6 @@ C:\Banu\Infinite\B2\CSharp\MSTest_TestProject\MSTest_TestProject\bin\Debug\MSTes
 C:\Banu\Infinite\B2\CSharp\MSTest_TestProject\MSTest_TestProject\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.xml
 C:\Banu\Infinite\B2\CSharp\MSTest_TestProject\MSTest_TestProject\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml
 C:\Banu\Infinite\B2\CSharp\MSTest_TestProject\MSTest_TestProject\bin\Debug\MSTestMainDLL.pdb
-C:\Banu\Infinite\B2\CSharp\MSTest_TestProject\MSTest_TestProject\obj\Debug\MSTest_TestProject.csproj.AssemblyReference.cache
 C:\Banu\Infinite\B2\CSharp\MSTest_TestProject\MSTest_TestProject\obj\Debug\MSTest_TestProject.csproj.CoreCompileInputs.cache
 C:\Banu\Infinite\B2\CSharp\MSTest_TestProject\MSTest_TestProject\obj\Debug\MSTest_TestProject.csproj.CopyComplete
 C:\Banu\Infinite\B2\CSharp\MSTest_TestProject\MSTest_TestProject\obj\Debug\MSTest_TestProject.dll
