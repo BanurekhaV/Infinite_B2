@@ -1,0 +1,37 @@
+Software Development Life Cycle :
+
+1. Water Fall Model : 
+2. Prototype Model :
+3. Incremental Model :
+4. Iterator Model
+5. V -Shaped Model :
+6. Spiral Model : 
+
+Agile Methodology : 
+
+Testing : Is a process of executing program/application with the intent of finding bugs.
+- Process of verification and validation
+
+
+Non-Functional Requirements : are those which are beyond the sw development, but are a part of the sw development/deployement/management
+
+Unit testing : Testing a small piece of code for correctness, reduce wastes,validations
+
+Framework for Unit Testing  :
+
+NUnit : open source s/w used for all .net applications
+MSTest : Integrated with Visual Studio
+MBTest :
+
+TDD : Test Driven Development, where the developers write test cases to test the code, and refactor the code if in case any test fails
+
+Testing Involves the concept of 3A's
+ 1. Arrange (Object Creation etc)
+ 2. Ask  (Method calling)
+ 3. Assert ( checking the correctness of the code)
+
+Test cases are always public (No other modifier is allowed)
+Test Cases do not have any return type
+The names of the test cases should be meaningful even if it is lengthy.
+
+Test Fixture : 

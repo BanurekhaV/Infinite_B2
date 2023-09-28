@@ -105,6 +105,14 @@ In the Dialog box that opens up, go to browse and type unity.ioc.framework
 - start calling the methods
 
 
+Pros and Cons of Dependency Injection
 
+Pros : Isolation (both for testing and developing)
+       Explicit defining of dependency class
+       Facilitating Good Design
+       Quick Switching of implementations
+
+Cons : Increased number of classes
+       Creation of many Interfaces
 
 
