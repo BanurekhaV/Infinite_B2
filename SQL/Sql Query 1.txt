@@ -41,3 +41,80 @@ add Phone varchar(10)
 --to give values to the newly added column
 
 update Emp set phone='444444' where EmpId=6
+
+--adding constraints after the tables creation and with data
+alter table emp
+add constraint Uc_phone unique (Phone)
+
+--default constraint will work during insert (if values is not provided)
+alter table emp
+add city varchar(15) default 'Delhi'
+
+--drop the above 'default' constraint with the system created name 
+alter table emp
+drop constraint DF__Emp__city__267ABA7A 
+--drop a column from the existing table
+alter table emp
+drop column city
+
+--adding a city column again and setting the default constraint later
+--using add constraint command
+alter table emp
+add city varchar(15)
+
+alter table emp
+add constraint df_city default 'Mumbai' for city
+
+--we cannot drop a column on which we have placed a constraint
+--in order to drop a column, we need to first drop the constraint attached
+
+alter table emp
+drop constraint df_city
+
+alter table emp drop column city
+
+-- check constrint for the salary column
+alter table emp
+add constraint salcheck check(salary>=5000)
+
+-- disabling/enabling  a check constraint
+
+alter table emp nocheck constraint salcheck
+
+alter table emp check constraint salcheck  -- enabling
+
+--to see the whole table object with all its constraints and types
+sp_help emp
+
+-- to drop  table object
+drop table tblDepartment
+
+create table tblDepartment
+(
+DeptId int primary key,
+Deptname varchar(20) not null,
+Budget int)
+
+create table tblEmployee
+(
+EID int primary key,
+EName varchar(30) not null,
+Gender char(7),
+Salary float check(salary >5000),
+DeptId int foreign key references tblDepartment(DeptId)
+)
+
+insert into tblDepartment values(1,'IT',10000),(2,'Payroll',8900),(3,'HR',5000),(4,'Admin',10000)
+
+insert into tblEmployee values(100,'Adithya','Male',6000,null),
+(103,'Arun','Male',6000,1),(102,'Bhuyash','Male',6200,1),
+insert into tblemployee values(105,'Bhavagna','Female',6400,3)
+
+select * from tblDepartment
+select * from tblEmployee
+
+--delete a row or many rows
+delete from dummy  -- delete all rows
+select * from Dummy
+delete from dummy where dummyid=5  -- restricted deletion 
+select * from Dummy

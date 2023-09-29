@@ -51,4 +51,53 @@ Relationships : an association between entities
      - One to Many  Eg : One student can enrol for many courses
      - Many to Many Eg : Many Students take many Tests
 
+Structured Query Language : 5 Components
+1. Data Definition Language (DDL) - Create, Alter,Drop,Truncate
+2. Data Manipulation Language (DML) - Insert, Delete, Update
+3. Data Query Language (DQL) - Select
+4. Data Control Language (DCL) - Grant, Revoke
+5. Transaction Control language (TCL) - Commit, Rollback
+
+Table : 
+create table <table name>
+( Colname, datatype size, constraints,
+...
+..
+)
+
+//to View the data
+select * from <tablename> (* indicates all rows and columns)
+
+Keys Concept : columns, which have special meaning
+ - Primary Key : a candidate key chosen as a principal means of identifying tuples within a relation.
+    - is a key which cannot have null values nor duplicate values.
+    
+ - Composite Key : a key that has more than 1 attribute
+ - Composite Primary Key : a primary key made up of more than one column
+
+ - Unique Key : is like a primary key but can take one null
+
+Integrity Constraints in DBMS : Constraints are the rules enforced on the data columns of a table. These are used to limit the type of data that can get into the table. This way we can ensure accuracy and reliabilty of the data in the database
+
+ -There are 3 types of constraint :
+    1. Domain Integrity Constraint : States that every element from a relation should respect the type and restrictions attached to the attribute (Eg. Default, Check)
+    2. Entity Integrity Constraint : States that no primary key can contain null values (primary key)
+    3. Referential Integrity : States that maintaining consistency among 2 or more relations is a must in RDBMS (Foreign key)
+
+ - default constraint : is a default value being set for a column, which will be used in case we do not supply value for the column
+
+ - Check Constraint : is used to validate the data that is being given thru insert/update commands against the constraint
+
+ - Foreign key : a key in one relation that must have a primary key reference in another relation
+   - Foreign keys will always look up to the primary key for its values. It is dependent on the pk value
+   - They can be duplicates
+   - They can be null
+
+   
+
+
+
+
+
+
 
