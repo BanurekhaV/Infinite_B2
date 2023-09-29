@@ -1,0 +1,54 @@
+What is Database and DBMS ? : Storage of inter related data that has been organized in such a fashion, that retrieving data is efficient and effective.
+
+Management System is a set of programs to access the data.
+An Environment that is both convinient and efficient to use
+
+Need for Database : Drawbacks of using File System to store data :
+     - Data Redundance and inconsistency
+     - Difficulty in accessing data
+     - Data Isolation - Multiple files and formats
+     - Integrity Problems
+     - Atomicity of Updates
+     - Concurrent access by multiple users
+     - Security Problems
+
+DBMS : Dbase III, IV, Foxbase, Foxpro
+  
+No Sql Database : MongoDB
+
+Architecture of Database : 
+  1. Physical Level : Describes how a record/data is sroted in the system (Bits and Bytes)
+  2. Logical Level : Describes data stored in the database, and thgeir relationships 
+   Customer Data : Cust id 1001(int)
+                   CustName "AAAA" (string)
+ 3. Applicational/View Level : Giving away required data and hiding secured data
+
+Data Modeling : A collection of tools for describing
+ - Data
+ - Data Relationships
+ - Data Semantics
+ - Data Constraints
+
+  - Hierachial Database (Focus 4GL)
+  - Network Database
+  - Relational Database : SQL Server, Oracle,MYSQL, Postgress, Informix, Sybase etc.. 
+  - Object Relational Database (Multimedia, Hyper Text based Database)
+
+Features of RDBMS : It follows the Relational Data Model. The data is stored in the form of Tables(Rows and Columns).
+The table is also known as relation
+The Columns are called as attributes (attributes together in a relation is known as 'Domain'
+The row is called as 'Tuple'
+Number of attributes is known as the 'Degree'
+Number of rows is known as 'Cardinality'
+
+E-R Modelling :
+Entity : is anything that exists and is distinguishable
+Entity Set : a group of similar entities
+Attribute : properties that describe an entity
+Relationships : an association between entities
+  Types of Relationships :
+     - One to One   Eg : Student is issued one ID Card
+     - One to Many  Eg : One student can enrol for many courses
+     - Many to Many Eg : Many Students take many Tests
+
+

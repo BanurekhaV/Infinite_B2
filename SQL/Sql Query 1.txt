@@ -1,0 +1,43 @@
+--Creation of Database
+create database InfiniteDB
+
+use InfiniteDB;
+
+--to create a table
+
+create table Dummy(
+dummyid int,
+dummyname varchar(25),
+dummyLocation varchar(30)
+)
+
+-- to add a new tuple/row/record
+insert into Dummy values(5,'Dummy1','Chennai' )
+--inserting values for only few columns
+--insert into tablename(column list) values(column list)
+insert into Dummy(dummyname,dummyLocation) values('Dummy2','Bangalore')
+
+--query the inserted records
+select * from dummy
+--creating table with constraints
+create table Emp
+(EmpId int primary key,
+EmpName varchar(30) not null,
+Salary int)
+
+insert into Emp values(5,'Arpita',5200) 
+
+--to insert many records with one insert statement
+insert into Emp values(3,'Amarnath',5000),
+(6,'Shilpa',5100),
+(2,'HimaBindu',5000)
+
+select * from Emp
+
+--we want to add a phone column to the existing table Emp with records
+alter table emp 
+add Phone varchar(10)
+
+--to give values to the newly added column
+
+update Emp set phone='444444' where EmpId=6
