@@ -88,3 +88,91 @@ from tblEmployee
 select sum(salary) from tblEmployee
 select sum(salary) as Total, avg(salary) as Average,
  max(salary) as Maximum,min(salary) Minimum from tblEmployee
+
+--Note : Functions cannot be used in the RHS of the where clause
+ select * from tblEmployee where salary>avg(salary) -- this is not poosible
+
+ --Wild Characters using Like operator 
+  -- 1. (Underscore '_' - subtitutes one character
+  -- 2. (Bracket '[]'  - match for a particular character in the given range
+  -- 3. (Caret '^' - match for a character not in the given range
+  -- 4. (Percentile '%' - substitues 0,1, or more characters
+
+  --workinh with % and _
+  select * from tblEmployee where ename like 'A%'
+  select * from tblEmployee where ename like 'A___'
+  select * from tblEmployee where ename like '_a%'
+  select * from tblEmployee where ename like '%i%'
+    select * from tblEmployee where ename like '%a'
+--[], ^
+  select * from tblEmployee where ename like '[mb]%'
+    select * from tblEmployee where ename like '_[mbar]%'
+	  select * from tblEmployee where ename like '_[m]a%'
+
+  select * from tblEmployee where ename like '_[^mbar]%'
+    select * from tblEmployee where ename like '[^mbar]a%'
+
+
+--distinct(avoid duplicates)
+select distinct(deptid) from tblEmployee   -- (one per repeatitions, and one for nulls, no duplicates)
+select count(deptid) from tblEmployee   --(excludes nulls, but includes duplicates)
+
+select count(Eid) from tblEmployee where deptid=2
+select count(*) deptid from tblemployee
+
+select all deptid from tblEmployee
+
+select * from Dummy
+insert into dummy values(1, 'd1','Blore'), (2,'d2','Hyd'), (3,'d3','Vizag')
+
+delete from dummy where dummyid=2
+rollback
+
+truncate table dummy 
+--Bulk insertion using 'insert into select' 
+--between 2 tables whose column nos. and datatypes match with each other
+
+create table dummy2
+(did int,
+dname varchar(20),
+dloc varchar(10))
+
+select * from dummy2
+
+insert into dummy2 
+  select * from dummy where dummylocation = 'Vizag'
+
+--sorting of display data
+--order by clause is by default ascending (asc)
+-- we can specify 'desc' for descending order
+
+--multiple column sort
+select deptid,ename,salary from tblEmployee
+order by deptid, ename desc
+
+--sorting on a column, which is not in the select list
+select eid, gender,deptid from tblemployee
+order by ename
+
+--sorting on the column alias name
+select ename as 'Employee Name', Salary from tblEmployee
+order by 'Employee Name'
+
+--single row functions :
+
+select lower('SQL SERVER') 
+select upper(ename) from tblemployee
+select len(ename) from tblemployee
+select SUBSTRING(ename, 1,3) from tblEmployee
+
+--group by
+select deptid, gender , avg(salary) 'Deptartement Average'
+from tblemployee
+group by deptid,gender
+
+--write a query to count no. of males and no.of females working
+select gender ,count(gender) from tblemployee
+group by gender
+--order by gender desc
+
+

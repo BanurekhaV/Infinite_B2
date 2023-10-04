@@ -28,3 +28,58 @@ Relational Algebra
 Column Alias name : is used to display proper meaningful column names so that the user can understand it better
  - can be followed by the actual column name with or without the key word 'as'. 
  - has to be enclosed in a single quote if there is space between the words, else not required
+
+--Various operatotrs in the Select Clause
+ 
+
+Difference between Drop and Truncate
+
+Drop : will remove the object from the database itself
+Truncate : will retain the object structure, but will only delete the rows
+
+Delete                     vs                  Truncate
+
+- DML command                                   DDL command
+- We can Rollback				We cannot rollback
+- Delete can have restrictions			No restrictions, complete delete
+    with a where clause
+- it is slow compared to truncate               It is faster
+- It retains the structure, even after all      It also retains the structure
+    records/rows are deleted
+
+--sorting of data for display purpose
+--order by clause is by default ascending (asc)
+-- we can specify 'desc' for descending order
+-- we can sort multiple columns with a ',' seperation
+-- we can sort on alias names
+-- we can sort on columns that are not a part of the select statement
+
+Sql Functions: Single Row Functions - operates on each row and returns one result per row
+               Multiple Row Functions - operates on group of rows and returns one result per group
+
+lower
+upper
+concat
+length
+substr
+
+Group By : To categorize the data into several small groups/sections, we use group by clause
+-- we have to group on all the columns that is in the select list except for the aggreagated column
+-- we cannot group on the columns that is not in select list
+-- we cannot group on alias names of the columns
+
+
+--order of the query
+
+select .... from ...where.. group by .. having... order by..
+
+--order of the query execution
+1. from
+2. where
+3. group by
+4. having
+5. order by
+6. select
+
+
+
