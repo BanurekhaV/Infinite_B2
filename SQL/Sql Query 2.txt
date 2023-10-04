@@ -176,3 +176,71 @@ group by gender
 --order by gender desc
 
 
+--write a query to display the count of empid, sum of their salaries department wise
+
+select deptid, count(eid)as No_Of_Employees, avg(salary) as Total_Salary
+from tblEmployee
+--where salary>avg(salary)  cannot use where to restrict groups
+group by deptid
+having avg(salary)>6700
+
+select deptid, min(salary) from tblEmployee
+group by deptid
+having min(salary)>=6800
+
+--give the list of managers who have atleast 3 people reporting to them
+/* select mgrid, count(eid) from tblemployee
+group by mgrid
+having count(eid)>3   */
+
+select * from tblDepartment
+--department name wise maximum salary
+--involves 2 tables
+
+select d.Deptname, max(e.salary) as 'Highest Salary'
+from tblDepartment d, tblEmployee e
+where d.DeptId = e.DeptId
+group by d.Deptname
+
+--Joins : 
+-- inner join is equal to natural join,equi join 
+-- left outer join
+-- right outer join
+-- full outer join
+-- cross join - a cartesian product
+-- self join
+
+--cross join 
+select * from tblEmployee, tblDepartment  --is also written as below
+
+select * from tblEmployee cross join tblDepartment
+
+--self join - join the table with itself
+/* select e.ename as 'Subordinate', m.ename as 'Supervisor' 
+from tblemployee e join tblemployee m on e. mgrid= m.eid   */
+
+--join/inner join
+select * from tblDepartment d inner join tblEmployee e
+on d.DeptId=e.DeptId
+order by e.deptid
+
+--outer joins -- left join or left outer join
+select * from tblDepartment d left outer join tblEmployee e
+on d.DeptId=e.DeptId
+order by e.deptid
+
+--right outer join
+select * from tblDepartment d right join tblEmployee e
+on d.DeptId=e.DeptId
+order by e.deptid
+
+--full outer join
+select * from tblDepartment d full  outer join tblEmployee e
+on d.DeptId=e.DeptId
+order by e.deptid
+
+
+
+
+
+

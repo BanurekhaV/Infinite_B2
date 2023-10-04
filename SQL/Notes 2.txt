@@ -81,5 +81,11 @@ select .... from ...where.. group by .. having... order by..
 5. order by
 6. select
 
+Where clause                   vs              Having Clause
 
+restrictions on the rows                       restrictions on the group
+
+--Queries involving more than one table
+
+Joins: 
 
