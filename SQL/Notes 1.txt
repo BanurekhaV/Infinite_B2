@@ -93,6 +93,10 @@ Integrity Constraints in DBMS : Constraints are the rules enforced on the data c
    - They can be duplicates
    - They can be null
 
+
+
+
+ 
    
 
 

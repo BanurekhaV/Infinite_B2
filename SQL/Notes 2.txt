@@ -1,0 +1,30 @@
+Data Types : Supports almost all the data types
+  Char, varchar() text, ntext, nvarchar, nvarchar(max), int, float, decimal, double, numeric
+  date, datetime, year, image, real, bool,
+
+Integrity Constraints on the columns of the Table
+ 1. Primary Key
+ 2. Unique Key
+ 3. Foreign Key
+ 4. Not Null
+ 5. Default
+ 6. Check
+
+- the above constraints can de declared either at column level or at the table level
+
+-Identity key column : is like a primary key because it does not accomodate nulls or duplicates
+  - The data is inserted automatically using the seed and the increment value
+  - The default seed is 1 and the increment value is 1 (we can change the seed and increment value)
+  - Can be applied to integer datatypes
+
+Relational Algebra
+ Selection  - Restriction (where) no of rows/tuples/records
+ Projection - Restriction of no.of columns
+ Join
+ Union
+ Difference
+ Divide
+
+Column Alias name : is used to display proper meaningful column names so that the user can understand it better
+ - can be followed by the actual column name with or without the key word 'as'. 
+ - has to be enclosed in a single quote if there is space between the words, else not required
