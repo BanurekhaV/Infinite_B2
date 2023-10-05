@@ -61,4 +61,119 @@ order by deptno desc
 --find the list of employees who earn less than any manager, but they should not be a manager
 
 select ename,job,salary from employee 
-where sal <any (select sal from employee where job like 'M%')
+where sal <any (select sal from employee where job like 'M%') and job <>'Manager'
+
+
+--case in sql
+create table casetable(cid int, casename varchar(20))
+
+insert into casetable values(5,'White'),(2,'Blue'),(3,'Green'),(4,'Yellow')
+select * from casetable
+
+--simple case without else
+select cid, casename,
+case casename  
+   when 'Red' then 'Danger'
+   when 'Blue' then 'Primary'
+   when 'Green' then 'Success'
+end as remarks
+from casetable
+
+--simple case with else
+select cid, casename,
+case casename  
+   when 'Red' then 'Danger'
+   when 'Blue' then 'Primary'
+   when 'Green' then 'Success'
+   else 'Alert'
+end as colors
+from casetable
+  
+--searched case w/o else
+
+select cid, casename,
+case
+   when casename='Red' then 'Danger'
+   when casename='Blue' then 'primary'
+   when casename='Green' then 'Success'
+end 'Color descriptions' from casetable
+
+--searched case with else
+
+select cid, casename,
+case
+   when casename='Red' then 'Danger'
+   when casename='Blue' then 'primary'
+   when casename='Green' then 'Success'
+   else 'Incorrect Color'
+end 'Color descriptions' from casetable
+
+select * from tblEmployee
+
+--nested case inside if else
+
+declare @salesmade int, @sal int
+set @salesmade=100
+select @salesmade as 'Total Sales'
+print 'The Total Sales made is' + ' '+ cast(@salesmade as varchar(10))
+select @sal=salary from tblemployee where eid=110
+print 'Employee - Sonu''s Salary is ' + ' ' + cast(@sal as varchar(10))
+if @salesmade>500
+  select 'Bumper Sales'
+else
+  begin
+    select case
+      when @salesmade between 100 and 200 then 'Poor Sales'
+	  when @salesmade between 201 and 300 then 'OK Sales'
+	  when @salesmade between 301 and 500 then 'Good Sales'
+	else 'No Sales At All'
+    end as saladata
+ end
+
+ --nested case
+ declare @totalsales int
+ set @totalsales=100
+ select case
+    when @totalsales >=500 then 'Bumper Sales'
+	when @totalsales <500 then
+	 case
+        when @totalsales between 101 and 200 then 'Ok Sales'
+	    when @totalsales between 201 and 300 then 'Good Sales'
+	    when @totalsales between 301 and 500 then 'Very Good Sales'
+	   else 'No Sales At All'
+	 end
+  end as saladata
+
+  --casting/conversions
+  select 1+'2'
+  select 1+2
+  select 1+'a'
+
+  select cast('05-10-2023' as datetime)
+  select cast('Helloworld' as datetime)
+
+--TSql
+--eg 1
+begin
+declare @v1 int =50
+declare @v2 int =100
+declare @sum int
+set @sum= @v1 + @v2
+print 'The total of v1 and v2 is '+ ' ' + cast(@sum as varchar(10))
+select @sum
+end
+
+--eg 2
+
+declare @a int;
+declare @b int;
+set @a=10;
+set @b=40
+begin
+  if(@a > @b)
+   print ' a is greater'
+  else
+   print 'b is greater'
+end
+
+

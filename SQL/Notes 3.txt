@@ -18,8 +18,25 @@ Single Row subqueries : return one value
 
 Multi Row subqueries : return more than one value
   operators : in, any, all in conjunction with the single row operators
-PlSQl
-Case
-Set Commands
+
+Case : 2 types of case
+ 1. Simple case : 1. case keyword is immediately followed by case expression and before when
+                  2. Value exists for each when statement
+
+ 2. Searched case : 1. Case keyword is followed by when statement. There is no expression between case and when
+                    2. Boolean expression exists for each when statement
+
+ 3. Nested case : case inside if else , case inside case
+
+
+T-Sql (Transact Sql) : declare variables, if else construct, while loops, break, continue
+
+variables are declared using a single '@' symbol  (local variables)
+'@@' global variables
+--assigning values to local variables is done using 'set' keyword or 'select'
+
+
+
+Set Commands :
 CTE
 
