@@ -1,0 +1,25 @@
+Employee Name           Manager Name
+Smith			Ford
+Allen			Blake
+
+--self join query 
+select e1.ename as 'Employee Name', m1.ename as 'Manager Name'
+from Employee e1 join Employee m1 on e1.empno=m1.mgr-id
+
+Subqueries : Are query within a query which can be nested
+             We have to enclose the subqueries in parenthesis
+             Place subqueries on the right hand side of the comparision operator
+             Always the inner query selects the attribute that is required by the outer query
+             We have to use single row operators with single row subquery and
+             Multi row operators with multi row subquery
+
+Single Row subqueries : return one value
+  operators : =, >,<,>=,<=,<>
+
+Multi Row subqueries : return more than one value
+  operators : in, any, all in conjunction with the single row operators
+PlSQl
+Case
+Set Commands
+CTE
+

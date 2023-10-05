@@ -1,0 +1,64 @@
+use infinitedb
+
+select * from tblEmployee
+
+--subqueries (query within a query)
+--All employee names who earn more than Hannah
+--1. find out what hannah's salary
+--2. find all employees salary > hannah
+select salary from tblEmployee where ename like 'Hannah'
+select ename from tblEmployee where salary > 6800
+
+--using subquery for the above question
+select ename, salary from tblemployee   -- main query that makes use of the output from inner query
+where salary > 
+               (select salary from tblEmployee   -- inner query that executes first
+			   where ename like 'Hannah')
+
+--multi row subquery
+--find all employees and their salaries who earn more than all the employees of dept 2
+select ename ,salary from tblEmployee
+where salary >all (select salary from tblemployee where deptid=2)
+
+--find all employees and their salaries who earn less than all the employees of dept 2
+select ename ,salary from tblEmployee
+where salary <all (select salary from tblemployee where deptid=2)
+
+--find all employees and their salaries who earn more than any of the employees of dept 2
+select ename ,salary from tblEmployee
+where salary >any (select salary from tblemployee where deptid=2)
+
+--find all employees and their salaries who earn less than any of the employees of dept 2
+select ename ,salary from tblEmployee
+where salary <any (select salary from tblemployee where deptid=2)
+
+--find all employees and their salaries who earn equal to that of the employees of dept 2
+select ename ,salary from tblEmployee
+where salary in (select salary from tblemployee where deptid=1)
+
+--multiple subquery
+-- display the names,job and salary of employees where the job is that of 7900 (clerk)
+ -- and salary greater than that of 7369 (800)
+
+/* select ename,job,salary
+from employee where job = (select job from employee where empno=7900)
+and salary > (select salary from employee where empno=7369)
+
+select ename,job,salary from employee where job='clerk' and salary >800
+
+--nested sub query
+--display the name, job and salary of all employees who are having the job as that of Smith
+select ename,job,salary
+from employee where job = (select job from employee where empno = 
+                                           (select empno from employee where ename='Smith'))
+
+--list department wise minimum salary which are greater than dept no 20
+select deptno, min(salary) from employee 
+group by deptno
+having min(salary)>(select min(salary) from employee where deptno=20)
+order by deptno desc
+
+--find the list of employees who earn less than any manager, but they should not be a manager
+
+select ename,job,salary from employee 
+where sal <any (select sal from employee where job like 'M%')
