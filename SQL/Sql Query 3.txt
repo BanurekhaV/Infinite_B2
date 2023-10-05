@@ -177,3 +177,74 @@ begin
 end
 
 
+--eg 3
+--increase the salary of an employee
+begin
+   declare @esal float
+   declare @ename varchar(20)
+   select @ename=ename, @esal=salary from tblemployee where eid=105
+   print 'Name of the Employee : '+ ' '+ @ename
+   print  @ename + ' ' + 'Salary is :' + ' ' +cast(@esal as varchar(10))
+   if(@esal <=6500)
+     begin
+	   set @esal=@esal + 3000
+	   print 'Employees Revised Salary is' + '  '+ cast(@esal as varchar(20))
+	 end
+	 else
+	   begin
+	    set @esal=@esal+500
+		print 'Salary is OK Now'
+       end
+end
+
+--while 
+
+declare @ctr int=1;
+while @ctr<=5
+ begin
+   print @ctr
+   set @ctr=@ctr+1
+  end
+
+--continue,break
+
+declare @ctr1 int=0;
+while @ctr1<=5
+ begin
+    set @ctr1=@ctr1+1
+	if @ctr1=4
+	--break
+	continue
+   print @ctr1  
+  end
+
+  --corelated sub query
+  --eg second highest salary
+  select * from tblEmployee
+
+  select e.ename, e.salary from tblemployee e
+  where 2=(select count(salary) from tblemployee p where p.salary >=e.salary)
+
+  --find all the employees whose salary is greater than the average salary of the department
+
+  select deptid, avg(salary) from tblemployee
+  group by deptid
+
+  select e.ename, e.salary from tblemployee e
+  where salary > (select avg(salary) from tblemployee p
+            where p.DeptId=e.DeptId)
+
+  --we can convert the above corelated subquery using joins
+   select e.ename, e.salary from tblemployee e join
+   (select deptid, avg(salary) as dept_average from tblemployee
+   group by deptid) as t on e.deptid=t.deptid where e.salary > t.dept_average
+
+   --update salary of all employees, whose salary is the lowest in that department
+   -- corelated query
+   update tblemployee set salary = salary + 100 from tblemployee t1 where salary <=
+      (select min(t2.salary) from tblEmployee t2 where t2.deptid=t1.deptid)
+
+
+  
+
+

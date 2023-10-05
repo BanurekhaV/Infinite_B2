@@ -19,6 +19,13 @@ Single Row subqueries : return one value
 Multi Row subqueries : return more than one value
   operators : in, any, all in conjunction with the single row operators
 
+Corelated Sub Queries : is a way of reading every row of the table and comaparing values in each row against related data
+                        It is used whenever a subquery must return a different result or set of results for each row value by the main query
+
+Normal Subquery : The inner select query executes once and returns the value to the outer query. It is then removed from the memory
+
+Co-related Subquery : The inner query executes once for each candidate row of the outer query. In other words the inner query is driven by the outer query.
+
 Case : 2 types of case
  1. Simple case : 1. case keyword is immediately followed by case expression and before when
                   2. Value exists for each when statement
@@ -34,7 +41,6 @@ T-Sql (Transact Sql) : declare variables, if else construct, while loops, break,
 variables are declared using a single '@' symbol  (local variables)
 '@@' global variables
 --assigning values to local variables is done using 'set' keyword or 'select'
-
 
 
 Set Commands :
