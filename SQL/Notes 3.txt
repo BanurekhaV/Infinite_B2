@@ -43,6 +43,28 @@ variables are declared using a single '@' symbol  (local variables)
 --assigning values to local variables is done using 'set' keyword or 'select'
 
 
-Set Commands :
-CTE
+Set Commands : are operators used to work with multiple tables
+  List of set operators : Union, Union all, intersect, except
 
+Rules for using set operators :
+    1. the result set of both queries must have the same number of columns
+    2. The data type of columns of both result set must be same
+    3. If we want to sort the final result, then the order by clause must be given at the end of the query
+    4. The positional ordering of the columns returned by the queries must be same
+
+Difference between union and union all :
+-----------------------------------------
+Union removes duplicates occuring by concatenating 2 resultsets
+Union All does not remove duplicates
+
+Intersect : set operator that matches the resultset of top query with the resultset of bottom query and selects only the matching rows
+
+Except : set operator which works the opposite of intersect
+
+
+CTE : Common table Expression : allows us to define a temporary named resultset that is temporarily avialable in the execution scope of statements viz, select,insert,update,delete 
+
+syntax : with expression_name(col list)
+         as
+         (cte definition)
+       sql statements

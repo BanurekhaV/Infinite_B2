@@ -245,6 +245,63 @@ while @ctr1<=5
       (select min(t2.salary) from tblEmployee t2 where t2.deptid=t1.deptid)
 
 
+--union and union all
+create table table2(Tid int identity, Tname varchar(30),
+TGrade char(1),TPercentage int)
+
+select * from table1
+select * from table2
+
+insert into table2 values('Shreyank','A',90),('Prachi','A',80),('Varsha','B',55),('Zainab','B',60)
+  
+  --union
+select TGrade,TPercentage from table1
+union 
+select TGrade,TPercentage from table2
+
+--union all
+select TGrade,TPercentage from table1
+union all
+select TGrade,TPercentage from table2
+
+--intersect
+select * from dummy1
+select * from dummy2
+
+create table dummy1(Id int identity, Dname varchar(20),Age int, City varchar(20))
+
+insert into dummy1 values('John',25,'Seatle'),('Ben',26,'NewYork'),('Robert',25,'Chicago')
+
+create table dummy2(BonusId int, Id int, BonusAmt float)
+
+insert into dummy2 values(200,1,25000),(202,3,20000)
+
+select dummy1.Id,dname,dummy2.bonusamt from dummy1 left join dummy2 on dummy1.id=dummy2.id
+intersect
+select dummy1.Id,dname,dummy2.bonusamt from dummy1 right join dummy2 on dummy1.id=dummy2.id
+
+--except
+select dummy1.Id,dname,dummy2.bonusamt from dummy1 left join dummy2 on dummy1.id=dummy2.id
+except
+select dummy1.Id,dname,dummy2.bonusamt from dummy1 right join dummy2 on dummy1.id=dummy2.id
+
+--cte
+
+with cte1(AnnualSalary,EmpName, Department) as
+ (select (salary*12),ename, tbldepartment.deptname from tblemployee join
+ tblDepartment on tblEmployee.DeptId=tblDepartment.deptid)
+
+ select AnnualSalary,Empname,Department from cte1
+ where AnnualSalary>85000
+
+ --eg 2
+ with cte1(AnnualSalary,EmpName, Department) as
+ (select (salary*12),ename, tbldepartment.deptname from tblemployee join
+ tblDepartment on tblEmployee.DeptId=tblDepartment.deptid)
+
+ select Department, avg(annualsalary) from cte1
+ group by department
+ having avg(annualsalary)>85000
   
 
 
