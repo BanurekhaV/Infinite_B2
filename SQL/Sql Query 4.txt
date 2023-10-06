@@ -1,0 +1,25 @@
+--rank
+
+create table Marks(stdname varchar(20), class_subject varchar(10),marks int)
+
+insert into Marks values('Muthu','Maths',80),('Muthu','Science',70),('Muthu','English',65)
+insert into Marks values('Shahbaz','Maths',68),('Shahbaz','Science',85),('Shahbaz','English',90)
+insert into Marks Values('Sahithi','Maths',60),('Sahithi','Science',90),('Sahithi','English',64)
+
+insert into Marks values('Shreya','Maths',68),('Shreya','Science',85),('Shreya','English',60)
+select * from marks
+update marks set marks=65 where stdname='Sahithi' and class_subject='English'
+
+--query with row_number()
+select stdname,class_subject,marks,ROW_NUMBER()over(order by marks desc)ranking from marks
+
+--query with rank() -- skips the rank numbers whenever there is a tie(duplicate value)
+select stdname,class_subject,marks,rank()over(order by marks desc)ranking from marks
+
+--query with dense_rank() -- unlike rank(), this does not skip rank numbers
+select stdname,class_subject,marks,dense_rank()over(order by marks desc)ranking from marks
+
+--ranks with partitions
+select stdname,class_subject,marks,rank()over(partition by class_subject order by marks desc)ranking from marks
+
+select stdname,class_subject,marks,dense_rank()over(partition by class_subject order by marks desc)ranking from marks

@@ -302,6 +302,56 @@ with cte1(AnnualSalary,EmpName, Department) as
  select Department, avg(annualsalary) from cte1
  group by department
  having avg(annualsalary)>85000
-  
 
 
+--create view vwmyview 
+--as 
+--select e.eid, e.salary, d.deptname from tblemployee e inner join tbldepartment d
+--on e.deptid=d.deptid
+
+--select * from vwmyview
+
+--sp_helptext vwmyview
+
+----DML operations with cte's
+--with empcte1(deptid,dname)
+--as(select e.DeptId,d.Deptname from tblemployee e 
+--inner join
+--tblDepartment d on e.DeptId=d.DeptId)
+
+--update empcte1 set deptid=4 where dname='HR'
+
+
+--with empcte2(deptid,dname)
+--as(select deptid, deptname from tblDepartment)
+
+--insert into empcte2 values(5,'Operations')
+----delete from empcte2 where deptid=5
+
+select * from tbldepartment
+select * from tblEmployee
+
+--multiple cte's
+
+with mycte1
+as(select * from tblemployee),
+
+cte2 as(select * from tblDepartment)
+
+select mycte1.Ename, mycte1.Salary,mycte1.gender,cte2.Deptname from mycte1 inner join cte2
+on mycte1.deptid=cte2.deptid
+
+
+--recursive cte'2
+with mycte(empno,ename,mgr_id,emplevel)
+as(select empno,ename,mgr_id, 1 emplevel
+from emp where mgr_id is null     -- initial query
+
+union all
+
+select e.empno,e,ename,e.mgr_id, mct.emplevel + 1 -- recursive query
+from emp e inner join mycte mct on e.mgr_id=mct.empno
+where e.mgr_id is not null)
+
+select * from mycte
+order by emplevel

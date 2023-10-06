@@ -1,0 +1,7 @@
+Ranks() - Window Function to rank the rows based on the data value
+
+Indexes :
+
+Transactions :
+
+Stored Procedure : 

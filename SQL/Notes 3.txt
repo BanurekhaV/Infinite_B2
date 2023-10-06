@@ -63,8 +63,21 @@ Except : set operator which works the opposite of intersect
 
 
 CTE : Common table Expression : allows us to define a temporary named resultset that is temporarily avialable in the execution scope of statements viz, select,insert,update,delete 
+-We can perform dml operations using cte's
+-We can have multiple ctes seperated with a ',' (comma) and  a singlw 'with' keyword for the fidrt cte definition
+-We can refer one cte within another cte
+-We can have recursive cte
 
-syntax : with expression_name(col list)
+syntax : with <ctename>/expression_name(col list)
          as
-         (cte definition)
-       sql statements
+         (cte definition),
+        ctename2 as(select ....)
+
+       sql statements  - main query
+
+Advantages of CTE's : Reusability, Complex quries can be broken down into different ctes expressions, provides more readbility to the queries, does not occupy memory
+
+Disadvantages : CTE result set cannot be used by another Sql statement, not supported by all database platforms, developers may find it difficult to qrite cte queries
+  
+
+
