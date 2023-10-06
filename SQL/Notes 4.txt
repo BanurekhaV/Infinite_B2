@@ -1,6 +1,20 @@
 Ranks() - Window Function to rank the rows based on the data value
 
-Indexes :
+Indexes : is a mechanism of sorting the data physically within the database schema
+They are of 2 types : 
+    1. Clustered Index: One per table
+                        Sorts the physical data everytime there is a DML Operation
+
+    2. Non-Clustered Index : We can have many non-clustered index for a table
+                          Creates a index table where the data is sorted
+                          Hence occupies hard disk space 
+                          Any manipulations done to the table, the index table also has to be updated and sorted accordingly
+
+    3. Filtered Index : is a non-clustered index with a predicate used in situtaions where we need only the portion of the index.
+                        
+
+ Unique Clusterd : ensuring no duplicates, sorting the physical table
+ Unique Non-Clustered : ensures no duplicates
 
 Transactions :
 

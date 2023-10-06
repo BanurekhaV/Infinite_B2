@@ -23,3 +23,53 @@ select stdname,class_subject,marks,dense_rank()over(order by marks desc)ranking 
 select stdname,class_subject,marks,rank()over(partition by class_subject order by marks desc)ranking from marks
 
 select stdname,class_subject,marks,dense_rank()over(partition by class_subject order by marks desc)ranking from marks
+
+
+
+--index
+sp_help casetable
+
+select * from casetable
+update casetable set cid=1 where casename='Blue'
+insert into casetable values(3,'Beige')
+
+create unique clustered index idxcaseid on casetable(cid)
+
+create clustered index idx2 on casetable(casename) -- not more than 1 clustered index is allowed/table
+
+--drop index
+drop index casetable.idxcaseid
+
+--non-clustered index
+
+create nonclustered index idxid on casetable(cid)
+
+drop index casetable.idxid
+
+--just clustered index
+create clustered index idx1 on casetable(cid)
+select * from casetable
+where cid=3
+
+--non clustered index on name column of the emp
+create nonclustered index idxname on emp(empname)
+
+select * from emp where empname like 'S%'
+
+--filtered index
+create index ixphone on emp(phone)
+where phone is not null
+
+create index idxdept on tblemployee(deptid)
+where deptid is not null
+
+select * from tblEmployee where deptid is not null
+
+create table indexsample(sampleid int, sname varchar(20),sage int, city varchar(30))
+insert into indexsample values(3,'aaa',3,'Pune'),(6,'bbb',15,'Mumbai'),(1,'ccc',32,'Kolkatta'),
+(5,'ddd',21,'Chennai')
+
+select * from indexsample
+where city like 'K%'
+
+create nonclustered index idxcity on indexsample(city)
