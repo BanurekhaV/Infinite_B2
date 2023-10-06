@@ -16,6 +16,41 @@ They are of 2 types :
  Unique Clusterd : ensuring no duplicates, sorting the physical table
  Unique Non-Clustered : ensures no duplicates
 
-Transactions :
+Transactions : A single unit of work that contains one or more sql statements
 
-Stored Procedure : 
+Transactions begins with the first DML statement being executed and 
+             end with one of the following events
+                - A commit or a Rollback is issued
+                - Auto Commit
+                - The user Exits
+                - The system crashes
+
+Transaction management ensures
+      - Data Consistency
+      - Preview data changes before making it permanent
+      - Group logically related operations
+
+All transactions should start with a begin transaction
+
+Save Points/Transaction : Are Logical markers/blocks of a set operations in a transaction
+
+ ACID Properties
+A-Atomicity
+C-Consistency
+I-Isolation       
+D-Durability
+
+Locks are of 2 types :1. shared lock, 2. exclusive lock
+
+
+Stored Procedure :  are saved sql statements
+  - can be reused
+  - they are faster in performance
+  - they are parsed once 
+  - they create an execution plan once
+  
+when called, they simply execute
+
+-Every procedure has an integer return type
+-Procedures can take any number of inputs
+-Procedures can return output values

@@ -73,3 +73,72 @@ select * from indexsample
 where city like 'K%'
 
 create nonclustered index idxcity on indexsample(city)
+
+
+
+--transactions
+
+begin transaction
+  select * from tblemployee where eid=100
+ update tblemployee set deptid=3 where eid=100
+   select * from tblemployee where eid=100
+   commit
+
+   --eg 2
+begin tran
+ insert into tblemployee values(200,'Banurekha','Female',6000,1)  -- has to be committed
+ select * from tblemployee
+	save tran t1
+  delete from tblemployee where eid=200
+  select * from tblemployee
+    save tran t2
+update tblDepartment set deptname='Accounts' where deptid=4
+  select * from tblDepartment
+  rollback tran t1
+  commit
+
+
+  --eg 3
+  begin tran
+ insert into tblemployee values(201,'Gowtham','Male',6000,1)  -- has to be committed
+ select * from tblemployee
+	save tran t1
+  delete from tblemployee where eid=200  -- has to be committed
+  select * from tblemployee
+    save tran t2
+update tblDepartment set deptname='Accounts' where deptid=4
+  select * from tblDepartment
+  rollback tran t2
+  commit
+
+  select * from tblemployee
+  select * from tblDepartment
+
+
+--procedures
+--eg 1.
+create procedure sp_myproc1
+as
+begin
+  select 'Hello World!!'
+end
+
+-- to execute the above procedure
+execute sp_myproc1
+--or
+
+exec sp_myproc1
+
+
+create or alter proc  myproc2
+as
+begin
+select * from tblemployee where salary between 6800 and 7500  and 
+deptid in(1,3)
+end
+
+--to execute use either exec/execute or simply call it by its name
+myproc2
+
+--to drop a procedure
+drop procedure myproc2
