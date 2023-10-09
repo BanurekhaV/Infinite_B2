@@ -252,3 +252,111 @@ sp_sellingproducts 10,5  -- will terminate the transaction as the @@Error variab
                         -- a number > 0 (FK violation)
 
 
+--Scalar Functions
+--eg 1
+create or alter function fn_EmpData(@ename nvarchar(25),@gender nvarchar(10))
+returns nvarchar(50)
+as
+begin
+return(select @ename + ' is a ' +@gender)
+end
+
+--to execute the above function using 3 part qualifier
+select eid, infinitedb.dbo.fn_empdata(ename,Gender) as 'Emp Data' from tblemployee
+
+--to execute the above function using 2 part qualifier
+select eid, dbo.fn_empdata(ename,Gender) as 'Emp Data' from tblemployee
+
+--to drop a function
+drop function dbo.fn_EmpData
+
+--eg 2
+create or alter function fnAdd2Nos(@a int,@b int)
+returns int
+as
+begin
+return @a + @b
+end
+
+print dbo.fnadd2Nos(10,20)  -- or
+select dbo.fnAdd2Nos(20,50)
+
+--eg 3 create a function that calculates the area of a rectangle
+create or alter function fn_Area(@length float, @breadth float)
+returns float
+as
+begin
+declare @area float
+set @area = @length * @breadth
+return @area
+end
+
+select dbo.fn_Area(6.4,3.2) as 'Area of Rectangle'
+
+--eg 3
+create or alter function fn_getAge(@dob date)
+returns int
+as
+begin
+declare @age int
+set @age=datediff(year,@dob,getdate())-
+case 
+  when(month(@dob) > month(getdate())) then 1
+  else 0
+  end
+return @age
+end
+
+select dbo.fn_getAge('1985/11/20')as Age
+
+--inline table valued functions
+--returns a table and is not enclosed within begin and end keywords
+--can be used in where and join clause of sql statement
+
+--eg 1
+create or alter function fn_GetEmpDetails(@deptid int)
+returns table
+as
+ return (select eid,ename,salary,gender,deptid from tblEmployee
+     where DeptId=@deptid)
+
+--ways to execute the above functions
+select * from fn_GetEmpDetails(1)
+
+select * from tblDepartment d join fn_GetEmpDetails(2) 
+on d.DeptId=fn_GetEmpDetails.DeptId
+
+select d.DeptName,fn_GetEmpDetails.EName,fn_GetEmpDetails.Salary from tbldepartment d join fn_GetEmpDetails(2) 
+on d.DeptId=fn_GetEmpDetails.DeptId
+
+--Multi Statement Table valued Function returns a dummy table like structure
+--which is encompassed within a begin and end keywords
+select * from customers
+
+sp_help customers
+
+create or alter function GetCustomersByCountry(@country varchar(20))
+returns 
+@CustomersByCountry table
+(Cust_Id varchar(10),
+Cust_name varchar(30),
+City varchar(15),
+Country varchar(20))
+as
+begin
+ insert into @CustomersByCountry
+ select CustomerID, ContactName,City,Country from customers
+ where country=@country
+
+ --to check if rows were selected for a given country
+ if @@ROWCOUNT = 0
+  begin
+   insert into @CustomersByCountry values(' ','No Customers Found',null,null)
+   end
+   return 
+ end
+
+ select * from GetCustomersByCountry('Germany')
+
+
+

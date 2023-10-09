@@ -28,6 +28,32 @@ sp_addmessage <msgid/errorid>, <severity>, <message>
 
 
 
+--Functions :are reusable piece of code that can be called from select statement, where or join clauses
+They are of 2 types
+    1. Scalar :
+    - Functions can accept 0 - many input parameters, and will have to return a single value
+    - can return int,char,float,varchar,etc.)
+    - cannot return text,ntext,image,timestamp
+    2. Table-Valued 
+          a. Inline Table Valued : 
+      - Returns a table of values
+      - does not contain begin or end statements
+
+          b. Multistatement Table Valued:
+      - Contains many sql statements
+      - Returns a user created table variable
+
+
+syntax:
+create function <fnname> (@ parameter1 datatype,@parameter2 datatype)
+returns datatype      (specifies what data type is expected out of the function)
+as
+ begin
+  function body...
+<return> the data       (actual returning of data takes place)
+end
+
+
 
 
 
