@@ -1,0 +1,34 @@
+Error Handling : In order to subtly exit out of an erroneous statements/procedures
+
+Error number : is a unique identifier given for each and every error. The value will be below 50000 for predefined system errors and above 50000-2147483647 for user defined error numbers
+
+Error Message : It is piece of brief information describing the error occurred, which should be maximum of 2047 characters
+
+Severity Level : Tells about the importance of the error which can be ranging between 0-24
+   0-9 : are not severe. Can be considered as information or status messages
+   11-16 : Indicates errors created by the user
+   17-19 : are Software errors that cannot be corrected by the user, and must be reported to the admin
+   20-24 : are fatal errors, which can damage the database or system. Automatically the database connection is terminated
+
+State : It is an arbitrary value that is not important , and can range between 0-127. We can use this whenever the same error has to occur in multiple places
+
+Raiserror is a function which raises an error with specific error no/id and displays the error message associated with it
+ 
+ raiserror(errorid/errormsg, severity,state) or raiserror(errorid,severity,state,error message)
+
+We can also throw errors :
+
+  throw error_id, errormsg, state
+
+Throw is just throwing an error, while raiserror is raising an error and then throwing
+
+--To add user defined error messages to the already existing sys.messages table, we use the below procedure
+
+sp_addmessage <msgid/errorid>, <severity>, <message>
+
+
+
+
+
+
+

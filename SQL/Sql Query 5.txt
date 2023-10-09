@@ -1,0 +1,254 @@
+
+select * from tblemployee where deptid=4 and salary>6000
+
+--procedures with input parameter
+
+--eg 1
+create or alter proc getSalary(@empid int)
+as
+begin
+select ename,salary from tblemployee where eid=@empid
+end
+
+getsalary 307
+
+--eg 2
+create or alter proc getDeptname(@deptid int, @eid int)
+as
+begin
+ select ename from tblemployee where eid=@eid
+ select deptname from tblDepartment where deptid=@deptid
+ end
+
+ getdeptname 2,108
+
+--procedures with both input and output parameters
+--eg 1
+create or alter proc GetEmpSalary @ename varchar(20), @sal float output
+as
+begin
+select @sal=salary from tblemployee where ename=@ename
+end
+
+--way 1 to execute the procedure with output values
+declare @retsal float
+execute GetEmpSalary 'nived',@retsal output
+print @retsal
+select @retsal
+
+--way 2 
+declare @returnsal float
+execute GetEmpSalary @sal=@returnsal output, @ename='Shilpa'
+print @returnsal
+
+--procedures with return parameters
+--procedures return only integers
+--eg 1
+create or alter proc retproc @did int
+as
+begin
+return (select count(eid) from tblemployee where deptid = @did)
+end
+
+--to execute procedures with return parameters
+
+declare @empcount int
+execute @empcount=retproc 1
+print 'Number of Employees in the dept are :' + ' '+cast(@empcount as varchar(3))
+select @empcount
+
+--eg 2 to show that procedures cannot return non integer types
+
+create or alter procedure getname @eid int
+as
+begin
+return (select ename from tblemployee where eid=@eid)
+end
+
+declare @empname varchar(20)
+execute @empname=getname 102
+print @empname
+
+--procedures with dml operations
+--eg 1
+create or alter proc DeleteEmp @eid int
+as
+begin
+select * from tblemployee
+delete from tblemployee where eid=@eid 
+select * from tblemployee
+end
+
+deleteemp 108
+
+--procedure for updation
+--eg 2
+create or alter proc sp_UpdateEmpSalary
+as
+begin
+update tblemployee set salary=6500 where salary in(6000,6100,6200)
+end
+
+sp_updateempsalary
+
+select * from tblEmployee where eid=107
+
+--procedures with t-sql
+--eg 1
+create or alter proc upd_proc(@increment int, @eid int)
+as
+begin
+declare @newSalary int
+set @newSalary=(select salary from tblemployee where eid=@eid)
+if(@newSalary <=6800)
+ begin
+  set @newSalary=@newSalary+@increment
+  print 'The revised Salary is :' + ' ' + cast(@newsalary as varchar(8))
+ end
+
+ else
+  begin
+  print ' Salary is good enough'
+  end
+end
+
+upd_proc 1000, 110
+
+--eg 2 with output parameter
+--tax calculation
+create or alter proc sp_TaxCalculator(@id int, @AnnualSalary int output)
+as
+begin
+declare @tempsal int
+select @tempsal=(salary *12) from tblemployee where eid=@id
+
+if(@tempsal>85000)
+ begin
+  set @AnnualSalary=@tempsal
+ end
+ else
+  begin
+   print 'Salary < 85000'
+   end
+end
+
+
+declare @rsal int
+declare @taxamt float
+exec sp_TaxCalculator 107, @rsal output
+set @taxamt=(@rsal*12)/100   -- you may give correct formula
+print 'The tax amount to be paid is ' + cast(@taxamt as varchar(10))
+
+--procedure with exception handling
+create or alter procedure Err_proc
+as
+begin
+begin try
+select salary+ename from tblemployee where eid=109
+end try
+begin catch
+--select 'Error in the procedure'
+raiserror(15600,-1,1,'Invalid Operation in Err_proc')
+end catch
+end
+
+Err_proc
+
+select * from sys.messages where message_id=50000
+
+--user defined error messages
+
+--syntax, call the stored procedure sp_addmessage with message id, severity,'message text'
+sp_addmessage 51200, 8, 'Oops ! an error occured'
+
+
+--procedure with exception handling, transaction, few dml operation etc
+
+create table Products
+(
+ProductId int Primary key,
+ProductName varchar(25),
+Price int,
+QuantityAvailable int
+)
+
+--populate some data into the table
+insert into Products values(101,'Laptops',45000,100),
+(102,'Desktops',25000,25),
+(103,'Tablets',50000,50),
+(104,'SmartPhones',80000,60)
+
+--create productsales table to record sales
+create table ProductSales
+(
+ProductSalesId int primary key,
+ProductId int references Products(ProductId),
+QuantitySold int)
+
+select * from products
+select *from ProductSales
+
+--create procedure for the above concepts
+create or alter procedure sp_SellingProducts
+@Pid int, @qtyto_sell int
+as
+begin
+  --first we need to check if the stock is avilable for the product we want to sell
+  declare @stockavailable int
+  select @stockavailable=QuantityAvailable 
+  from Products where ProductId=@Pid
+  --we need to throw an error to the calling application
+  --if the stockavailable is less than to qty to sell
+  if(@stockavailable<@qtyto_sell)
+   begin
+    Raiserror('Not Enough Stock to sell',16,1)
+   end
+  else 
+   begin -- we need to start the transaction of inserting into one table and updating the other
+   begin transaction
+      -- first let us reduce the qty in the products table
+	  update products set
+	   quantityavailable=(quantityavailable-@qtyto_sell)
+	   where ProductId=@Pid
+	  --next we need to calculate the max ProductSalesId inorder to insert into the table
+	  declare @maxsaleid int
+	  select @maxsaleid= case  
+	     when max(productsalesid) is null then 0
+		 else max(productsalesid)
+		 end
+		 from productsales
+		 --we will increment the value @maxsaleid by 1, so that we dont get a primary key violation error
+		 set @maxsaleid = @maxsaleid + 1
+
+		 --now we can insert a row into the productsales table
+		 insert into productsales 
+		 values(@maxsaleid,@pid,@qtyto_sell)
+		 --let us use the global variable @@Error which tracks the recent error occured
+		 if(@@ERROR <> 0)
+		  begin
+		   Rollback transaction
+		   print ' Something went wrong .. Rolling back the transaction'
+          end
+		 else
+		  begin
+		   commit transaction
+		   print 'Transaction Successful'
+          end
+	end
+end
+
+select * from products
+select *from ProductSales
+
+update products set quantityavailable =100 where productid=10
+
+delete from products where productid=10
+
+select * from products where productid=10
+
+insert into productsales values(3,10,20)
+
+sp_sellingproducts 10,5  -- will terminate the transaction as the @@Error variable will have
+                        -- a number > 0 (FK violation)
+
+
