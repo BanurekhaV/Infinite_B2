@@ -41,6 +41,7 @@ They are of 2 types
 
           b. Multistatement Table Valued:
       - Contains many sql statements
+      - in enclosed within a begin and end clauses
       - Returns a user created table variable
 
 
@@ -54,7 +55,14 @@ as
 end
 
 
+Difference between functions and procedures
 
+1. A function must return a value whereas a procedure never returns a value explicitly
+2. A function can have only input parameters, whereas a procedure can have both input and output parameters
+3. A function can be used only to perform select operations, whereas a procedure can be used to perform select and dml operations
+4. A function cannot handle errors or transactions, whereas a procedure can have transactions and error handling mechanisms implemented
+5. A function can call only other functions, whereas a procedure can call other procedures and other functions
+6. UDF can be used in SQL statements of where/having/join/select clauses, whereas stored procedures cannot be 
 
 
 

@@ -1,0 +1,27 @@
+Triggers: helps to create User defined constraints.
+          they are like procedures/functions which are reused, but unlike procedures/functions they are executed automatically on an event
+
+They are DDL and DML triggers.
+There are 2 types of triggers : before/after triggers, Insteadof Triggers
+SQL server supports after and instead of triggers
+
+triggers fire->on an object -> for an event
+
+- Magic Tables get created during the scope of execution of the trigger body
+    1. Inserted table
+    2. Deleted table           
+
+
+Cursors 
+
+
+Normalization
+
+
+SQL
+
+
+Revision of certain topics 
+
+
+

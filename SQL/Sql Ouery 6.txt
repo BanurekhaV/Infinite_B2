@@ -1,0 +1,181 @@
+--triggers
+--eg 1 
+
+drop trigger trginsertemp
+create trigger trgInsertEmp
+on tblEmployee
+for insert
+as
+ begin
+  select * from inserted  -- to show that the table inserted is actually having the inserted data
+ end
+
+ select * from inserted
+insert into tblemployee values(202,'Vatsa','Male',6500,2),(203,'Muthu','Male',6700,3)
+
+select * from tblEmployee
+
+--eg 2
+create trigger trgDeletEmp
+on tblemployee
+for delete
+as
+begin
+  select * from tblemployee
+  select * from deleted
+  
+  end
+
+delete from tblemployee where eid in(200,201)
+
+--eg 3
+create trigger trgUpdateEmp
+on tblemployee
+for update
+as
+begin
+ select * from deleted
+ select * from inserted
+end
+
+update tblEmployee set deptid=1 where eid=110
+
+--eg 4
+
+--every time an employee record is added to tblemployee, we want the details of the
+--added data to be available in an audit table
+
+create table tblAudit
+( details nvarchar(max))
+
+create or alter trigger trgAuditInsert
+on tblemployee
+for insert
+as
+begin
+ declare @id int
+ select @id=eid from inserted
+ --insert the newly added employee into audit table
+ insert into tblAudit values('New Employee with EmpId :' + cast(@id as varchar(5)) +
+ '  is added on :' + cast(getdate() as varchar(20)))
+ end
+
+ insert into tblemployee values(300,'Chandan','Male',6700,3)
+
+ select * from tblaudit
+
+ --every time an employee record is deleted from tblemployee, we want the details of the
+--deleted data to be available in an audit table
+ --eg 5
+
+ create or alter trigger trgAuditDelete
+on tblemployee
+for delete
+as
+begin
+ declare @id int
+ select @id=eid from deleted
+ --insert the newly added employee into audit table
+ insert into tblAudit values('An Existing Employee with EmpId :' + cast(@id as varchar(5)) +
+ '  is been removed on :' + cast(getdate() as varchar(20)))
+ end
+
+ delete from tblEmployee where eid=200
+
+ --when an employee data is updated, let us store the old details into a table
+ --eg 6
+ --let us create a dummy table of tblemployee, into which we can store all the previous 
+ --information before updation of the tblemployee table
+
+ create table employeedummy
+ (ID int,
+ EmpName varchar(30),
+ EmpSalary float,
+ EmpDept int)
+
+ create trigger updTrig
+ on tblemployee
+ for update
+ as
+ begin
+  declare @id int, @old_deptid int
+  declare @oldname varchar(30)
+  declare @oldsalary float
+
+  select @id=eid from inserted
+  select @oldname=ename from deleted
+  select @old_deptid = deptid from deleted
+  select @oldsalary=salary from deleted
+
+  insert into employeedummy values(@id,@oldname,@oldsalary,@old_deptid)
+ end
+
+ select * from tblEmployee
+ select * from employeedummy
+
+ update tblemployee set EName='SowmyaSree', salary=7500,DeptId=3
+ where eid=111
+
+ drop trigger trginsertdept
+ --eg 6: instead of trigger
+ create or alter trigger trginsertdept
+ on tbldepartment
+ instead of insert
+ as
+  begin
+  print 'You cannot insert into department table'
+ -- rollback
+  end
+
+  select * from tblDepartment
+
+  insert into tblDepartment values(5,'Operations',12000)
+
+  drop view vwEmpData
+  create view vwEmpdata
+  as
+ select e.eid,e.ename,e.gender,e.salary,d.deptname from
+ tblEmployee e inner join tblDepartment d on
+ e.DeptId=d.DeptId
+
+ select * from vwEmpdata
+
+ insert into vwEmpdata values(200,'Banurekha',7000,'Female','Accounts')
+ --the above insertion fails as the view is dependent on more than 1 base tables
+ --to overcome this issue, we can use instead of triggers
+
+ create or alter trigger trg_viewempinstead
+ on vwEmpData
+ instead of insert
+ as
+ begin
+ declare @departmentid int
+ --first check if there is a valid departmentid in the tbldepartment table
+ -- for the given department name
+ select @departmentid= d.deptid
+ from tblDepartment d inner join inserted i
+ on i.deptname=d.Deptname
+
+ --if the department is null, then we will throw an error, else insert
+ if(@departmentid is null)
+  begin
+   raiserror('Invalid Department, Terminating..',16,1)
+   return
+  end
+
+  --if valid dept then insert the data into tblemployee
+  insert into tblEmployee select Eid,Ename,Gender,salary,@departmentid from inserted
+ end
+
+ --now if we try to insert again into the view, the insertion will not fail, as long as
+ --we give a valid department name
+
+ insert into vwEmpdata values(200,'Banurekha','Female',7000,'Accounts') -- invalid deptname, insertion fails
+
+ insert into vwEmpdata values(200,'Banurekha','Female',7000,'Operations') -- valid deptname, insertion success
+
+ -- now since we already have 2 triggers for insert on tblemployee, all the triggers would fire
+ -- give the below statements to see the trigger effects
+
+ select * from tblemployee
+ select * from tblaudit
