@@ -1,8 +1,8 @@
 Triggers: helps to create User defined constraints.
           they are like procedures/functions which are reused, but unlike procedures/functions they are executed automatically on an event
 
-They are DDL and DML triggers.
-There are 2 types of triggers : before/after triggers, Insteadof Triggers
+There are DDL and DML triggers.
+There are 2 types of DML triggers : before/after triggers, Insteadof Triggers
 SQL server supports after and instead of triggers
 
 triggers fire->on an object -> for an event
@@ -11,17 +11,118 @@ triggers fire->on an object -> for an event
     1. Inserted table
     2. Deleted table           
 
+DDl Triggers : 2 types of DDL :1. Database Scoped DDL Trigger - Triggers for a specific database
+                               2. Server Scoped DDL Trigger- Triggers for all databases in the server
 
-Cursors 
+--DDL database scopped
 
+ --eg 1
 
-Normalization
+ use InfiniteDB
+
+ --drop database scoped ddl triggers
+ drop trigger if exists trgRestrictCreateTables on database  
+
+ create or alter trigger trgRestrictCreateTables
+ on database
+ for Create_table --, alter_table,drop_table
+ as 
+ begin
+ print 'You are not allowed to Create tables in this database'
+-- rollback transaction
+ end
+
+ drop table mytable1
+ create table mytable1(id int, mname char(10))
+
+ --Server scopped DDL trigger
+
+ --to drop triggers which are server scopped
+ drop trigger if exists trgServerScoped on all server
+
+ create trigger trgServerScoped
+ on all server
+ for drop_index
+ as
+ begin
+  Print ' You cannot drop index in any database of this Server'
+  rollback transaction
+end
+
+drop index tblemployee.idxdept
+
+Cursors  : is an object that stores the resultset of any query and allows traversal over the rows 
+They are of 2 types : 1. Implicit Cusror - are automatically created by the database engine and processed, 2. Explicit Cursor - we need to go thru the Lief Cycle of the Cursors
+
+Life Cycle : 
+1. Declare a cursor
+2. Open the cursor
+3. Fetch Data as long as there are rows (iteration)
+4. Close the cursor
+5. Deallocate
+
+Coalesce() - is a function that can be used to evaluate a list of values and returns the first non-null values
+
+Roll Up : Works along with group by clause to generate Sub Totals and Grand Totals
+
+Calculated/computed Columns: basic, variablecomp, grosssalary(basic+variablecomp), netsalary(grosssalary-10%)
+
+Normalization : Decomposing a larger, complex table into several smaller, simpler ones
+
+un normal form : if a column has more than one value
+
+1st Normal Form : a table/relation will be in 1st NF, when every row contains exactly one value for each column/attribute
+
+2nd Normal Form : a table/relation is in 2nf, it it is already in 1st nf and every non-prime attribute is fully functionally dependent on the primary key
+- 2nf prohibits partial dependencies
+
+Eg: Emp{Eno,Dept,prjCode,Hours}
+    pk - Eno,prjCode
+
+e1   d1   p1    5
+e1   d1   p2    3
+e2   d1   p2    8
+e3   d2   p1    5
+e3   d2   p2    3
+
+select dept from emp where eno='e1' (d1)  partial dependency on the primary key
+
+select hours from emp where eno='e1' (5,3)
+
+select hours from emp where eno='e1' and prjcode='p1'  (5)
+
+{Eno}->Dept : partial dependency
+{Eno,PrjCode}->hours : fully/functionally dependent
+
+Emp {Eno,Dept}   {eno is the pk}
+Empproject {Eno,PrjCode, Hours}   {ck=eno+prjcode}
+
+3rd Normal Form : A table/relation is in 3 nf when it is already in 2nf and
+   No non-prime attribute is transitively dependent on the primary key
+   3 nf prohibits transitive dependencies
+
+a=b=c
+
+a=c is transitive or indirect dependency
+
+EmpProject {Eno,prjCode,hours}
+Emp {Eno,Dept,Dept_Head}
+
+Decomposition
+
+Emp {Eno,Dept}
+Dept {Dept,Dept_head}
+
+Boyce Codd
+4th and 5th NF
+
+Why Normalization ?? To avoid anamolies creeping due to data redundancy
 
 
 SQL
 
 
-Revision of certain topics 
+Revision of certain c# topics 
 
 
 

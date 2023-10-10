@@ -179,3 +179,77 @@ begin
 
  select * from tblemployee
  select * from tblaudit
+
+
+ --DDL database scopped
+
+ --eg 1
+
+ use InfiniteDB
+
+ --drop database scoped ddl triggers
+ drop trigger if exists trgRestrictCreateTables on database  
+
+ create or alter trigger trgRestrictCreateTables
+ on database
+ for Create_table --, alter_table,drop_table
+ as 
+ begin
+ print 'You are not allowed to Create tables in this database'
+-- rollback transaction
+ end
+
+ drop table mytable1
+ create table mytable1(id int, mname char(10))
+
+ --Server scopped DDL trigger
+
+ --to drop triggers which are server scopped
+ drop trigger if exists trgServerScoped on all server
+
+ create trigger trgServerScoped
+ on all server
+ for drop_index
+ as
+ begin
+  Print ' You cannot drop index in any database of this Server'
+  rollback transaction
+end
+
+drop index tblemployee.idxdept
+
+
+--for computing subtotals and grand totals
+select coalesce(null,null,'Banu','AA','BB',null,'CC')
+
+select coalesce(null,null,null,5)
+select isnull(null,4) as 'result'
+
+--rollup
+--the below group by clause does not give grand totals
+
+select deptid, sum(salary)as Salary_Sum
+from tblemployee
+group by deptid  
+
+--using roll up with colaesce gives the grand total and also a value for the 
+--grandtotal row on which the grandtotal is calculated
+
+select coalesce(deptid,100) as Department, sum(salary) as Salary_Sum
+from tblemployee 
+group by rollup(deptid)
+
+--rollup without coalesce will give grandtotal row and the column value on which the grand total
+--is calculated will be null
+select coalesce(deptid,100) as Department, sum(salary) as Salary_Sum
+from tblemployee 
+group by rollup(deptid)
+
+--subtotals with rollup
+
+select coalesce(deptid,100) as Department, coalesce(gender,'All Genders') as Gender,
+sum(salary) as Salary_Sum
+from tblemployee 
+group by rollup(deptid,gender)
+
+select * from tblemployee where deptid is null
