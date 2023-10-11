@@ -1,0 +1,108 @@
+Sql In - The IN statement can be used to find rows in aquery where one column can be matched to a list of values, that can either be hard coded ot can come from a sub query.
+-It is easy to understand and use.
+-The only downside is that they can only compare single column 
+
+Sql Exists :Tests for existence of rows in the result of a subquery.
+- If found the serach does not continue and the condition flags a TRUE
+- If not found, the condition flags FALSE and the search continues in the inner query
+
+Eg: To find employees(managers) who have atleast one employee reporting to them
+ 
+select empno,ename,jobid,dept from employees
+outeremp where exists(select 'x' from employees inneremp where inneremp.mgrid=outeremp.empno)
+ returns a true and stops, or returns a false and continues
+
+Note: 'x' here is a constant used, since the inner query does not return any specific value. Also to improve performance of the query with a constant rather than a column value
+
+
+Eg : select empno,ename,jobid,dept from employees where
+  empno in(select mgr_id from employees where mgrid is not null)
+
+Not Exists :
+ Find all depts that do not have any employees
+ select deptid,deptname from tbldepartment d
+where not exists(select 'x' from tblemployee where deptid=d.deptid)
+
+alternatively we can use not in
+
+SQL : File groups :
+Whenever we create a database, the sql server will create only 2 files viz
+
+  1. A data file (.mdf) - primary file group (default group)
+  2. A transaction log file (.ldf)
+
+Multiple File Groups : Helps us to stire data in a granular manner
+
+Eg : create database mfgdb on primary
+(
+--primary group
+ Name='mfgdb',
+ filename='C:\Program Files\Microsoft SQL Server\MSSQL15.MSSQLSERVER\MSSQL\DATA\mfgdb.mdf',
+ size=5mb;
+ maxsize=unlimited,
+ filegrowth=1024kb
+),
+
+--secondary group
+filegroup filegroup1
+(
+-- 1st file in secondary group
+ Name='mfgdbfile1',
+  filename='C:\Program Files\Microsoft SQL Server\MSSQL15.MSSQLSERVER\MSSQL\DATA\mfgdbfile1.ndf',
+ size=1mb,
+maxsize=unlimited,
+ filegrowth=1024kb
+),
+
+
+(
+-- 2nd file in secondary group
+ Name='mfgdbfile2',
+  filename='C:\Program Files\Microsoft SQL Server\MSSQL15.MSSQLSERVER\MSSQL\DATA\mfgdbfile2.ndf',
+ size=1mb,
+maxsize=unlimited,
+ filegrowth=1024kb
+),
+
+Log On
+filegroup filegroup1
+(
+-- Log file in secondary group
+ Name='mfgdblogfile1',
+  filename='C:\Program Files\Microsoft SQL Server\MSSQL15.MSSQLSERVER\MSSQL\DATA\mfgdblogfile1.ldf',
+ size=5mb,
+maxsize=unlimited,
+ filegrowth=1024kb
+)
+
+--to place any tables that we create on a specific file group, we can give it as below:
+create table Customers ( ..,..,..,.. ) on filegroup1
+
+--inorder to make the file group1 as a default file group , so that all the user tables gets created inside that group, we can do as below:
+
+alter database mfgdb modify filegroup filegroup1 default
+
+create table testtable (..,..,..) 
+
+Note : If we insert say about 40,000 records/rows, the resultant size of data will be appx 312 mb
+(40,000 * 8kb/1024 = 312)
+
+--each file in the filegroup will receive about 160 MB
+
+SQL Server Profiler : is a GUI Tool that helps to
+  -- Step through the queries to find the cause of the problem
+  -- Find and diagnose slow running queries
+  -- Capture series of t-sql statements that lead to a problem
+  -- Monitor the performance
+
+SQL Server Manager : a set of services used to start,stop,pause various components on the sql server
+
+Security Model : Security threats that can affect sql server
+  1. Sql Server Authenticatioins - login thru connection string is vulnerable for attacks.
+  2. Sql Injection : 
+  3. Verbose erros: 
+  4. Denial of Service(DOS) :  
+
+
+
+Revision of certain c# topics 

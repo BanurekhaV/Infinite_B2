@@ -76,7 +76,7 @@ un normal form : if a column has more than one value
 2nd Normal Form : a table/relation is in 2nf, it it is already in 1st nf and every non-prime attribute is fully functionally dependent on the primary key
 - 2nf prohibits partial dependencies
 
-Eg: Emp{Eno,Dept,prjCode,Hours}
+Eg: Emp{Eno,Dept,prjCode,Hours,dept_head}
     pk - Eno,prjCode
 
 e1   d1   p1    5
@@ -94,7 +94,8 @@ select hours from emp where eno='e1' and prjcode='p1'  (5)
 {Eno}->Dept : partial dependency
 {Eno,PrjCode}->hours : fully/functionally dependent
 
-Emp {Eno,Dept}   {eno is the pk}
+Emp {Eno,Dept,Dept_head}   {eno is the pk}
+        {Eno}->{dept}->{dept_head}  - dept_head is directly dependent on the dept and indirectly dependent on the Eno (transitive dependency)
 Empproject {Eno,PrjCode, Hours}   {ck=eno+prjcode}
 
 3rd Normal Form : A table/relation is in 3 nf when it is already in 2nf and
@@ -105,13 +106,13 @@ a=b=c
 
 a=c is transitive or indirect dependency
 
-EmpProject {Eno,prjCode,hours}
+EmpProject {Eno,prjCode,hours}   -- table 1
 Emp {Eno,Dept,Dept_Head}
 
 Decomposition
 
-Emp {Eno,Dept}
-Dept {Dept,Dept_head}
+Emp {Eno,Dept}   -- table 2
+Dept {Dept,Dept_head} -- table 3
 
 Boyce Codd
 4th and 5th NF
@@ -119,10 +120,7 @@ Boyce Codd
 Why Normalization ?? To avoid anamolies creeping due to data redundancy
 
 
-SQL
 
-
-Revision of certain c# topics 
 
 
 

@@ -1,0 +1,7 @@
+C:\Banu\Infinite\B2\SQL\ConsoleApp1\ConsoleApp1\bin\Debug\ConsoleApp1.exe.config
+C:\Banu\Infinite\B2\SQL\ConsoleApp1\ConsoleApp1\bin\Debug\ConsoleApp1.exe
+C:\Banu\Infinite\B2\SQL\ConsoleApp1\ConsoleApp1\bin\Debug\ConsoleApp1.pdb
+C:\Banu\Infinite\B2\SQL\ConsoleApp1\ConsoleApp1\obj\Debug\ConsoleApp1.csproj.AssemblyReference.cache
+C:\Banu\Infinite\B2\SQL\ConsoleApp1\ConsoleApp1\obj\Debug\ConsoleApp1.csproj.CoreCompileInputs.cache
+C:\Banu\Infinite\B2\SQL\ConsoleApp1\ConsoleApp1\obj\Debug\ConsoleApp1.exe
+C:\Banu\Infinite\B2\SQL\ConsoleApp1\ConsoleApp1\obj\Debug\ConsoleApp1.pdb

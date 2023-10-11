@@ -1,0 +1,118 @@
+use InfiniteDB
+--exists and not exists
+--in and not in
+ select deptid,deptname from tbldepartment d
+where not exists(select 'x' from tblemployee where deptid=d.deptid)
+
+select deptid,deptname from tbldepartment d
+where deptid not in(select deptid from tblemployee where deptid=d.deptid)
+
+select * from tblDepartment
+select * from tblEmployee
+
+update tblemployee set deptid=4 where eid=200
+select * from sys.messages
+
+--File Groups
+
+--Eg : 
+create database mfgdb on primary
+(
+--primary group
+ Name='mfgdb',
+ filename='C:\Program Files\Microsoft SQL Server\MSSQL15.MSSQLSERVER\MSSQL\DATA\mfgdb.mdf',
+ size=5mb,
+ maxsize=unlimited,
+ filegrowth=1024kb
+),
+
+--secondary group
+filegroup filegroup1
+(
+-- 1st file in secondary group
+ Name='mfgdbfile1',
+  filename='C:\Program Files\Microsoft SQL Server\MSSQL15.MSSQLSERVER\MSSQL\DATA\mfgdbfile1.ndf',
+ size=1mb,
+maxsize=unlimited,
+ filegrowth=1024kb
+),
+
+
+(
+-- 2nd file in secondary group
+ Name='mfgdbfile2',
+  filename='C:\Program Files\Microsoft SQL Server\MSSQL15.MSSQLSERVER\MSSQL\DATA\mfgdbfile2.ndf',
+ size=1mb,
+maxsize=unlimited,
+ filegrowth=1024kb
+),
+
+--Log On
+
+(
+-- Log file in secondary group
+ Name='mfgdblogfile1',
+  filename='C:\Program Files\Microsoft SQL Server\MSSQL15.MSSQLSERVER\MSSQL\DATA\mfgdblogfile1.ldf',
+ size=5mb,
+maxsize=unlimited,
+ filegrowth=1024kb
+)
+
+--eg crrating tables on a specific file group
+create table customers (custid int not null,
+Lastname varchar(max),
+firstname varchar(max),
+custrating int not null) on filegroup1
+
+--eg2 creating table without specifiying a file group
+create table Testtable(tid int, tname varchar(30),tdate date)
+
+drop table testtable
+--to make a file group degaulu, so that all objects are stored inside it
+alter database mfgdb modify filegroup filegroup1 default
+
+sp_help testtable
+
+--SQL Profiler
+create table TestSample
+(Id int primary key,
+ SampleData char(1))
+
+ insert into TestSample values(1,'A'),(2,'B'),(3,'C')
+
+ --procedure 1 for insertion
+ create or alter procedure InsertData 
+ @Tid int, @val char(1), @result varchar(10) output
+ as
+begin
+ begin try
+    begin transaction
+    insert into testsample values(@Tid,@val)
+    commit
+	set @result='Done'
+ end try
+ begin catch
+ if @@TRANCOUNT>0
+  rollback
+  set @result='Error'
+ end catch
+ 
+end
+
+--procedure 2 for retrieval of inserted data
+create procedure GetData @val char(1)
+as
+begin
+ select ID,sampledata from testsample
+  where sampledata=@val
+ end
+
+ --to execute the insert procedure
+ declare @res varchar(10)
+ exec InsertData 5,'E',@res output
+ select @res
+
+ --execute the second procedure to see if the data is inserted
+ exec getdata 'E'
+
+ select * from testsample
