@@ -1,0 +1,77 @@
+Revision of certain c# topics : 
+
+Generics:is a concept that acts like a place holder to define classes,methods,events,properties,members etc. C# compilers will replace the placeholder with a specific data type
+
+Generics can be applied to :
+ 1. class
+ 2. interface
+ 3. method
+ 4. property
+ 5. event
+ 6. delegates
+
+Advantages : Reusability of the code
+             Type safe, as the datatype gets resolved during compilation itself
+             Better Performance
+
+Constraint : class Mygeneric <T> where T: class/structure
+		{ }
+
+Delegates: type safe function pointers, that holds the reference to a function that matches the signature(functiond and the delegates)
+
+1. declare a delegate signature ( which is similar to that of abstract method)
+<access modifier>delegate <return type> <name of the delegate>(list of parameters);
+
+2. Associating a delegate to a handler (function)
+ 
+3. Invoking the delegate thereby invoking the function
+
+Generic Delegates : 3 types of generic delegates 
+1. Func  : can take input parameters upto 16 nos., but will have to return a value
+
+ Syntax for Func delegate as per our example in the code
+
+  Func<int,float,double,double>   (first 3 are input types, and the last is the output)
+
+2. Action : may take inputs, but need not return any value
+
+Action<int,float,double>  (only inputs and no output)
+
+3. Predicate : will take one parameter and return a boolean
+
+Predicate<string>  (only 1 input which checks the criteria and returns true or false)
+
+Dictionary :  is a generic collection class that stores data of the same type and also attaches a key for every data (key value pairs)
+  - keys have to be non null and non duplicates
+
+Dictionary<Tkey, Tvalue> d
+
+Dependency Injection : a concept that helps in maintaining loose coupling between various objects/components of the application.
+
+ - Creational Dependency Injection allows the dependency class object to be injected into the dependent class either in the Constructor, Method or Property
+
+(The object that gets injected would always be that of either an Abstract class or Interface)
+
+Remoting: .NET Remoting is a mechanism for communication between objects which are not in the same process. The dotnet objects are exposed to remote process, allowing inter process communication. The processes can be in the same machine or in different machine
+
+MS .Net Remoting provides a framework that allows objects to communicate. This hides all the difficult aspects like
+   - managing connections
+   - marshalling of data
+   - reading and writing of data (xml format) using some protocols (SOAP)
+ The other Services provided by the framework are
+   - activation of objects
+   - management of lifetime of the objects (Single Call, Singleton, Client Activated Objects)
+   - establishing communication channels
+   - transporting messages etc.
+
+Object Activation : MarshalByRef has 2 activation schemes
+1. Server Activated Objects :
+    The objects are created only when the client makes the first call to the remote method. 
+2. Client Activated Objects :
+    The objects are created on the server immediately upon the client request. An instance of the of the client activated object gets created every time the client instantiates by using a new keyword
+
+RemotingConfiguration.RegisterActivatedClientType(typeof(Service),
+      "tcp://localhost:2001/"OurFirstRemoteServices")
+
+Service serviceobj= new Service();
+

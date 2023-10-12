@@ -103,6 +103,32 @@ Security Model : Security threats that can affect sql server
   3. Verbose erros: 
   4. Denial of Service(DOS) :  
 
+1. Sql Server Data Masking
+2. Sql Server Roles
+3. Sql Server Audits
+4. Sql Server Row Level Security
+5. Sql Server Authentication
+6. Sql Server Column Level Security
+
+Best Practices:
+1. Run Multiple Security Audits
+2. Have a strong Password Policy
+3. Limit the Service Accounts Permission.
+4. Use Appropritae Authentication Options
+5. Use strong Database Backup strategy
+6. Use Sql Monitoring Tools
 
 
-Revision of certain c# topics 
+System Databases : By default SQL server consists of 4 system databases
+1. Master : stores all systemic information viz configurations, startup informations, files and filegroup information, accounts information and other services that may be required like analysis,integration,reporting etc.
+
+2. Model : Acts like a template for all newly created databases
+
+3. Msdb : is used by the SQL Server Agent services to manage and maintain the jobs and its   associated tasks like alerts,emailers,history,backup
+
+4. Tempdb: is used to store all temporary objects and resultsets. Since it is temporary, it cannot be saved/backed up nor restored
+
+Note : Always backup the master database, especially if some systemic informations are changed
+- Do not allow user objects to be created under master database.
+ 
+
