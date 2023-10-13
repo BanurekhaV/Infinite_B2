@@ -115,7 +115,7 @@ namespace ConnectedArchitecture_1
         {
             //when windows authenticated
             con = new SqlConnection("Data Source=LAPTOP-TJJ7D977;Initial Catalog=InfiniteDB;" +
-                "Integrated Security=True");
+                "Integrated Security=True" );
             con.Open();
             return con;
 
