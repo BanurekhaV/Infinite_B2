@@ -1,0 +1,7 @@
+C:\Banu\Infinite\B2\ADO\ConnectedArchitecture_1\ConnectedArchitecture_1\bin\Debug\ConnectedArchitecture_1.exe.config
+C:\Banu\Infinite\B2\ADO\ConnectedArchitecture_1\ConnectedArchitecture_1\bin\Debug\ConnectedArchitecture_1.exe
+C:\Banu\Infinite\B2\ADO\ConnectedArchitecture_1\ConnectedArchitecture_1\bin\Debug\ConnectedArchitecture_1.pdb
+C:\Banu\Infinite\B2\ADO\ConnectedArchitecture_1\ConnectedArchitecture_1\obj\Debug\ConnectedArchitecture_1.csproj.AssemblyReference.cache
+C:\Banu\Infinite\B2\ADO\ConnectedArchitecture_1\ConnectedArchitecture_1\obj\Debug\ConnectedArchitecture_1.csproj.CoreCompileInputs.cache
+C:\Banu\Infinite\B2\ADO\ConnectedArchitecture_1\ConnectedArchitecture_1\obj\Debug\ConnectedArchitecture_1.exe
+C:\Banu\Infinite\B2\ADO\ConnectedArchitecture_1\ConnectedArchitecture_1\obj\Debug\ConnectedArchitecture_1.pdb

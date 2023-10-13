@@ -1,0 +1,23 @@
+ADO.Net  :  Provides a bridge between the front end applications and the backend databases.
+-It encapsulates all the data access techniques thus hiding the details of movement of data.
+- ADO stands for Activex Data Objects.
+-It is a database technology from Microsoft to work with any database servers
+-It consists of various classes to handle data and its access
+- It uses XML to store and transfer data among applications
+- It is scalable and interoperable
+
+ADO.Net Architecture : is of 2 types
+1. Connected Architecture :
+2. Disconnected Architecture : 
+
+
+Important classes and objects
+
+SQLConnection:The object of this class will try to establish a connection with the SQL server and return the connection details if successful
+
+SQLCommand: The object of this class enables us to give sql commands/ call procedures with or without parameters.
+-It supports functions to execute the command viz
+     - ExecuteReader() - returns SqlDataReader object and is used only when we have to select the data
+     - ExecuteNonQuery() - returns an int type and is used for DML operations
+
+     - ExecuteScalar() - returns a scalar type (used when we want just one value to be retrieved)
