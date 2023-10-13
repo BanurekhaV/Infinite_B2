@@ -21,3 +21,11 @@ SQLCommand: The object of this class enables us to give sql commands/ call proce
      - ExecuteNonQuery() - returns an int type and is used for DML operations
 
      - ExecuteScalar() - returns a scalar type (used when we want just one value to be retrieved)
+
+
+CRUD operations : Create(Insert), Read(Select), Update(Update - hands on), Delete(Delete)
+
+update the salary of an employee 
+
+eid as input
+salary as input

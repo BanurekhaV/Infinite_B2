@@ -15,10 +15,81 @@ namespace ConnectedArchitecture_1
         public static SqlDataReader dr;
         static void Main(string[] args)
         {
+            // Insertdata();
+            DeleteData();
             SelectData();
             Console.Read();
         }
 
+        static void DeleteData()
+        {
+            con = GetConnection();
+            Console.WriteLine("Enter the Employee Id to be deleted :");
+            int eid = Convert.ToInt32(Console.ReadLine());
+            SqlCommand cmd1 = new SqlCommand("select * from tblemployee where eid=@eid");
+            cmd1.Connection = con;
+            cmd1.Parameters.AddWithValue("@eid", eid);
+            SqlDataReader dr1=cmd1.ExecuteReader();
+
+            while(dr1.Read())
+            {
+                for(int i=0; i<dr1.FieldCount;i++)
+                {
+                    Console.WriteLine(dr1[i]);
+                }
+            }
+            con.Close();
+            Console.WriteLine("Are you sure to delete this Record Y/N");
+            string answer = Console.ReadLine();
+            if(answer=="Y" ||answer=="y")
+            {
+                cmd = new SqlCommand("delete from tblemployee where eid=@eid", con);
+                cmd.Parameters.AddWithValue("@eid", eid);
+                con.Open();
+                int res = cmd.ExecuteNonQuery();
+                if(res>0)
+                {
+                    Console.WriteLine("Record Deleted Successfully");
+                }
+                else
+                    Console.WriteLine("Some Problem... Contact DB Admin");
+            }
+        }
+        static void Insertdata()
+        {
+            con = GetConnection();
+            //do not hard code the values
+            //cmd = new SqlCommand("insert into tblemployee " +
+            //    "values(113,'Zainab','Female',6950,1)",con);
+            try
+            {
+                int eid, edid;
+                string ename, egender;
+                float esalary;
+                Console.WriteLine("Please Enter EmpId,EmpName,Gender,Salary and Deptid :");
+                eid = Convert.ToInt32(Console.ReadLine());
+                ename = Console.ReadLine();
+                egender = Console.ReadLine();
+                esalary = Convert.ToSingle(Console.ReadLine());
+                edid = Convert.ToInt32(Console.ReadLine());
+                cmd = new SqlCommand("insert into tblemployee values(@id,@nm,@gen,@sal,@did)", con);
+                cmd.Parameters.AddWithValue("@id", eid);
+                cmd.Parameters.AddWithValue("@nm", ename);
+                cmd.Parameters.AddWithValue("@gen", egender);
+                cmd.Parameters.AddWithValue("@sal", esalary);
+                cmd.Parameters.AddWithValue("@did", edid);
+
+                int res = cmd.ExecuteNonQuery();
+                if (res > 0)
+                    Console.WriteLine("Record Inserted");
+                else
+                    Console.WriteLine("Not Inserted..");
+            }
+            catch(SqlException se)
+            {
+                Console.WriteLine(se.Message);
+            }
+        }
         static void SelectData()
         {
             //get the connection object
@@ -47,6 +118,7 @@ namespace ConnectedArchitecture_1
                 "Integrated Security=True");
             con.Open();
             return con;
+
             //when sql authenticated
            // con = new SqlConnection("Data Source=LAPTOP-TJJ7D977;Initial Catalog=InfiniteDB;"+
            //"user id=sa;password=pwd);
