@@ -25,7 +25,3 @@ SQLCommand: The object of this class enables us to give sql commands/ call proce
 
 CRUD operations : Create(Insert), Read(Select), Update(Update - hands on), Delete(Delete)
 
-update the salary of an employee 
-
-eid as input
-salary as input

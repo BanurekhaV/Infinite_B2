@@ -13,7 +13,7 @@ namespace ConnectedArchitecture_1
         public int RegionID { get; set; }
         public string RegionDescription { get; set; }
 
-        public void GetRegion()
+        public void AddRegion()
         {
             Console.WriteLine("Enter Region ID:");
             RegionID = Convert.ToInt32(Console.ReadLine());
@@ -30,6 +30,11 @@ namespace ConnectedArchitecture_1
         public void ShowAllRegions()
         {
             DataAccess.DisplayRegion();
+        }
+
+        public void Using_DisconnectedArch()
+        {
+            DataAccess.DisconnectedArch();
         }
     }
 
@@ -95,15 +100,38 @@ namespace ConnectedArchitecture_1
             int regioncount = Convert.ToInt32(cmd.ExecuteScalar());
             Console.WriteLine("No Of Available Regions :{0}", regioncount);
         }
+
+        //disconnected Architecture using DataAdapters and datasets
+
+        public static void DisconnectedArch()
+        {
+            con = GetConnectionNorthWind();
+            cmd = new SqlCommand("Select * from Customers", con);
+            DataSet ds = new DataSet();
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            da.Fill(ds);
+            con.Close();
+            //you can identify a datatable inside the dataset either using index or give a name
+            DataTable dt = ds.Tables[0];  
+
+            foreach(DataRow drow in dt.Rows)
+            {
+                foreach(var item in drow.ItemArray)
+                {
+                    Console.WriteLine(item);
+                }
+            }
+        }
     }
     class Program2
     {
         static void Main()
         {
             Region r = new Region();
-          //  r.GetRegion();
-            r.ShowRegionCount();
-            r.ShowAllRegions();
+            //  r.GetAddRegion();
+            // r.ShowRegionCount();
+            //   r.ShowAllRegions();
+            r.Using_DisconnectedArch();
             Console.Read();
         }
     }

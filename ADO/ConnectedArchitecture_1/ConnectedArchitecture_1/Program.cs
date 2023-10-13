@@ -111,6 +111,8 @@ namespace ConnectedArchitecture_1
             }
 
         }
+
+        
         static SqlConnection GetConnection()
         {
             //when windows authenticated
