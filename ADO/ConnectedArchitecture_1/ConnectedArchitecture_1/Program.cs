@@ -16,11 +16,62 @@ namespace ConnectedArchitecture_1
         static void Main(string[] args)
         {
             // Insertdata();
-            DeleteData();
-            SelectData();
+            // DeleteData();
+            // SelectData();
+            //StoredProc_withParameter();
+            StoredProc_WithOutput();
             Console.Read();
         }
 
+        public static void StoredProc_withParameter()
+        {
+            con = GetConnection();
+            Console.WriteLine("Enter Employee Id :");
+            int eid = int.Parse(Console.ReadLine());
+            cmd = new SqlCommand("getSalary @eid", con); //name of the procedure
+            // cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.AddWithValue("@eid", eid);
+            dr=cmd.ExecuteReader();
+            while (dr.Read())
+            {
+                Console.WriteLine($"Employee Name : {dr[0]} and the Salary is {dr[1]} ");
+            }
+        }
+
+        public static void StoredProc_WithOutput()
+        {
+            con = GetConnection();
+            Console.WriteLine("Enter Employee Name :");
+            string ename = Console.ReadLine();
+            cmd = new SqlCommand();
+            cmd.CommandText = "getEmpSalary";
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Connection = con;
+
+            //we will use SqlParameter class for input and output parameters
+            SqlParameter param1 = new SqlParameter
+            {
+                ParameterName = "@ename",
+                SqlDbType=SqlDbType.NVarChar,
+                Value=ename,
+                Direction=ParameterDirection.Input
+            };
+
+            cmd.Parameters.Add(param1);
+
+            SqlParameter outparam = new SqlParameter
+            {
+                ParameterName = "@sal",
+                SqlDbType = SqlDbType.Float,
+                Direction = ParameterDirection.Output
+            };           
+
+            cmd.Parameters.Add(outparam);
+
+            cmd.ExecuteScalar();
+           Console.WriteLine("Salary of Employee : {0} is : {1}",ename, outparam.Value);
+            
+        }
         static void DeleteData()
         {
             con = GetConnection();

@@ -131,6 +131,7 @@ namespace ConnectedArchitecture_1
             //  r.GetAddRegion();
             // r.ShowRegionCount();
             //   r.ShowAllRegions();
+            
             r.Using_DisconnectedArch();
             Console.Read();
         }
