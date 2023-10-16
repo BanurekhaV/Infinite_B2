@@ -1,0 +1,7 @@
+C:\Banu\Infinite\B2\ADO\Disconnected_Arch\Disconnected_Arch\bin\Debug\Disconnected_Arch.exe.config
+C:\Banu\Infinite\B2\ADO\Disconnected_Arch\Disconnected_Arch\bin\Debug\Disconnected_Arch.exe
+C:\Banu\Infinite\B2\ADO\Disconnected_Arch\Disconnected_Arch\bin\Debug\Disconnected_Arch.pdb
+C:\Banu\Infinite\B2\ADO\Disconnected_Arch\Disconnected_Arch\obj\Debug\Disconnected_Arch.csproj.AssemblyReference.cache
+C:\Banu\Infinite\B2\ADO\Disconnected_Arch\Disconnected_Arch\obj\Debug\Disconnected_Arch.csproj.CoreCompileInputs.cache
+C:\Banu\Infinite\B2\ADO\Disconnected_Arch\Disconnected_Arch\obj\Debug\Disconnected_Arch.exe
+C:\Banu\Infinite\B2\ADO\Disconnected_Arch\Disconnected_Arch\obj\Debug\Disconnected_Arch.pdb
