@@ -1,0 +1,56 @@
+- Building Relationships using DataSet
+
+- XML operations (Read and Write)
+
+Xml stands for Extensible Markup Lang. It is a text based markup language derived from Standard Generalized Markup  Lang(SGML)
+- Xml tags identify the data and are used to store and organize the data, rather than the specifics of how to display the data.
+- XML is a public standard ( W3C an open standard)
+
+
+XMl Usage: XML works behind the screen to simplify the creation of html documents for small and large web sites
+- Xml can be used to exchange info/data between organizations, systems
+- Xml can be used to store data, hence we might customize the data to suit our organization/application
+- Xml can express virtually any type of data 
+- Xml can merge with style sheets to create desired output
+
+<message>
+  <text>    /<text>
+</message>
+
+<  &lt
+>  &gt
+&  &amp
+'  &apos
+"  &quot
+
+references in xml starts with an & and ends with a ;
+character references - #97
+
+XML files can be validated against
+ 1. DTD : Document Type Definition
+ 2. XSD : Xml Schema Definition
+
+Eg : XML DTD :
+
+<?xml version="1.0"?>
+<!DOCTYPE employee SYSTEM "employee.dtd">
+<employee>
+  <firstname>Arya</firstname>
+  <lastname>Gupta</lastname>
+  <email>ag@gmail.com</email>
+</employee>
+
+Eg : XML XSD
+<?xml version="1.0"?>
+<employee
+xmlns="http://www.infinite.com"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://www.infinite.com employee.xsd">
+  <firstname>Arya</firstname>
+  <lastname>Gupta</lastname>
+  <email>ag@gmail.com</email>
+</employee>
+ 
+
+HREF,, href
+
