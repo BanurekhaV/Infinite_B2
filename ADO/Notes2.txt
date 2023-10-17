@@ -52,5 +52,22 @@ xsi:schemaLocation="http://www.infinite.com employee.xsd">
 </employee>
  
 
-HREF,, href
+LINQ: Lang Integrated Query. There are 2 basic ways to write a LINQ Query
+  1. Query Syntax ( Query Expression) : from <range variable> in <IEnumerable>or<IQueryable><Collection> <standard query operators><lambda expressions> <select or group by> <result formation>
+ 
+  2. Method Syntax (Method extensions syntax, fluent )
+
+Advantages of LINQ:
+1. Familiar Lang : 
+2. Less Coding
+3. Readable Code
+4. Standardized way of querying multiple data sources
+5. Compile time safety
+6. Intellisense support
+
+var emp= emplist.Find(e => e.Empid==100)
+
+Operators supported by LINQ
+1. Aggregate Operators
+2. ElementAt
 
