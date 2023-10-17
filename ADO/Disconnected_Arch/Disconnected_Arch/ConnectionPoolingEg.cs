@@ -15,17 +15,17 @@ namespace Disconnected_Arch
                     "trusted_connection=true;";
         static void Main()
         {
-            //var stopwatch = new Stopwatch();
+            var stopwatch = new Stopwatch();
 
-            //stopwatch.Start();
-            //for(int i=0; i<1000;i++)
-            //{
-            //    SqlConnection con = new SqlConnection(connectstr);
-            //    con.Open();
-            //    con.Close();
-            //}
-            //stopwatch.Stop();
-            //Console.WriteLine($"Pooling = true, Time Taken : {stopwatch.ElapsedMilliseconds} ms");
+            stopwatch.Start();
+            for (int i = 0; i < 1000; i++)
+            {
+                SqlConnection con = new SqlConnection(connectstr);
+                con.Open();
+                con.Close();
+            }
+            stopwatch.Stop();
+            Console.WriteLine($"Pooling = true, Time Taken : {stopwatch.ElapsedMilliseconds} ms");
             TransactionEg(connectstr);
             Console.Read();
         }
