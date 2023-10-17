@@ -68,6 +68,19 @@ Advantages of LINQ:
 var emp= emplist.Find(e => e.Empid==100)
 
 Operators supported by LINQ
-1. Aggregate Operators
-2. ElementAt
+1. Aggregate Operators : All aggregate functions plus aggregate accumulator (with seed)
+2. ElementAt,First,Last,single operators
+3. OrderBy, ThenBy  (OrderByDescending,thenbyDescending)
+4. GroupBy
+5. GroupJoin : similar to left outer join in Sql
+
+LINQ to SQL : Offers an runtime infrastructure for the management of relational data as objects
+
+Table - > Class
+Columns ->Property
+Rows -> Instance
+StoredProcedure -> Methods
+
+-> To work with Linq-SQL, we need to convert all relational database objects to Programming Objects. This process of mapping is known as ORM
+
 
