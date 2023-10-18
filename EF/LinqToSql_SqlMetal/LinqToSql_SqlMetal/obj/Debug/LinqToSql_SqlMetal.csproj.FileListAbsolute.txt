@@ -4,3 +4,4 @@ C:\Banu\Infinite\B2\EF\LinqToSql_SqlMetal\LinqToSql_SqlMetal\bin\Debug\LinqToSql
 C:\Banu\Infinite\B2\EF\LinqToSql_SqlMetal\LinqToSql_SqlMetal\bin\Debug\LinqToSql_SqlMetal.pdb
 C:\Banu\Infinite\B2\EF\LinqToSql_SqlMetal\LinqToSql_SqlMetal\obj\Debug\LinqToSql_SqlMetal.exe
 C:\Banu\Infinite\B2\EF\LinqToSql_SqlMetal\LinqToSql_SqlMetal\obj\Debug\LinqToSql_SqlMetal.pdb
+C:\Banu\Infinite\B2\EF\LinqToSql_SqlMetal\LinqToSql_SqlMetal\obj\Debug\LinqToSql_SqlMetal.csproj.AssemblyReference.cache

@@ -71,11 +71,6 @@ namespace LinqToSql_SqlMetal
     partial void DeleteTerritories(Territories instance);
 		#endregion
 
-		public NorthwindContext():
-			base("NwindConnString")
-        {
-			OnCreated();
-        }
 		public NorthwindContext(string connection) : 
 				base(connection, mappingSource)
 		{
