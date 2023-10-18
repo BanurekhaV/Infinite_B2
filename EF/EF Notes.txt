@@ -1,0 +1,41 @@
+Entity Framework : EF is an object relational mapper (ORM)
+- It is an open source framework for ADO.Net
+- It helpd the developers to work with relational data using specific objects
+
+DBContext : Is an instance that represents a combination of Unit Of Work and Repository Patterns such that , it can be used to query the database objects, and group together any changes that has to be written back to the store as a unit
+
+Types of Entities :
+1. POCO Entities (Plain Old CLR Objects)A POCO entity is a class that does not depend on any framework specific base class. It is like a normal .Net CLR Class.
+
+2. Dynamic Proxy Entities(POCO Proxy)Dynamic proxy is a runtime proxy class class which wraps the POCO Entity
+
+Eager and Lazy Loading
+
+Eager Loading is the process where a query of one type of entity also loads related entities as a part of the query. It is achieved using Include()
+
+Lazy Loading is the opposite of eager loading. The process of loading the related type is delayed, until we specifically request for it.
+
+As of DotNet Framework, we have 3 approaches to work with EF
+1. Database First (Existing Database) : Relations are simply mapped to classes as Models
+2. Code First (New Database) : A class gets mapped to a relation using migrations
+3. Model First (create models in design mode, then classes would get auto generated, which are mapped to the specific relations)
+
+
+Entity States: The life cycle that describes the process in which an entity is creates, modified, rdeleted, added etc. An entity is always in any of the foloowing states
+
+1. Added : The entity is marked as added when we perform insertion. The entity will be tracked by the context, but data is yet to be avialable in the database
+
+2. Deleted : The entity is marked as deleted. The entity will be tracked by the context and exiists in the database, but has been marked for deletion, When we call the savechanges(). After savechanges, the entity is detached
+
+3. Modified: The entity has been modified. The entity is being tracked by the contextand exists in the database, and some or all of its property values have been modified
+
+4. Unchanged : The entity hasnt been modified. The entity is being tracked by the contextand exists in the database, an its property values have not changed from the values of the database
+
+5. Detached : The entity is not being tracked by the context. An entity will be in this state as soon as it is created using new operator
+
+
+The context object not only holds the reference to all the entities, but also keeps track of the states of each entity and maintains all changes made to the entity. This is known as Change Tracking
+
+
+
+
