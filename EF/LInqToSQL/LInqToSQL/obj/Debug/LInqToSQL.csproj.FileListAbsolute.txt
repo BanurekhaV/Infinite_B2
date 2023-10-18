@@ -1,0 +1,7 @@
+C:\Banu\Infinite\B2\EF\LInqToSQL\LInqToSQL\bin\Debug\LInqToSQL.exe.config
+C:\Banu\Infinite\B2\EF\LInqToSQL\LInqToSQL\bin\Debug\LInqToSQL.exe
+C:\Banu\Infinite\B2\EF\LInqToSQL\LInqToSQL\bin\Debug\LInqToSQL.pdb
+C:\Banu\Infinite\B2\EF\LInqToSQL\LInqToSQL\obj\Debug\LInqToSQL.csproj.AssemblyReference.cache
+C:\Banu\Infinite\B2\EF\LInqToSQL\LInqToSQL\obj\Debug\LInqToSQL.csproj.CoreCompileInputs.cache
+C:\Banu\Infinite\B2\EF\LInqToSQL\LInqToSQL\obj\Debug\LInqToSQL.exe
+C:\Banu\Infinite\B2\EF\LInqToSQL\LInqToSQL\obj\Debug\LInqToSQL.pdb

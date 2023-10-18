@@ -1,0 +1,66 @@
+LINQ to SQL : Offers an runtime infrastructure for the management of relational data as objects
+
+Table - > Class
+Columns ->Property
+Rows -> Instance
+StoredProcedure -> Methods
+
+-> To work with Linq-SQL, we need to convert all relational database objects to Programming Objects. This process of mapping is known as ORM
+
+Advantages :Query Database object as a .net object
+Development becomes easier
+Handles SQL Injection attack
+Type safety ensured by the compiler
+Intellisense support
+
+-Linq to Objects
+-Linq to Collections/Arrays
+-Linq To entities (ORM)
+-Linq to SQL  :  Mapped objects are generated using 
+   1. a Tool called as SQLmetal.exe( wee need to execute certain commands in the .net development command prompt to generate a .dbml file)
+   2. Visual Studio : (Using Linq-Sql Classes, we obtain a .dbml file that has all the mappings)
+
+Steps for working with LINQ-SQL using Visual studio component :
+---------------------------------------------------------------
+ 1. Create a console application for .netframework
+ 2. To the Project-> right click ->add new item->select LinqtoSql classes
+ 2.a ) Go to view and open sql server object explorer and if required add anew connection to the database
+ 3. If you want, you can rename the .dbml file (which actually represents the DataContextObject)
+ 4. Observe that a reference to System.Data.Linq is added, andl also a Layout and a designer.cs files getting added. (Do not change any code)
+ 5. Have a look at the constructors of the designer.cs file (4 in numbers, and all parameterized)
+ 6. Then you may drag and drop any tables that you want to the left side of the layout pane, and any functions or procedures to the right side of the layout pane
+ 7. Wait for sometime, for it to get activated.
+ 8. Now go and observer the designer.cs file to find an empty constructor getting added for the Context Class.
+ 9. Now you may invoke the DB activities in your Main() by creating an object of the DataContext Class.
+
+
+SQL Metal : The below command is to be issued from the Dotnet developer command prompt.
+- Change the Directory to c:\Windows\System32 and type as below :
+
+c:\Windows\System32>sqlmetal.exe /server:LAPTOP-TJJ7D977 /database:NorthWind /dbml:C:\Banu\Infinite\B2\nwind.dbml /context:NorthwindContext
+
+-Note : you are required to give the 
+        Server name with instance if any, 
+        Database name
+        dbml location and name
+        context name for the data
+
+- Add the dbml file to the project by right clicking on the project->existing item-serach for the dml file and select it
+
+- make changes to the app.config file
+app.config file : add the connection string details as below
+
+<?xml version="1.0" encoding="utf-8" ?>
+<configuration>
+	<configSections>
+		
+	</configSections>
+	<connectionStrings>
+		<add name="NwindConnString"          //can be any name
+			  connectionString="Data Source=Laptoptjj7d977;initial catalog=Northwind;integrated security=true"
+			   providerName="System.Data.SqlClient"/>
+	</connectionStrings>
+    <startup> 
+        <supportedRuntime version="v4.0" sku=".NETFramework,Version=v4.7.2" />
+    </startup>
+</configuration>
