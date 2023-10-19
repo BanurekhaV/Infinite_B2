@@ -1,0 +1,14 @@
+C:\Banu\Infinite\B2\EF\CodeFirstEg2\CodeFirstEg2\bin\Debug\CodeFirstEg2.exe.config
+C:\Banu\Infinite\B2\EF\CodeFirstEg2\CodeFirstEg2\bin\Debug\CodeFirstEg2.exe
+C:\Banu\Infinite\B2\EF\CodeFirstEg2\CodeFirstEg2\bin\Debug\CodeFirstEg2.pdb
+C:\Banu\Infinite\B2\EF\CodeFirstEg2\CodeFirstEg2\bin\Debug\EntityFramework.dll
+C:\Banu\Infinite\B2\EF\CodeFirstEg2\CodeFirstEg2\bin\Debug\EntityFramework.SqlServer.dll
+C:\Banu\Infinite\B2\EF\CodeFirstEg2\CodeFirstEg2\bin\Debug\EntityFramework.xml
+C:\Banu\Infinite\B2\EF\CodeFirstEg2\CodeFirstEg2\bin\Debug\EntityFramework.SqlServer.xml
+C:\Banu\Infinite\B2\EF\CodeFirstEg2\CodeFirstEg2\obj\Debug\CodeFirstEg2.csproj.AssemblyReference.cache
+C:\Banu\Infinite\B2\EF\CodeFirstEg2\CodeFirstEg2\obj\Debug\CodeFirstEg2.csproj.CoreCompileInputs.cache
+C:\Banu\Infinite\B2\EF\CodeFirstEg2\CodeFirstEg2\obj\Debug\CodeFirstEg2.csproj.CopyComplete
+C:\Banu\Infinite\B2\EF\CodeFirstEg2\CodeFirstEg2\obj\Debug\CodeFirstEg2.exe
+C:\Banu\Infinite\B2\EF\CodeFirstEg2\CodeFirstEg2\obj\Debug\CodeFirstEg2.pdb
+C:\Banu\Infinite\B2\EF\CodeFirstEg2\CodeFirstEg2\obj\Debug\CodeFirstEg2.Migrations.CreatingDatabasenObjects.resources
+C:\Banu\Infinite\B2\EF\CodeFirstEg2\CodeFirstEg2\obj\Debug\CodeFirstEg2.csproj.GenerateResource.cache

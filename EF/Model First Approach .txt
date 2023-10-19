@@ -1,0 +1,15 @@
+Model First Approach :
+
+1. Create a Console Application
+2. Add ADO.net Entity model item to the project (Model1)
+3. Select the second option from the wizard(EF designer)
+4. Observer an empty .edmx being created.
+5. Right click on the desiner surface and add entities
+6. Right click on the entity to add many more scalar properties(columns)
+7. You can set their datatypes and other options thru properties window of the property
+8. Once all entities and their properties are created, you can set the association by clicking on the surface of the designer and associate (Observe navigation properties get created)
+9. Right click on the surface and select Generate Database from Model (This will generate the SQL script)
+10.Click Finish and observe the edmx.sql file getting created in the solution explorer
+11. Inside the above file->rightclick->execute
+12. Specify your Server details in the Dialog Box and press ok
+13. Now see that the database and its objects being created (Sql Server Explorer window and also in the SQL Server)

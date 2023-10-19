@@ -1,1 +1,36 @@
-Code First Approach: 
+Code First Approach: 1. Create a ConsoleApplication
+2. Add Model Classes with properties (inside Model Folder - Optional)
+3. Create a Context Class that derives from the DbContext base class (include the namespace System.Data.Entity)
+4. Add all the Model classes as DbSet properties inside the Context class
+5. Add the Connection strings in the App.Config File
+
+<connectionStrings>
+		<add name="PersonContext"
+			 connectionString="Data Source=<your server name>;initial Catalog=PersonDB;
+			 integrated security=true"
+			   providerName="System.Data.SqlClient"/>
+	</connectionStrings>
+6. Create an empty constructor in the context class and pass the name of the connection string to the base class as a parameter 
+
+   public class PersonContext : DbContext
+    {
+        public PersonContext() : base("name=PersonContext")
+        {
+
+        }
+
+
+7. Build once
+8. Invoke a Package manager console (prompt) by going to tools->nugetpackage->package manager console
+9. Th eprompt looks like pm>
+10. We need to use the below commands in sequence
+   1. PM>enable-migrations (this will create a Migrations folder and add the initial migration details)
+   set the AutomaticMigrationsEnabled = true; as below
+	public Configuration()
+        {
+            AutomaticMigrationsEnabled = true;
+        } 
+   2. PM>add-migration "<meaningful name>" (this would enable the creation of relevant entity objects)
+   3. PM>update-database (this will ensure that the mapped objects are created in the Database)
+
+Note : Further if we make any changes viz, new model class addition, property addition etc, we will have to only give commands 2 and 3 
