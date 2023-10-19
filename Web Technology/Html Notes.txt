@@ -1,0 +1,77 @@
+What is World Wide Web?
+- Network of Information
+   - A Uniform Naming Scheme for locating resources on the web (URI's)
+   - Protocols, for access to the named resources over the web (Http)
+   - Hypertext, for easy navigation among resources (Html)
+
+Every Resource available on the web viz.
+   --HTML doc, Images, Video Clips,Program etc has an address that may be accessed by a URI
+
+EG :http://www.mypage.com/mydata
+
+URI's typically have 3 pieces
+1. The Protocol (naming scheme) to access the resource
+2. The name of the machine hosting the resource  (domain name)
+3. The name of the resource itself, given as path
+
+URI has (URN || URL)
+URN defines an items identity, while the URL provides a method for finding it
+
+Anatomy of a web Page
+
+HTML + CSS + JavaScript = Content + Style + Behaviour ( Seperation of Concern for Easier maintenance and faster development)
+
+Html is the LifeBlood of the WWW, representing data
+Css defines how pages should appear
+Javascript Gives behaviour to the html that can be activated based on the user interaction (behind the scene)
+
+WebSite : front end interface thru which the public interact with the business online
+
+Web Application : Services or application specific to a business need.
+
+Web Server : Is a machine that hosts the Wep Applications (web pages)
+
+W3C : Tim Berners founded World Wide Web Consortium in 1994
+
+Search Engines operates in the following manner
+  - Web Crawling - Indexing - Searching
+
+HTTP : is Hyper Text Transfer Protocol. Itis a network protocol virtually delivers any file/data ober the web.
+
+Browser : Is a http client, b'coz it i sthe one that send request to an Http server (Web Server)
+
+HYper Text Mark Up Lang : HTML also known as publishing lang. of the WWW. Works with all predefined tags
+
+<html>
+
+ 
+</html>
+
+Tags,Attributes,Elements - make up html
+Pages, Titles,Paragraphs,Headings
+List
+Links
+Images
+Tables
+Forms
+
+<b> bold
+<strong> bold (weight of the character)  (semantic)
+<i>
+<em>
+
+Lists:
+ 1. Ordered List (OL)
+ 2. Unordered List (ul)
+ 3. Description or Definition List (Dl)
+
+
+
+Span and Div Tags : both or non-semantic 
+Span is used for small chunk of in-line html
+Div is used for Block-Line Html (many html tags/elements can be placed inside Div tag)
+
+CSS : Cascading Styles
+ 1. Inline Style
+ 2. Internal Style
+ 3. External Style
