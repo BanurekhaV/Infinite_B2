@@ -1,0 +1,20 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script type="text/javascript">
+        function MsgBox(str) {
+            alert("Hello" + " " + str);
+        }
+    </script>
+</head>
+<body>
+    <form>
+        <input type="text" name="txt1" />
+        <input name="btnsubmit" type="button" value="Click Me" onclick="MsgBox(form.txt1.value)" />
+        <input type="button" name="docbtn" value="Try Me" onclick="document.write(5+5)" />
+    </form>
+</body>
+</html>

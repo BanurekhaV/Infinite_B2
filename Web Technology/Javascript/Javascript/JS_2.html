@@ -1,0 +1,28 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <h2>Javascripts capability in changing HTML content</h2>
+    <p id="num">Javascript is going to change</p>
+    <p id='str'>Name :</p>
+    <p id="obj">Object Info :</p>
+    <div id="change"></div>
+    <script>
+        var length = 10;
+        var names = "Abdul kalaam";
+        var ob = { fname: "Swamy", lname: "Vivekananda", Age: 36 };
+        /*document.getElementById("num").innerHTML = length;
+        document.getElementById('str').innerHTML = names;
+        document.getElementById('obj').innerHTML = ob.fname + " " + ob.lname + " " + ob.Age;*/
+        document.getElementById('change').innerHTML='<p><font color=blue>Hello JavaScript</font></p>'
+    </script>
+    <button type="button" ondblclick="document.getElementById('num').innerHTML=length">Get Number</button>
+    <button type="button" ondblclick="document.getElementById('str').innerHTML=names">Get Name</button>
+    <button type="button" ondblclick="document.getElementById('obj').innerHTML= ob.fname + ob.lname">Get Object</button>
+</body>
+
+</html>

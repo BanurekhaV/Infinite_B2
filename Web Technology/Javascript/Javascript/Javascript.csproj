@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{B4A819D5-BA9B-4595-B950-C0FE3CAE8C20}</ProjectGuid>
+    <ProjectGuid>{AC057FFE-C7DB-4B22-8665-E38E4823E707}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>Html</RootNamespace>
-    <AssemblyName>Html</AssemblyName>
+    <RootNamespace>Javascript</RootNamespace>
+    <AssemblyName>Javascript</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -48,24 +48,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Animation.html" />
-    <Content Include="AudionVideo.html" />
-    <Content Include="Doc2.html" />
-    <Content Include="Form.html" />
-    <Content Include="generalStyles.css" />
-    <Content Include="Images\Chocolates.jpg" />
-    <Content Include="Images\cinematic-documentary-115669.mp3" />
-    <Content Include="Images\Cookies.jpg" />
-    <Content Include="Images\Doll.jpg" />
-    <Content Include="Images\Puppy.jpg" />
-    <Content Include="Images\sample-5s.mp4" />
-    <Content Include="MultiColumn.html" />
-    <Content Include="Registration.html" />
-    <Content Include="Styles.html" />
-    <Content Include="Tables.html" />
-    <Content Include="usingExternalCss.html" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
