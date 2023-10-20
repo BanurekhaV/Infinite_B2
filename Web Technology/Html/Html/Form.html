@@ -1,0 +1,38 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+<h1><center>Registration Form</center></h1>
+<form action="Registration.html" method="post">
+    FirstName :  <input type="text" name="txtfname" /><br />
+    LastName  :  <input type="text" name="txtlname" /><br />
+    Password  :  <input type="password" name="pwd" /><br />
+    Age    &nbsp;&nbsp;  &nbsp;&nbsp; :  <input type="number" name="age" /><br />
+    Address    : <textarea rows="4" cols="30"></textarea><br />
+    Gender     :  <input type="radio" name="gender" value="m" />Male
+    <input type="radio" name="gender" value="f" checked />Female
+    <input type="radio" name="gender" value="o" />Others
+    <br /><br />
+    City       :  <select name="city">
+        <option value="blr">Bengaluru</option>
+        <option value="chn">Chennai</option>
+        <option value="hyd">Hyderabad</option>
+        <option value="vzg">Vizag</option>
+
+    </select>
+    <br /><br />
+    Submit ID Proof :
+    <input type="checkbox" name="c1" value="acard" />Aadhar Card<br />
+    <input type="checkbox" name="c2" value="pcard" />Pan Card <br />
+    <input type="checkbox" name="c3" value="dlic" />Driving Licensce<br />
+
+    Upload Proof : <input type="file" /><br /><br />
+    <input type="submit" value="Register" />
+    <input type="reset" value="Clear" />
+</form>
+</body>
+</html>
