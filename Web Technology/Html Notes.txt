@@ -71,7 +71,36 @@ Span and Div Tags : both or non-semantic
 Span is used for small chunk of in-line html
 Div is used for Block-Line Html (many html tags/elements can be placed inside Div tag)
 
+Forms:action and method are 2 imp attributes that allow the form to be submitted securely
+
+HTML 5 : it is enriched with advance features that make it easy and interactive for designers/developers and users
+ - It allows audio and video files to be played
+ - It allows to draw or write on the canvas
+ - It facilitates to design better forms and build web applications
+Eg :
+<header><footer><mark><article><figure><figcaption><nav><progress><section><summary><time>
+
+Form Elements :Fieldset, legend, datalist, label for 
+
 CSS : Cascading Styles
  1. Inline Style
- 2. Internal Style
+ 2. Internal Style  
  3. External Style
+
+Class Selectors override Tag Selectors
+
+Animations : keyframes : rules for animation
+
+Grouping and Nestings  :
+
+h2{color:red;}
+.c1{color:red;}
+ instead of repeating common properties for various style elements, we can group them as below:
+
+h2,.c1,div{color:red;}
+
+Nesting
+#top{background-color:red;padding:2em}
+#top h1{color:white;}
+#top p{font-size:12px;font-weight:bold;}
+Shorthand 
