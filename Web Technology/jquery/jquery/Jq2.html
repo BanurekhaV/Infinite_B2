@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js">
+
+    </script>
+    <script>
+        function fn1() {
+            alert('Hi 1');
+            var elem = document.getElementById('d1');
+            alert('hi 2');
+            elem.blur = true;
+            elem.innerHTML = "I am HTML element";
+        }
+    </script>
+</head>
+<body>
+    <form>
+        <div id="d1" style="background:yellow;height:40px;width:100px;">HELLO</div>
+        <br/>
+        <br/>
+        <div style="background: green; height: 80px; width: 100px;color:yellow;">WORLD</div>
+        <input type="button" value="Click me.." onclick="fn1()" />
+    </form>
+</body>
+</html>
