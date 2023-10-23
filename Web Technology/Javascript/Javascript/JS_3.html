@@ -1,0 +1,51 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+        function concat(first, last) {
+            var fulldata;
+            fulldata = first + last;
+            return fulldata;
+        }
+
+        function caller() {
+            var result;
+            result = concat(100,260);
+            document.getElementById('showresult').innerText = result;
+        }
+    </script>
+</head>
+<body>
+    <input type="button" onclick="caller()" value="Get Full Name" />
+    <h2 id="showresult"></h2>
+
+    <!-- Eg 1
+      <script>
+          function change() {
+              var paragraphs = document.getElementsByTagName('p');
+              document.getElementById('result').innerHTML = paragraphs[1].innerHTML;
+              }
+      </script>
+        <p id="result">This Script is using getElementsByTagName</p>
+        <p>Para 2</p>
+        <p>Para 3</p>
+        <p>Para 4</p>
+        <h2>Heading 2</h2>
+        <input type="button" onclick="change()" value="Click to see changes" />
+    </body>-->
+    <!--Eg 2
+    <h1>Date Functions</h1>
+    <p id="demo">Get date</p>
+    <script>
+        var currentdate = new Date();
+        currentdate.setDate(currentdate.getDate()+120);
+    </script>
+    <input type="button" onclick="document.getElementById('demo').innerText=currentdate" value=GetNewDate />
+        -->
+
+    <!--Eg 3-->
+    </body>
+</html>

@@ -1,0 +1,48 @@
+JavaScript: Easy to use programming lang, that can be embedded either in the head or the body sections
+of the web page(html page) 
+- Used to enhance the interactive features and dynamism of the page
+- Can perform calculations,validations,special effects, graphics, security aspects etc
+- Browser detection and control, cookie storage, validation of client forms etc.
+- Modify Html Page,write text, add or remove tags, change styles
+
+window.alert() -  write into an alert box
+document.open()
+document.write() - write onto a html page
+console.log() - writes on to the browsers console
+innerhtml - writes onto a html element
+
+Events : mouse and keyboard 
+
+inline, internal and external javascripts
+
+variables using var keyword
+
+var name='banu';
+var age=26;
+var name,age;
+
+marks=67;
+
+<html>
+<body onLoad=check()>
+<script type="text/javascript">
+var myvar="global";
+function check(){
+var myvar="local";
+docu,ent.write(myvar)
+}
+</script>
+</body>
+
+
+
+
+
+
+
+
+
+
+
+
+<a href="abc.html" onClick="alert("Not Possible")">click here</a>

@@ -1,0 +1,71 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+
+<body>
+    <!--Eg Loop
+        Say What ?<input id="saythis" size="40" /><br/><br/>
+        How many Times? <select id="howmany">
+        <option value="0">Select</option>
+        <option value="1">1 Time</option>
+        <option value="5">5 Times</option>
+        <option value="10">10 Times</option>
+        <option value="20">20 Times</option>
+    </select> <br/><br/>
+        <button onclick="doLoop()">Do It !</button>
+        <br/>
+        <div id="results"></div>
+        <script>
+            function doLoop() {
+                var saywhat = document.getElementById('saythis').value;
+                var maxtime = document.getElementById('howmany').value;
+                var str = ' ';
+                for (var i = 1; (i <= maxtime); i++) {
+                    str = str + i + ':' + saywhat + '<br/>';
+                }
+                document.getElementById("results").innerHTML = str;
+            }
+        </script>-->
+    <!-- Eg selection
+    <script>
+        var book = "maths";
+        if (book == 'history') {
+            document.write("<b><i>History Book</i></b>");
+        } else if (book == 'maths') {
+            document.write("<b><i>Maths Book</i></b>");
+        } else if (book == 'science') {
+            document.write("<b><i>Science Book</i></b>");
+        } else {
+            document.write("<b><i>Not a Subject Book</i></b>");
+        }
+    </script>-->
+    <!-- Do while loop
+    <script>
+        var count = 0;
+        document.write("Starting the Do While Loop" + "<br/>");
+        do {
+            document.write("Count Value :" + count + '<br/>');
+            count++;
+        } while (count < 5);
+        document.write("Loop Ended");
+    </script>-->
+    <!-- while do with break-->
+    <script>
+        var i = 0;
+        document.write("Loop with Break.." + '<br/>');
+        while (i < 10) {
+            console.log(i);
+            if (i == 5) {
+                break;
+            }
+            i = i + 1;
+            document.write(i + "<br/>")
+        }
+    </script>
+</body>
+ 
+</html>
