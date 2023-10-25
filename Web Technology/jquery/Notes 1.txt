@@ -1,0 +1,60 @@
+jQuery: Is a Javascript Library
+- Light Weight, write less, do more
+
+Features:
+ Manipulation of HTML/DOM
+CSS manipulation
+HTML event methods
+Effects and Animations
+AJAX (Asynchronous Javascript and XML)
+Utilities
+      <script> src="jquery-3.4.1.min.js </script>  -- download
+
+or include as below in the head element of your HTML page
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js">
+<script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-3.4.1.min.js"
+
+	https://github.com/jquery/jquery
+
+Syntax:
+basic $(selector).action()  
+
+  - $ - is either to define or access Jquery
+  - selector - to query or find html element/s
+  - action - some action to be performed on the element
+
+ $(this).hide() - hides the current element
+ $("p").hide() - hides all <p> element
+
+
+Documents readiness
+$(document).ready(function(){});
+  to prevent jquery code from running before the document is finished loading
+
+- hide()
+-show()
+-toggle()
+-fadein()
+-fadeout()
+-fadeToggle()
+-fadeTo() - fading to a given opacity (0-1)
+-slide()
+-Animate()
+-stop()
+-callback()
+Chaining - run multiple jquery(for the same element)within a single statement
+
+bind() - syntax
+selector.bind(event type[,eventdata],handler)
+
+event type - a string containing javascript event type viz, click,dblclick,submit
+event data - optional, used to map some data that can be passed to the handler
+handler - a function to execute each time the event is triggered
+
+--Removing an evenet with unbind()
+
+Callback Functions - in order to prevent some overlap of jqueries previous effect with some other effects, we can use a callback to ensure that the jquery effect is fully executed
+
+$(selector).action(duration,callback) -- callback function will be the last argument
+    - 

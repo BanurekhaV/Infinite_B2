@@ -1,0 +1,45 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Events</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js">
+    </script>
+    <!-- handling events makes a page dynamic
+        Mouse events, keyboard events, html events, document events
+        using jquery event model, we can establish event handlers on the DOM elements
+        with the bind()-->
+    <script>
+        $(document).ready(function () {
+
+            //to bind event
+            //$('div').bind('click', function (event) {
+            //    alert('Hi there !!' + event.target.innerHTML);
+                
+            //});
+
+            //to unbind event
+            $('div').bind('click', function (event) {
+                alert('Hi there !!' + event.target.innerHTML);
+                alert("The Event Type is : " + event.type);
+                $('button').click(function () {
+                    $('div').unbind('click');
+                });
+            });
+        });
+    </script>
+    <style>
+        .div{
+            margin:10px;padding:12px; border:2px solid #666;width:60px;
+        }
+    </style>
+</head>
+<body>
+    <p>Click on any square below to see the result</p><br />
+    <div class="div" style="background-color:red;">Div No. ONE</div>
+    <div class="div" style="background-color:blue;">Div No. TWO</div>
+    <div class="div" style="background-color:Green;">Div No. THREE</div>
+   <!-- <button>unbind</button>-->
+</body>
+</html>

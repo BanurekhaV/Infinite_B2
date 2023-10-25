@@ -1,0 +1,62 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js">
+    </script>
+    <script>
+        clicked = true;
+        $(document).ready(function () {
+            // eg for hide and show
+            //$('#hide').click(function () {
+            //    $('p').hide();
+            //});
+            //$('#show').click(function () {
+            //    $('p').show();
+            //});
+
+            //eg for toggle
+            //$('button').click(function () {
+            //    $('div').toggle();
+            //});
+
+            //eg for css manipulation
+            $('button').click(function () {
+                if (clicked) {
+                    $(this).css('background-color', 'red');
+                    clicked = false;
+                } else {
+                    $(this).css('background-color', 'blue');
+                    clicked = true;
+                }
+            });
+        });
+    </script>
+    <style>
+        button{
+            background-color:blue;
+            height:100px;
+            width:100px;
+        }
+    </style>
+</head>
+<body>
+    <!-- eg for hide and showw
+     <p>Let us play Hide and Show</p>
+    <p>One more Para</p>
+    <button id="hide">Hide</button>
+    <button id="show">Show</button> -->
+
+    <!-- eg for toggle
+    <button>Toggle</button><br/>
+    <div>
+        <img src="C:\Banu\Infinite\B2\Web Technology\Html\Html\Images\puppy.jpg" height="100" width="100" />
+        <p>Toggle Me !!</p>
+    </div> -->
+
+    <!--eg for css-->
+    <button>Press Here</button>
+</body>
+</html>
