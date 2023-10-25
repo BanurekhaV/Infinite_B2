@@ -1,0 +1,43 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Get and Set</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js">
+    </script>
+    <script>
+        $(document).ready(function () {
+            // jquery Get
+            //$('#b1').click(function () {
+            //    alert("The Text is :" + $('#t1').text());
+            //});
+            //$('#b2').click(function () {
+            //    alert("The Text is :" + $('#t1').html());
+            //});
+            //$('#b3').click(function () {
+            //    alert("The Value is :" + $('#t2').val());
+            //});
+
+            //Jquery Set
+            $('#b1').click(function () {
+                $('#t1').text("We are setting Text");
+            });
+            $('#b2').click(function () {
+                $('#t1').html("<mark>We are setting Text</mark>");
+            });
+            $('#b3').click(function () {
+                $('#t2').val("Happy Day");
+            });
+
+        })
+    </script>
+</head>
+<body>
+    <p id="t1">Some <b><i>Text</i></b> of the Para</p> <br />
+    UserName : <input type="text" id="t2" /> <br />
+    <button id="b1">show Text</button> <br />
+    <button id="b2">Show Html</button> <br />
+    <button type="button" id="b3">Show Data</button>
+</body>
+</html>

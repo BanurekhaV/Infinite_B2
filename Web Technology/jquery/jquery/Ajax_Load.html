@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js">
+
+    </script>
+    <script>
+        $(document).ready(function () {
+            $('button').click(function () {
+                $('div1').load("Sample.txt", function (responsetxt, statustxt, xhr) {
+                    if (statustxt == "success")
+                        alert("external content loaded successfully");
+                    if (statustxt == "error")
+                        alert("Error :" + xhr.status + " :" + xhr.statusText);
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+     <div id="div1">
+         <h2>Let Jquery Ajax change this Text</h2>
+     </div>
+    <br/>
+    <button>Get Data Loaded</button>
+</body>
+</html>

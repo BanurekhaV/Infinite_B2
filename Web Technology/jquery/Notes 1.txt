@@ -57,4 +57,9 @@ handler - a function to execute each time the event is triggered
 Callback Functions - in order to prevent some overlap of jqueries previous effect with some other effects, we can use a callback to ensure that the jquery effect is fully executed
 
 $(selector).action(duration,callback) -- callback function will be the last argument
-    - 
+
+Get or set html data
+ text(),html(), val()
+
+
+Ajax : 
