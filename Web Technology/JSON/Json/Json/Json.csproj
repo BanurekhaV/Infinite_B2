@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{CEFDA444-D1C3-4A34-8049-F0228FFE7135}</ProjectGuid>
+    <ProjectGuid>{2927E160-8009-4C27-BB79-81E0DB821C7B}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>jquery</RootNamespace>
-    <AssemblyName>jquery</AssemblyName>
+    <RootNamespace>Json</RootNamespace>
+    <AssemblyName>Json</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -50,17 +50,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Ajax_Load.html" />
-    <Content Include="Animation.html" />
-    <Content Include="ContentChange.html" />
-    <Content Include="Events.html" />
-    <Content Include="Get_n_Set.html" />
-    <Content Include="Jq2.html" />
-    <Content Include="Jq3.html" />
-    <Content Include="JQ41.html" />
-    <Content Include="Jquery1.html" />
-    <Content Include="JQ_Traversing.html" />
-    <Content Include="Sample.txt" />
+    <Content Include="Json1.html" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

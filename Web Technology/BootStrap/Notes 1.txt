@@ -1,0 +1,29 @@
+BootStrap : Is a free Frontend framework for faster and easier web development
+  - It includes Html,Css based design templates for typography,forms,buttons,tables,navaigation,modals,images,carousels and many more other options, as well as java script plug-ins
+  - It also gives the ability to create responsive designs
+  - Was developed by Mark Otto and Jacob in the year 2011
+  - Is an Open source framework targetting Mobile-first approach
+  - Easy to Use
+  - Browser Compatability
+
+Where to get Bootstrap from ?
+1. Download from getbootstrap.com or include from a cdn as below:
+
+2. https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css
+
+-For Jquery Library
+
+ <!--jquery Library-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js"></script>
+
+- Always include the Html5 doctype
+
+eg :<!Doctype html>
+
+- Inorder to ensure proper rendering, touch and zoom, we need to add a <meta> tag inside the <head> 
+<meta name="viewport" content="width=device-width,initial-scale=1">
+
+Containers : all site contents have to be wrapped in a containing element
+  - are of 2 types
+ 1: .container class - a responsive fixed container
+    .container-fluid  - full width container,spanning the entire width of the viewport

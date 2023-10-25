@@ -1,0 +1,38 @@
+JSON : Java Script Object Notation 
+-Light Weight format to store and exchange data
+-Content Negotiation
+-Easy to use and understand
+-Lang Independent
+-Supports Datastructures like arrays and objects
+-Executes faster on the server than xml
+-Is Enclosed within {}
+-Is a name/value pair (name is always a string)
+-Is a simple Text based format
+
+Eg :
+{
+"Courses":[{"Name":"CSharp",
+            "Duration":"40hrs",
+            "Fees":8000},
+           {"Name":"SQL",
+            "Duration":"35hrs",
+            "Fees":5000}]
+
+Disadvantages: No Error handling
+               No Security
+
+Data Type Support : string, number,object,boolean,array,null
+
+Not Supported Data Types: date,function,undefined
+<Employees>
+<Employee>
+  <Name>Shreyank></Name>
+  <Dept>IT</Dept>
+  <DOJ>12/12/2022</DOJ>
+</Employee>
+
+</Employees>
+
+{"Employee":{"name":"Banurekha","Dept":null:"Age":26,"Salary":45000,"isFullTime":true}}
+
+parse() - an inbuilt javascript function to convert string to js object

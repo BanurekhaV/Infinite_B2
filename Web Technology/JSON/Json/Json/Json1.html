@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <h1>Parsing Text to Javascript Object using JSON.parse()</h1>
+    <p id="test"></p>
+    <script>
+        /* 1. parsing text to objects */
+        const mydata = '{"Name":"Sahithi","City":"Bangalore","Salary":45000}'
+        const myobj = JSON.parse(mydata);
+        document.getElementById('test').innerHTML = "Name:" + myobj.Name + " " +"City :" + " " +
+            myobj.City + "," + "Salary : " + " " + myobj.Salary;
+        /* 2. stringify 
+        data = JSON.stringify(myobj)
+        document.write(data);*/
+        /* 3. Replacer in stringify */
+        var obj = { "fname": "jamuna", "age": 35, "city": "chennai" };
+        var text = JSON.stringify(obj, function (key, value) {
+            if (key == "fname") {
+                return value.toUpperCase();
+            } else if (key == "age") {
+                return value + 10;
+            }
+
+            else{
+                return value;
+            }
+        });
+        document.getElementById('test').innerHTML = text;
+    </script>
+</body>
+</html>
