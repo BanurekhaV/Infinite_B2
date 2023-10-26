@@ -5,6 +5,11 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title></title>
+    <script>
+        function wishes() {
+            alert("hello, I am a JS");
+        }
+    </script>
 </head>
 <body>
     <form id="form1" runat="server">
@@ -19,6 +24,10 @@
         <p>
             <asp:Button ID="Btnwish" runat="server" Text="Click" OnClick="Btnwish_Click" />
         </p>
+        <p>
+            &nbsp;</p>
+        <p>
+            <input id="Button1" type="button" onclick="wishes()" value="Html button" /></p>
     </form>
 </body>
 </html>

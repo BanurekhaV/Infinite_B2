@@ -61,4 +61,12 @@ Application Life Cycle :
  Dispose : This event is called before the application instance is destroyed
  Application_End : application is unloaded from the memory
 
+HttpGet: first time request to the server for a page is Get
+
+HttpPost : is a post back event (in response to users query data)
+
+Inorder to understand and appreciate the page events, we can enable the trace to true 
+in web.config file under<system.web> tag
+
+This will create a trace.axd file which traces all the events and the request response states
 
