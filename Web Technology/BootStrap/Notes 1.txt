@@ -27,3 +27,18 @@ Containers : all site contents have to be wrapped in a containing element
   - are of 2 types
  1: .container class - a responsive fixed container
     .container-fluid  - full width container,spanning the entire width of the viewport
+
+Components: A set of reusable and customizable components to make web development faster and easier
+- List of Components:
+1. Jumbotron: making any content look larger and bigger to catch the attention of the user
+2. Alerts: Predefined Popup messages
+3. Buttons:perform actions on the form,dialog box. Multiple states, size and styles
+4. Badge : Labelling component
+5. Progress bar : Progress of some operation
+6. Nav bar: The header bar at the top of the application and provides navigation thru menus
+7. Forms: Multiple Inputs
+8. List Group : provides display of unorder series of contents in aproper way
+9. Card :Provides customizable,extensible and flexible content container
+10. Carousel : slide of images using built in 3d css and javascript
+11. Breadcrumbs: Provides location of the current page in the navigational hierarchy and also has seperators thru css
+12. Pagination : Navigation between different pages
