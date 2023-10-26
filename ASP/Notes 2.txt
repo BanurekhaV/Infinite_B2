@@ -10,8 +10,19 @@ Client Side  :
 
 Note : All asp controls(server controls) have a viewstate field to retain postback events. This is a serialized base64-encoded strings and is stored in  a hidden field
 
-  2. Hidden Fields:
-  3. Cookies:
+  2. Hidden Fields: Are controls in the tool box.
+                    They are not visible at the runtime and only seen at the design time
+                    It is a class and hence needs to be initialized
+                    More load on the system
+                    Can retain values (state of the controls) across multiple postbacks of the same page
+
+Note : While both ViewState Variables and HiddenField Controls work in the same manner, if we have less data/values to manage state, then may be we can use Hiddenfields. If more data has to be managed, then Viewstate is preferred (performance)
+Both are local to the form/page
+
+  3. Cookies: Are used when we want our data to travel across pages. Are of 2 types 
+             1. Persistent Cookies : We need to use a HttpCookies class object
+             2. Non-Persistent Cookies : no need for the httpcookies object
+
   4. Query String:    
                             
 Server Side :
