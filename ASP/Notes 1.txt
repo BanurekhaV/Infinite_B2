@@ -14,9 +14,18 @@ Web Form : also known as a web page, is the core component of asp applications
 Model of ASP.net web form
  - Event driven
  - Browser is the default client
+ - Accessible anywhere with internet
+ - Client-Server architecture
  - Clients Request/response is done thru Http (a stateless protocol)
         - Page State:contains all inputs in the web form
         - Session State : collective information of various pages of a particular user
+
+All web Applications have to be hosted on a web server:
+      -IIS
+      -Tomcat
+      -Apache
+      -WebSphere
+      -JellyFish
  
 
 Page Life Cycle : WebForms/Page live barely for a moment.
@@ -25,3 +34,31 @@ Page Life Cycle : WebForms/Page live barely for a moment.
          b) Events are processed
          c) Generates the HTML and Posts it to the client
          d) The webform is immediately destroyed
+
+Life Cycle :
+S : Start the page
+I : Intialiazation (all controls and other container objects)
+L : Load
+V : Validate
+E : Event handling
+R : Render (Css/Html/UI are applied)
+
+Page Events :
+ Pre-Init
+ Init
+ InitComplete
+ OnPreLoad
+ Load
+ LoadComplete
+ OnPreRender
+ Render
+ Unload
+
+Application Life Cycle :
+ Application_Start : all global variables and default values are set
+ ObjectCreation : HttpContext object, HttpRequest object, HttpResponse object
+ HttpApplication Creation : Created by the web server, inorder to process subsequent requests
+ Dispose : This event is called before the application instance is destroyed
+ Application_End : application is unloaded from the memory
+
+
