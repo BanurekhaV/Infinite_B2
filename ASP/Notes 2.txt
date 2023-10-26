@@ -1,0 +1,19 @@
+State Management: Managing /Retaining the state of the page (data management)
+
+There are 2 types of statemanagement techniques : 
+
+Client Side  :
+  1. ViewState: Is a dictionary object that can store any data. 
+                It is a simple variable that does not require typecasting.
+                It is stored at the client side
+                Can retain values (state of the controls) across multiple postbacks of the same page
+
+Note : All asp controls(server controls) have a viewstate field to retain postback events. This is a serialized base64-encoded strings and is stored in  a hidden field
+
+  2. Hidden Fields:
+  3. Cookies:
+  4. Query String:    
+                            
+Server Side :
+  1. Session State:
+  2. Application State:

@@ -7,7 +7,8 @@
     <title></title>
     <script>
         function wishes() {
-            alert("hello, I am a JS");
+            var data = Text1.Text;
+            alert("hello, I am a JS" + data);
         }
     </script>
 </head>
@@ -27,7 +28,9 @@
         <p>
             &nbsp;</p>
         <p>
-            <input id="Button1" type="button" onclick="wishes()" value="Html button" /></p>
+            <input id="Text1" type="text" runat="server" /></p>
+        <p>
+            <input id="Button1" type="button" runat="server" onclick="wishes()" value="Html button" /></p>
     </form>
 </body>
 </html>

@@ -70,3 +70,6 @@ in web.config file under<system.web> tag
 
 This will create a trace.axd file which traces all the events and the request response states
 
+
+
+
