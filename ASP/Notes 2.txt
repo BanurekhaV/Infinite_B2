@@ -23,8 +23,22 @@ Both are local to the form/page
              1. Persistent Cookies : We need to use a HttpCookies class object
              2. Non-Persistent Cookies : no need for the httpcookies object
 
-  4. Query String:    
+  4. Query String: Across Pages statemanagement (? %) The data values are passed to other pages over the address bar. It is visible. Hence we should not use query strings to pass sensitive information. UrlEncode to encode the data in a format that overrules any other specific format 
+
                             
 Server Side :
   1. Session State:
   2. Application State:
+
+
+Inline Code : Refers to the code that is written inside an ASP.Net Web Page that has an extension .aspx. 
+-It allows the code to be written along with the Html source using <script> tag or %
+- Major point of interest is since it is physically in the .aspx file, it is deployed along with the web form.
+
+Code Behind : Refers to the code that is written as a seperate class file with an extension of aspx.cs
+- It code gets compiled into a seperate code file for each .aspx web form
+- Major point of obeservation is all these code files are compiled into a Dll file that allows it to be hosted free from any inline server
+
+
+
+Cross Page Post back : Can replace the session state management . Used to transfer data from one page to another

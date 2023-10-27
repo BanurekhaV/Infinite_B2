@@ -67,11 +67,23 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="ApplicationState.aspx" />
     <Content Include="CookieDestination.aspx" />
     <Content Include="CookieSource.aspx" />
+    <Content Include="QueryDestination.aspx" />
+    <Content Include="QuerySource.aspx" />
+    <Content Include="SessionFirst.aspx" />
+    <Content Include="SessionSecond.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ApplicationState.aspx.cs">
+      <DependentUpon>ApplicationState.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ApplicationState.aspx.designer.cs">
+      <DependentUpon>ApplicationState.aspx</DependentUpon>
+    </Compile>
     <Compile Include="CookieDestination.aspx.cs">
       <DependentUpon>CookieDestination.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -87,6 +99,34 @@
       <DependentUpon>CookieSource.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QueryDestination.aspx.cs">
+      <DependentUpon>QueryDestination.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="QueryDestination.aspx.designer.cs">
+      <DependentUpon>QueryDestination.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="QuerySource.aspx.cs">
+      <DependentUpon>QuerySource.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="QuerySource.aspx.designer.cs">
+      <DependentUpon>QuerySource.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SessionFirst.aspx.cs">
+      <DependentUpon>SessionFirst.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SessionFirst.aspx.designer.cs">
+      <DependentUpon>SessionFirst.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SessionSecond.aspx.cs">
+      <DependentUpon>SessionSecond.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SessionSecond.aspx.designer.cs">
+      <DependentUpon>SessionSecond.aspx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

@@ -16,9 +16,12 @@ namespace StateManagement
 
         protected void btnload_Click(object sender, EventArgs e)
         {
-            HttpCookie rc = Request.Cookies["TestCookie"];
-            lblname.Text = rc["t1"];
-            lblmail.Text = rc["t2"];
+            //persistent cookie
+            //HttpCookie rc = Request.Cookies["TestCookie"];
+            //lblname.Text = rc["t1"];
+            //lblmail.Text = rc["t2"];
+            lblname.Text = Request.Cookies["d1"].Value.ToString();
+            lblmail.Text = Request.Cookies["d2"].Value.ToString();
         }
     }
 }
