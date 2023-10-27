@@ -13,8 +13,8 @@ namespace CrossPage_PostBack
         {
             if(PreviousPage !=null && PreviousPage.IsCrossPagePostBack)
             {
-                TextBox txtname = (TextBox)PreviousPage.FindControl("txtname");
-                lblname.Text = "Welcome " + txtname.Text;
+                TextBox tname = (TextBox)PreviousPage.FindControl("txtname");
+                lblname.Text = "Welcome " + tname.Text;
             }
             else
             {

@@ -67,10 +67,49 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="AdForm.aspx" />
+    <Content Include="Ajax_Jquery.html" />
+    <Content Include="Display.aspx" />
+    <Content Include="Images\Chocolates.jpg" />
+    <Content Include="Images\Cookies.jpg" />
+    <Content Include="Images\Doll.jpg" />
+    <Content Include="Images\Puppy.jpg" />
+    <Content Include="Index.aspx" />
+    <Content Include="Photos.xml" />
+    <Content Include="Sample.txt" />
+    <Content Include="Toolbox.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AdForm.aspx.cs">
+      <DependentUpon>AdForm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdForm.aspx.designer.cs">
+      <DependentUpon>AdForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Display.aspx.cs">
+      <DependentUpon>Display.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Display.aspx.designer.cs">
+      <DependentUpon>Display.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Index.aspx.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Index.aspx.designer.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Toolbox.aspx.cs">
+      <DependentUpon>Toolbox.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Toolbox.aspx.designer.cs">
+      <DependentUpon>Toolbox.aspx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

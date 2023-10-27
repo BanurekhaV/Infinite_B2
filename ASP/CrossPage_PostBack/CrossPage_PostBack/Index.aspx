@@ -9,6 +9,17 @@
 <body>
     <form id="form1" runat="server">
         <div>
+            <table>
+                <tr>
+                    <td>Name</td>
+                    <td><asp:TextBox ID="txtname" runat="server"></asp:TextBox></td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                    <asp:Button ID="btnsubmit" runat="server" Text="Move to next page" PostBackUrl="~/Display.aspx" />
+                        </td>
+                </tr>
+            </table>
         </div>
     </form>
 </body>

@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Advertisements>
+	<Ad>
+		<ImageUrl>~/Images/puppy.jpg</ImageUrl>
+		<NavigationUrl>https://google.com</NavigationUrl>
+		<Impressions>10</Impressions>
+		<Keyword>Google</Keyword>
+	</Ad>
+	
+</Advertisements>
