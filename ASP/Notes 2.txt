@@ -42,4 +42,22 @@ Code Behind : Refers to the code that is written as a seperate class file with a
 
 
 Cross Page Post back : Can replace the session state management . Used to transfer data from one page to another
-- 
+- Uses PostbackUrl to refer to other page
+
+
+Yellow Line of Death : Is an error page whenever we have some executional issues in our web application
+
+Validation Controls: inbuilt controls that do minimum validations of our input values
+They are :
+ 1. Required Field Validator : Control to Validate, User defined Error Message
+ 2. Compare Validator : Control to Validate, Control to Compare, Error Message
+ 3. Range Validator : Control to Validate, Error Message, Maximum Value, Minimum value, Data Type
+ 4. Regular Expression : Control to Validate, Error Message, Validation expression(select from the ellipse...)
+
+shows unobtrusive error because all the validation controls nake use of inbuilt javascripts for validation. These scripts have to run within our process, hence we have to alllow them as below :
+<configuration>
+	<appSettings>
+		<add key="ValidationSettings:UnobtrusiveValidationMode" value="None"/>
+	</appSettings>
+  <system.web>
+
