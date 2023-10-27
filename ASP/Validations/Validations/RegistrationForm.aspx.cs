@@ -25,5 +25,17 @@ namespace Validations
                 Response.Write("Validations Failed... Please Re-enter..");
             }
         }
+
+        protected void Btnlogin_Click(object sender, EventArgs e)
+        {
+            if (Page.IsValid)
+            {
+                Response.Redirect("Valid.html");
+            }
+            else
+            {
+                Response.Write("Validations Failed... Please Re-enter..");
+            }
+        }
     }
 }
