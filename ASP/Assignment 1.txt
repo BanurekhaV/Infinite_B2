@@ -1,0 +1,10 @@
+1. Write a program containing the following controls: 
+• A Dropdown list 
+• A Button 
+• An Image 
+• A Label 
+
+
+Dropdown list is used to list items available in a store. When the user clicks on an item in the Dropdown list, its image is displayed in the Image control. When the user clicks the button, the cost of the selected item is displayed in the Label control.
+
+Hint :(Use any items collection like automobiles, Mobiles,Stationary etc. Store the images into an Images Folder. Add an Image control and set the imageurl property to display images)

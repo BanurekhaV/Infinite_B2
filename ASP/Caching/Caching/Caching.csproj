@@ -69,6 +69,7 @@
   <ItemGroup>
     <Content Include="DataForm.aspx" />
     <Content Include="GridwithSource.aspx" />
+    <Content Include="Navigation_Eg.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -85,6 +86,13 @@
     </Compile>
     <Compile Include="GridwithSource.aspx.designer.cs">
       <DependentUpon>GridwithSource.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Navigation_Eg.aspx.cs">
+      <DependentUpon>Navigation_Eg.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Navigation_Eg.aspx.designer.cs">
+      <DependentUpon>Navigation_Eg.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

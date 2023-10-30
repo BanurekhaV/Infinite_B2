@@ -1,0 +1,33 @@
+Caching : is a mechanism of storing pages/ some parts of the page for later retrieval. Caching helps in Server Performance, by avoiding round trips to the server. 
+
+Server.Transfer and Response.Redirect : Both are meant for navigation from one to another page
+
+Response.Redirect : the page is redirected permanently
+                    used to navigate within the same application as well as from one application to another
+                    The url is changed in the address bar. We can even bookmark the url
+                    Extra Round trip happens to the server after redirecting saying page redirection done
+                    We can redirect to even html pages
+
+
+Server.Transfer : The page is not redirected permanently
+                  Used to navigate only within the same application and not outside
+                  The Url is not changed, because the second page is processed from within the first page
+                  There is no extra round trip to the server. Sever resources are saved
+                   It is only used to navigate with ASP or ASP.net Page and not Html pages
+
+
+
+Exception Handling : While exception handling is a part and parcel of any application development. .net framework provides with a set of rich standard exceptions
+
+
+The various Events of the Application :
+1. Application_Start
+2. Session_Start
+3. Session_End
+4. Application_Error
+5. Application_End
+
+Apart from the various page events, we also can handle Page_Error event for respective handle
+
+Errors can be handled at 1. Page, 2. Application Level, 3. Custom level
+
