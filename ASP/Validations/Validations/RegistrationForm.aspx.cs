@@ -16,7 +16,7 @@ namespace Validations
 
         protected void btnsubmit_Click(object sender, EventArgs e)
         {
-            if(Page.IsValid)
+            if (Page.IsValid)
             {
                 Response.Redirect("Valid.html");
             }
@@ -28,14 +28,14 @@ namespace Validations
 
         protected void Btnlogin_Click(object sender, EventArgs e)
         {
-            if (Page.IsValid)
-            {
-                Response.Redirect("Valid.html");
-            }
-            else
-            {
-                Response.Write("Validations Failed... Please Re-enter..");
-            }
+            //if (Page.IsValid)
+            //{
+            //    Response.Redirect("Valid.html");
+            //}
+            //else
+            //{
+            //    Response.Write("Validations Failed... Please Re-enter..");
+            //}
         }
     }
 }

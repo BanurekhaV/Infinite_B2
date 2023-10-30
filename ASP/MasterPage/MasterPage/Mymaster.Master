@@ -1,0 +1,91 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Mymaster.master.cs" Inherits="MasterPage.Mymaster" %>
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Layout and HTML5</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        header, footer {
+            background-color: silver;
+            text-align: center;
+            font-size: 30px;
+            padding: 30px;
+        }
+
+        nav li {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        nav {
+            overflow: hidden;
+            background-color: #333;
+        }
+
+            nav li a {
+                float: left;
+                color: #f2f2f2;
+                text-align: center;
+                padding: 14px 16px;
+                text-decoration: none;
+                font-size: 17px;
+            }
+
+        a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+
+        section {
+            margin: 0px;
+            padding: 10px;
+            background-color: antiquewhite;
+        }
+
+        article {
+            margin: 5px;
+            padding: 10px;
+            background-color: white;
+        }
+
+        #float {
+            float: right;
+            padding: 0px;
+            height: auto;
+            width: 70%;
+            margin-top: 0px
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <header>
+            <h1>World's Amazing Place</h1>
+        </header>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#" style="float: right">Signup</a></li>
+                <li><a href="C:\Banu\Infinite\B2\Web Technologies\HTML\Form.html" style="float: right">Login</a></li>
+
+            </ul>
+        </nav>
+        <section>
+
+            <asp:ContentPlaceHolder ID="MasterContent" runat="server">
+
+            </asp:ContentPlaceHolder>
+
+        </section>
+
+        <footer>&copy; 2023 Amazing places, All rights reserved</footer>
+    </form>
+</body>
+</html>

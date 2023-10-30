@@ -1,0 +1,19 @@
+-Master pages allows us to create a consistent look and behaviour for all the pages in a web application
+-They have . master extension
+-Content Paceholder control defines a region on the master page, to place content pages
+ 
+To Create Master Page
+-Right click on the project in solution explorer and add a new item - masterpage (2nd option with .master ext)
+-First remove the contentplace holder under head and body.
+-Then add the html file with complete css inbuilt /you can create a fresh layout styles
+-Next include the content place holder by draging and droping a ContentPlaceHolder from tool box in the cph section of the master page
+-Change the name of the cph id to Maincontentplaceholder/MasterContent(or any primary name)
+-Then to format it properly select the entire text and pres ctrl k and d
+-Right click on the master page and add content page
+-Master page attribute reveals the association @page directive
+-Notice that within contentpage a content place holder set to the id (Maincontentplaceholder/MasterContent etc. which ever you give to in the master page)
+-you should place all contents only inside the content control <asp:content id=></asp:content>
+
+cannot change layout from content but only from master
+
+add another contentpage (webform 2) and include contents or any form controls
