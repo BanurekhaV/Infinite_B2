@@ -1,0 +1,27 @@
+Web Services : Are standardized way of developing interoperable applications, that may be in the same or different computers. 
+-Is a software module that is intended to carry some specific sets of activities/functions
+Eg: One application can invoke the methods of another application using some open standard protocols like Http,SOAP, and messaging systems like XML
+
+Java Webservices can be consumed by ,net application or vice-versa
+-They have an extension of .asmx
+
+Functioning of web services:
+1. Access applications via internet or intranet networks
+2. Easily locatable services
+3. Standardied messaging system using xml
+4. Platform independence
+
+Components of a Web Service
+1. SOAP - Simple Object Access Protocol
+2. UDDI - Universal Description, Discovery and Integration (Is a standard for specifying,publishing,siscovering a service providers online services. 
+    - Serves as a database for WSDL files (Web Services Description lang.)
+    - The UDDI Registry holds the required information for online services like a telephone directory
+    - WSDL - is an xml based file that explains what the webservice does to the client, location of the service and how to use it thru WSDL documents
+
+Legacy techniques for distributed aplications
+1. RPC (Remote procedure call)
+2. Remoting
+3. Web Services  -- only SOAP allowed
+4. WCF - Windows Communication Framework  (support for many protocols)
+5. Restful APIs (web API)
+

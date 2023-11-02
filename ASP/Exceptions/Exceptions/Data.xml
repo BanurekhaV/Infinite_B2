@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Employees>
+<Employee>
+	<EmpId>100</EmpId>
+	<EmpName>Aakash</EmpName>
+	<EmpSalary>25000</EmpSalary>
+	<EmpDept>IT</EmpDept>
+</Employee>
+	<Employee>
+		<EmpId>101</EmpId>
+		<EmpName>Sony</EmpName>
+		<EmpSalary>35000</EmpSalary>
+		<EmpDept>HR</EmpDept>
+	</Employee>
+	<Employee>
+		<EmpId>102</EmpId>
+		<EmpName>Amar</EmpName>
+		<EmpSalary>32000</EmpSalary>
+		<EmpDept>Testing</EmpDept>
+	</Employee>
+</Employees>

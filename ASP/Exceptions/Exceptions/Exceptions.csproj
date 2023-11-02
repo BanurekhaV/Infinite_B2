@@ -67,6 +67,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Data.xml" />
+    <Content Include="DatabaseLogging.aspx" />
     <Content Include="Default.aspx" />
     <Content Include="DefaultError.aspx" />
     <Content Include="Err2.aspx" />
@@ -78,6 +80,13 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DatabaseLogging.aspx.cs">
+      <DependentUpon>DatabaseLogging.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DatabaseLogging.aspx.designer.cs">
+      <DependentUpon>DatabaseLogging.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -106,6 +115,7 @@
     <Compile Include="Error.aspx.designer.cs">
       <DependentUpon>Error.aspx</DependentUpon>
     </Compile>
+    <Compile Include="ExceptionLogging.cs" />
     <Compile Include="forbidden.aspx.cs">
       <DependentUpon>forbidden.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

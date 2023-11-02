@@ -1,0 +1,20 @@
+Page -> Application -> Custom Errors
+
+Exception Logging onto a file /database
+
+
+Authentication : Authentication is aprocess of granting access to those users based on identity
+
+Who is the User?
+
+Authorization : What rights the user has?/ what resources the user can access
+
+1. Anonymous Authentication : allows users to access public areas of the website/application
+2. Impersonate : allows access to the web application to the logged in user with the rights,previleges that the user has on various resources
+3. Windows Authentication : Uses the underlying Principle identity schema and allows access to the web application
+4. Forms Authentication : Allows access only thru user name and password
+
+Passport Authentication - Single Sign-On's are enabled using a thrird party source of authentication known as passport.
+
+
+
