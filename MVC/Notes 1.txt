@@ -1,0 +1,34 @@
+ASP.Net MVC : is a popular framework for developing web based applications
+- It works on a Model View Controller pattern (MVC)
+- It is faster, light, robust and secure
+- It the next generation technology to web Forms
+- Designs and Codes are neatly seperated
+- It uses Pure HTML controls and Html Helpers, No Server Control
+- It uses controller based URL(for routing)
+- Implemebts No View State
+- It uses Razor Syntax (Razor Engine)
+- Uses Layouts for consistent Look and Feel instead of Master Pages
+- It is an Open Source Framework
+
+Model : Is Responsible for keeping data, Operation Logic like connecting retrieving data from database/class and oblects
+
+View : Responsible for serving web pages to the user (UI)
+
+Controller : Responsible for all programming logic
+- acts like a bridge between view and model
+- works with http request that comes from the browser
+- all controllers should have controller name suffixed with "controller" keyword
+- have action methods 
+
+Action Methods: Actionable code that are always
+  - Public
+  - Cannot be overloaded
+  - Cannot be static
+  - every controller has atleast one action method (index()) that returns a view
+  - ActionResult is the base class for all types of actions
+       View Result
+       Content
+       Json
+       Redirect
+       File
+       RedirectToAction

@@ -15,8 +15,8 @@ namespace MVC_Day1
 
             routes.MapRoute(
                 name: "Default",
-                url: "{action}/{controller}/{id}",
-                defaults: new { controller = "Home", action = "About", id = UrlParameter.Optional }
+                url: "{controller}/{action}/{id}",
+                defaults: new { controller = "Demo", action = "Index", id = UrlParameter.Optional }
             );
         }
     }
