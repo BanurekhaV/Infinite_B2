@@ -14,34 +14,40 @@ namespace Exceptions
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            if(!IsPostBack)
+            if (!IsPostBack)
+            //{
+            //    //try
             {
-                //try
-                //{
-                    string connectstr = ConfigurationManager.ConnectionStrings["Myconn"].ConnectionString;
-                    string sql = "select * from tblemployee1";
-                    SqlConnection con = new SqlConnection(connectstr);
-                    SqlCommand cmd = new SqlCommand(sql, con);
-                    DataSet ds = new DataSet();
-                    SqlDataAdapter da = new SqlDataAdapter(cmd);
-                    da.Fill(ds, "Emp");
-                    GridView1.DataSource = ds;
-                    GridView1.DataBind();
-                //}
-                //catch (Exception ex)
-                //{
-                //   lblinfo.Text = "Something went Wrong. Contact Admin";
-                //}
+                string connectstr = ConfigurationManager.ConnectionStrings["Myconn"].ConnectionString;
+                string sql = "select * from tblemployee";
+                SqlConnection con = new SqlConnection(connectstr);
+                SqlCommand cmd = new SqlCommand(sql, con);
+                DataSet ds = new DataSet();
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                da.Fill(ds, "Emp");
+                GridView1.DataSource = ds;
+                GridView1.DataBind();
             }
         }
+        //catch (Exception ex)
+        //{
+        //   lblinfo.Text = "Something went Wrong. Contact Admin";
+        //}
+        // DataSet ds1 = new DataSet();    
 
-        //1. Handling Page Error event for respective pages
-        protected void Page_Error(object sender, EventArgs e)
+        protected void btn1_Click(object sender, EventArgs e)
         {
-            Exception ex = Server.GetLastError();
-            Server.ClearError();
-            // Response.Write(ex);
-            Server.Transfer("~/Err2.aspx");
+            Response.Redirect("Hello.aspx");
         }
     }
+
+        //1. Handling Page Error event for respective pages
+        //protected void Page_Error(object sender, EventArgs e)
+        //{
+        //    Exception ex = Server.GetLastError();
+        //    Server.ClearError();
+        //    // Response.Write(ex);
+        //    Server.Transfer("~/Err2.aspx");
+        //}
+    
 }

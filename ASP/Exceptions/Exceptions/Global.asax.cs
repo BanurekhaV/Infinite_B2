@@ -34,6 +34,10 @@ namespace Exceptions
         {
             Exception ex = Server.GetLastError();
             Server.ClearError();
+            string str = "";
+            str = ex.Message;
+            string path = @"c:\Banu\Infinite\B2\AllErrors.txt";
+            System.IO.File.WriteAllText(path, str);
             Server.Transfer("~/Error.aspx");
         }
 

@@ -56,3 +56,4 @@ C:\Banu\Infinite\B2\ASP\Exceptions\Exceptions\obj\Debug\Exceptions.csproj.CoreCo
 C:\Banu\Infinite\B2\ASP\Exceptions\Exceptions\obj\Debug\Exceptions.csproj.CopyComplete
 C:\Banu\Infinite\B2\ASP\Exceptions\Exceptions\obj\Debug\Exceptions.dll
 C:\Banu\Infinite\B2\ASP\Exceptions\Exceptions\obj\Debug\Exceptions.pdb
+C:\Banu\Infinite\B2\ASP\Exceptions\Exceptions\obj\Debug\Exceptions.csproj.AssemblyReference.cache

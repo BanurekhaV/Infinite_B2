@@ -12,6 +12,7 @@
             <asp:Label ID="lblinfo" runat="server"></asp:Label>
             <br />
             <br />
+            <asp:Button id="btn1" runat="server" Text="click"  OnClick="btn1_Click"/>
             <br />
             <asp:GridView ID="GridView1" runat="server">
             </asp:GridView>
