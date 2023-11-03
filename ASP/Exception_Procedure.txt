@@ -1,0 +1,21 @@
+use infinitedb
+
+create table ExceptionLog
+(Logid int identity not null,
+exMessage nvarchar(max),
+exType varchar(100),
+exSource nvarchar(max),
+exUrl varchar(100),
+logDate datetime )
+
+create or alter proc sp_ExceptionLogging
+(@exmessage nvarchar(max),@extype varchar(100),
+@exsrc nvarchar(max),@exurl varchar(100))
+as
+begin
+insert into ExceptionLog(exMessage,exType,exSource,exUrl,logDate)
+select @exmessage,@extype,@exsrc,@exurl,getdate()
+end
+
+
+select * from ExceptionLog

@@ -12,7 +12,6 @@ ASP.Net MVC : is a popular framework for developing web based applications
 
 Model : Is Responsible for keeping data, Operation Logic like connecting retrieving data from database/class and oblects
 
-View : Responsible for serving web pages to the user (UI)
 
 Controller : Responsible for all programming logic
 - acts like a bridge between view and model
@@ -26,9 +25,34 @@ Action Methods: Actionable code that are always
   - Cannot be static
   - every controller has atleast one action method (index()) that returns a view
   - ActionResult is the base class for all types of actions
-       View Result
-       Content
-       Json
-       Redirect
-       File
-       RedirectToAction
+       View Result - Represents HTML and Razor Syntax
+       Content - Represents Text Result or html result
+       Json  - Represent JSON data (used for AJAX appln.)
+       Redirect - Represents redirection to a new URL
+       FileContentResult - Represents a downloadable file(binary content)
+       FilePathResult - "  "  (with a path)
+       FileStreamResult - "  "  (with FileStream Object)
+       RedirectToAction - Represents navigating to other action methods of same or other controllers
+       EmptyResult - Represents No Result
+
+
+View : Responsible for serving web pages to the user (UI)
+  - Creates a seperate folders for each controller of the application with the same name
+  - contains all .cshtml files with the same name as that of the action method
+  - It is a combination of both html and the C# programming constructs(razor Syntax)
+
+Razor Syntax is a very powerful and easiest way of writing server based code directly into the view pages
+ - It is a markup synatx that allows programming code to be embedded
+ - Use @{....} block to write C# code
+ - All the inline expressions like variables and fuctions starts with "@"
+ - Variables are declared with var keyword and all code should end with a semicolon ;
+ - All string values are with double quotes "  "
+ - Can use HTML for adding html code inside a razor block
+ - Comment in Razor syntax are 
+     @*  ...  *@
+     /*  */
+     //
+    <!-- ...  -->
+ - @model is used for adding and accessing model variables and data into the view page
+
+     
