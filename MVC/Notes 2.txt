@@ -20,3 +20,12 @@ ViewData - to pass data from controller to views
    Eg : ViewData["MyData"]="This is the Data";
     and to access
     @ViewData["MyData"]
+
+
+TempData  - is a Dictionary Object
+          - Is derived from TempDataDictionary
+          - is alive in subsequent request using a method keep()
+          - Internally it uses sessions to store value.
+          - We must check for null, before using TempData in order to avoid Runtime Error
+          - Can be used to transfer data to other views or other controllers
+          - Requires Typecasting (as and when required)
