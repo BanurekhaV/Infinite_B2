@@ -29,3 +29,6 @@ TempData  - is a Dictionary Object
           - We must check for null, before using TempData in order to avoid Runtime Error
           - Can be used to transfer data to other views or other controllers
           - Requires Typecasting (as and when required)
+
+
+ModelBinding : Binding a model object to the view

@@ -68,12 +68,13 @@ namespace MVC_Day2.Controllers
 
         public ActionResult SecondTempRequest()
         {
-            List<string> stnlist;
+            //List<string> stnlist;
             
-                stnlist = TempData["stores"] as List<string>;          
+             //   stnlist = TempData["stores"] as List<string>;          
 
-            TempData.Keep();
-            return View(stnlist);
+           // TempData.Keep();
+            // return View(stnlist);
+            return RedirectToAction("About", "Home");
            }  
             
         }

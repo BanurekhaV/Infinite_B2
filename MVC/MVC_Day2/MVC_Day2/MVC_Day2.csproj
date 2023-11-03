@@ -122,9 +122,12 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\DataController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\HRController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\Department.cs" />
+    <Compile Include="Models\Employee.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -168,10 +171,12 @@
     <Content Include="Views\Data\TestTransfer.cshtml" />
     <Content Include="Views\Data\FirstTempRequest.cshtml" />
     <Content Include="Views\Data\SecondTempRequest.cshtml" />
+    <Content Include="Views\HR\DisplayEmployee.cshtml" />
+    <Content Include="Views\HR\DisplayListofEmployees.cshtml" />
+    <Content Include="Views\HR\DepartmentList.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />

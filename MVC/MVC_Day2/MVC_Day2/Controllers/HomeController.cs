@@ -17,14 +17,17 @@ namespace MVC_Day2.Controllers
         {
             ViewBag.Message = "Your application description page.";
 
-            return View();
+          //  List<string> lst = TempData["stores"] as List<string>;
+            //   return View(lst);
+            return RedirectToAction("Contact");
         }
 
         public ActionResult Contact()
         {
             ViewBag.Message = "Your contact page.";
-
-            return View();
+            List<string> lst2 = TempData["stores"] as List<string>;
+            TempData.Keep();
+            return View(lst2);
         }
     }
 }
