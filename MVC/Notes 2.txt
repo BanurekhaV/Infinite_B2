@@ -35,4 +35,13 @@ ModelBinding : Binding a model object to the view
 
 Scaffolded Views : are templates supported for performing crud operations
 
-MVC with EF : 
+MVC with EF : Database first approach
+
+
+
+
+Passing Data/Info/Values from views to controllers
+1. By the Model Object  (category controller example)
+2. Forms Collection   (Shipper Controller)
+3. Using parameters
+4. Using Request Object

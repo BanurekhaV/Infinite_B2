@@ -76,7 +76,6 @@ C:\Banu\Infinite\B2\MVC\MVC_EFPrj\MVC_EFPrj\bin\System.Web.WebPages.Razor.xml
 C:\Banu\Infinite\B2\MVC\MVC_EFPrj\MVC_EFPrj\bin\Newtonsoft.Json.xml
 C:\Banu\Infinite\B2\MVC\MVC_EFPrj\MVC_EFPrj\bin\Antlr3.Runtime.pdb
 C:\Banu\Infinite\B2\MVC\MVC_EFPrj\MVC_EFPrj\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-C:\Banu\Infinite\B2\MVC\MVC_EFPrj\MVC_EFPrj\obj\Debug\MVC_EFPrj.csproj.AssemblyReference.cache
 C:\Banu\Infinite\B2\MVC\MVC_EFPrj\MVC_EFPrj\obj\Debug\MVC_EFPrj.csproj.CoreCompileInputs.cache
 C:\Banu\Infinite\B2\MVC\MVC_EFPrj\MVC_EFPrj\obj\Debug\MVC_EFPrj.csproj.CopyComplete
 C:\Banu\Infinite\B2\MVC\MVC_EFPrj\MVC_EFPrj\obj\Debug\MVC_EFPrj.dll
