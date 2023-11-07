@@ -1,0 +1,30 @@
+﻿@using HtmlHelpers.CustomHelpers
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<h2>Static Custom Helper</h2>
+<p>
+    @CustomHelper.LabelWithMark("This is an Example for Static Custom Helpers")
+</p>
+
+<br />
+<hr />
+<h2>Extension Custom Helper</h2>
+<p>
+    @Html.GreenLabel("This is Extension Helpers Example 1")
+    @Html.LabelwithItalics("This is another Extension Helper example")
+</p>
+<br />
+<hr />
+<h2>Inline Html Helper</h2>
+@helper LabelWithRazor(string Content)
+    {
+       <label><strong><sub>@Content</sub></strong></label>
+    }
+
+<p>
+    @LabelWithRazor("This is an inline Html Helper using Razor Syntax")
+</p>

@@ -18,7 +18,7 @@ HTML Helpers: are methods that return Html strings for the various html tags. We
 - Support for customised html helpers
 
 Types of HTML Helpers :
- 1. Inline Html Helpers : Are used in a single view only using @helper
+ 1. Inline Html Helpers : Are used in a single view only using @helper construct. 
 
  @helper Myhelp1(string[] words)
 {
@@ -55,7 +55,11 @@ Eg :
   Eg  : job Application 
 
 
- 4. Custom Html Helpers
+ 4. Custom Html Helpers :are of 2 types
+1. Static Custom  - are accessed using @<classname where the helper method is present>.Method()
+2. Extension Custom - are accessed using @Html.<Ext. Method Name>
+
+
 
     
 

@@ -1,0 +1,26 @@
+﻿@model IEnumerable<PartialViews_Prj.Models.Product>
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<table class="table">
+    <tr>
+        <th>@Html.DisplayNameFor(m => m.ProductId)</th>
+        <th>@Html.DisplayNameFor(m => m.ProductName)</th>
+        <th>@Html.DisplayNameFor(m => m.Category)</th>
+        <th>@Html.DisplayNameFor(m => m.Description)</th>
+        <th>@Html.DisplayNameFor(m => m.Price)</th>
+    </tr>
+    @foreach(var item in Model)
+            {
+<tr>
+    <td>@Html.DisplayFor(mItem => item.ProductId)</td>
+    <td>@Html.DisplayFor(mItem => item.ProductName)</td>
+    <td>@Html.DisplayFor(mItem => item.Category)</td>
+    <td>@Html.DisplayFor(mItem => item.Description)</td>
+    <td>@Html.DisplayFor(mItem => item.Price)</td>
+</tr>
+            }
+</table>
