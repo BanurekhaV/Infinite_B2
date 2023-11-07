@@ -69,5 +69,21 @@ namespace MVC_CodeFirst_Prj.Controllers
             var product = _repository.GetById(Id);
             return View(product);
         }
+
+        public ActionResult Delete(int Id)
+        {
+            var product = _repository.GetById(Id);
+            return View(product);
+        }
+
+        [HttpPost]
+        [ActionName("Delete")]
+        public ActionResult DeletePost(int Id)
+        {
+            var product = _repository.GetById(Id);
+            _repository.Delete(Id);
+            _repository.Save();
+            return RedirectToAction("Index");
+        }
     }
 }

@@ -1,0 +1,28 @@
+﻿@model Custom_Model_Validations.Models.EmpFullDetails
+@{
+    ViewBag.Title = "FullDetails";
+}
+<html>
+ <head>
+     <title>@Model.PageTitle</title>
+ </head>
+<body>
+    <h1>@Model.PageTitle</h1>
+    <div>
+        Employee ID  :  @Model.employee.EId
+        Employee Name : @Model.employee.EName
+    </div>
+    <div>
+        Employee Department : @Model.employee.Dept
+        Employee Salary    : @Model.employee.Salary
+    </div>
+    <div>
+        <h2>Employee Address</h2>
+        City : @Model.address.City
+        State : @Model.address.State
+    </div>
+</body>
+
+</html>
+
+

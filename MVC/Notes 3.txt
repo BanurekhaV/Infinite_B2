@@ -1,0 +1,20 @@
+Code First Approach :
+Repository Pattern : Used to create an abstraction layer between data access logic and the business logic. Follows the Solid Principles (ISP)
+
+
+Model Validation : Using Annotations
+Custom Validations : using classes that inherit from the ValidationAttribute base class
+
+
+View Models: are models that have few details from various models as in the real-life applications, we will have to display multiple data that are not in the same model
+
+Eg : Employee name, Phone  from Employee Model
+     Project Name, StartDate, EndDate from Projects Model
+     DeptName from Department Model
+
+The above can also be achieved using Navigation properties of the Models
+    
+
+
+
+
