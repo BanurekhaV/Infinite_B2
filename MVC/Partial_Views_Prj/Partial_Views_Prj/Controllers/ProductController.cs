@@ -7,6 +7,7 @@ using Partial_Views_Prj.Models;
 
 namespace Partial_Views_Prj.Controllers
 {
+   
     public class ProductController : Controller
     {
         // GET: Product
@@ -33,5 +34,13 @@ namespace Partial_Views_Prj.Controllers
             };
             return View(productlist);           
         }
+
+        //[Authorize(Roles="Admin,Manager")]
+      // [Authorize(Users ="Tester,User10")]
+        public ActionResult AnotherMethod()
+        {
+            return PartialView("ProductDetails");
+        }
+      
     }
 }

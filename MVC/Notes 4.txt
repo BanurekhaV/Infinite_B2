@@ -1,0 +1,34 @@
+Partial Views: When we need a common part of the User Interface(view) on multiple pages in a web application. 
+-It also has an .cshtml extension
+-Used for Re-usability purpose
+-It helps to reduce code duplication. 
+
+How to call /Display Partial Views :
+
+1. Html.RenderPartial
+2. Html.Partial
+3. Html.RenderAction
+4. Html.Action
+5. Jquery load function
+
+
+Reusability of partial ?
+
+
+Filters : There are 5 types of Filters:
+ 1. Authentication Filter
+ 2. Authorization Filter
+ 3. Action Filter
+ 4. Result Filter
+ 5. Exception Filter
+
+All the above are derived from the respective Interfaces
+
+[HandleError]
+[Authenticate]
+[Authorize]
+
+Filters can be applied at the below levels:
+ - Global Level (Filters are applicable for all controllers and ActionMethods)
+ - Controller Level (Applicable to all ActionMethods of the specific controller)
+ - Action Level (Applicable for specific action methods)
