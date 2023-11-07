@@ -134,6 +134,7 @@
     <Compile Include="Models\EmpFullDetails.cs" />
     <Compile Include="Models\Employee.cs" />
     <Compile Include="Models\JobApplication.cs" />
+    <Compile Include="Models\Register.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -174,6 +175,7 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\JobApplication\Index.cshtml" />
     <Content Include="Views\Employee\FullDetails.cshtml" />
+    <Content Include="Views\Employee\Standardhtml.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

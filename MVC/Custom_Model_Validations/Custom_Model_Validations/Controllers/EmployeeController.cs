@@ -48,5 +48,18 @@ namespace Custom_Model_Validations.Controllers
             //pass the viewmodel object to the view
             return View(efd);
         }
+
+        //using standard html helpers
+        public ActionResult Standardhtml()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult Standardhtml(FormCollection frm)
+        {
+            //string name = frm["txtname"].ToString();
+            return Content("All Good..");
+        }
     }
 }

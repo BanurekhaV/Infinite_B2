@@ -13,6 +13,50 @@ Eg : Employee name, Phone  from Employee Model
      DeptName from Department Model
 
 The above can also be achieved using Navigation properties of the Models
+
+HTML Helpers: are methods that return Html strings for the various html tags. We can render textbox, textare, checkbox, images etc.. 
+- Support for customised html helpers
+
+Types of HTML Helpers :
+ 1. Inline Html Helpers : Are used in a single view only using @helper
+
+ @helper Myhelp1(string[] words)
+{
+  <ol>
+  @foreach(string w in words)
+{
+ <li>@w</li>
+}
+
+</ol>
+
+ 2. Built-in Html Helpers
+    1. Standard Html Helpers
+
+Eg : 
+     @html.TextBox()   -- creates a textbox control
+     @html.BeginForm()  -- starts a form
+     @html.ActionLink()  -- creates a link on the html page
+     @html.DropDownList() -- 
+
+
+    2. Templated Html Helpers : is used for both display as well as input. It generates html automatically as per the model property. It can generate complete html for the model with a single tag
+- They are divided into 2 categories
+
+  Display Template :  @html.DisplayForModel()
+  Editor Template :   @html.EditorForModel()
+
+    3. Strongly Typed Html Helpers : takes a lambda as a parameter that tells a helper which element of the model to be used. Has to have a predefined Model
+
+ List of strongly typed html helpers :
+   @html.LabelFor()
+   @html.TextBoxFor()
+
+  Eg  : job Application 
+
+
+ 4. Custom Html Helpers
+
     
 
 
