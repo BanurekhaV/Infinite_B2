@@ -10,10 +10,10 @@ namespace Partial_Views_Prj.Controllers
    
     public class ProductController : Controller
     {
-        // GET: Product
-        public ActionResult Index()
+        List<Product> productlist;
+        public ProductController()
         {
-            List<Product> productlist = new List<Product>()
+             productlist = new List<Product>()
             {
                 new Product{ProductId=1,
                     ProductName="Shoes",Category="Accessories",
@@ -32,14 +32,20 @@ namespace Partial_Views_Prj.Controllers
                     Description="Memory Foam",Price=1000
                 },
             };
+        }
+        // GET: Product
+        public ActionResult Index()
+        {
+            
             return View(productlist);           
         }
 
         //[Authorize(Roles="Admin,Manager")]
       // [Authorize(Users ="Tester,User10")]
+     
         public ActionResult AnotherMethod()
         {
-            return PartialView("ProductDetails");
+            return View(productlist);
         }
       
     }

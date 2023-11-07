@@ -1,4 +1,4 @@
-﻿@model IEnumerable<Partial_Views_Prj.Models.Product>
+﻿
 @{
     ViewBag.Title = "AnotherMethod";
 }
@@ -7,6 +7,6 @@
 <h2>Displays the Partial View of Products</h2>
 <p>This is an example to render partial views</p>
 
-@{Html.RenderAction("ProductDetails", "Product");
-}
+@*@Html.Partial("ProductDetails", Model);*@
+@Html.Partial("ProductDetails");
 
