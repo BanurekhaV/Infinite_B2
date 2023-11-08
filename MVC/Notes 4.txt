@@ -12,18 +12,17 @@ How to call /Display Partial Views :
 5. Jquery load function
 
 
-Reusability of partial ?
-
 
 Filters : There are 5 types of Filters:
- 1. Authentication Filter
- 2. Authorization Filter
- 3. Action Filter
- 4. Result Filter
- 5. Exception Filter
+ 1. Authentication Filter - OnAuthentication(), OnAuthenticationChallenge()
+ 2. Authorization Filter - OnAuthorization()
+ 3. Action Filter  -  OnActionExecuting(), OnActionExecuted()
+ 4. Result Filter  - OnResultExecuting(), OnResultExecuted()
+ 5. Exception Filter - OnException()
 
 All the above are derived from the respective Interfaces
 
+Some of the predefined filters are :
 [HandleError]
 [Authenticate]
 [Authorize]
@@ -32,3 +31,12 @@ Filters can be applied at the below levels:
  - Global Level (Filters are applicable for all controllers and ActionMethods)
  - Controller Level (Applicable to all ActionMethods of the specific controller)
  - Action Level (Applicable for specific action methods)
+
+Problems with the Predefined HandleError attribute :
+  1. We cannot log the errors 
+  2. Not possible to handle exceptions raised outside the controller
+  3. Scenario-Based exceptions cannot be handled 
+
+The solution to the above problems can be solved using Custom Filters
+
+

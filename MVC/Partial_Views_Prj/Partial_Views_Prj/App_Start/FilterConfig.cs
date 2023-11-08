@@ -8,6 +8,7 @@ namespace Partial_Views_Prj
         public static void RegisterGlobalFilters(GlobalFilterCollection filters)
         {
             filters.Add(new HandleErrorAttribute());
+           
         }
     }
 }

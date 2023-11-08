@@ -41,7 +41,7 @@ namespace Partial_Views_Prj.Controllers
         }
 
         //[Authorize(Roles="Admin,Manager")]
-      // [Authorize(Users ="Tester,User10")]
+        //[Authorize(Users ="Tester,User10")]
      
         public ActionResult AnotherMethod()
         {

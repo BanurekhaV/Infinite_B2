@@ -1,0 +1,22 @@
+﻿
+@{
+    Layout = null;
+}
+<!--In order to display the details of the Error, we can bind our view
+    to the Errorclass as below-->
+@model System.Web.Mvc.HandleErrorInfo
+<!Doctype html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Error</title>
+</head>
+<body>
+    <h1>Unknown Error Occurred</h1>
+    <h1>We are working on it.. Please try after some time..</h1>
+    <hr/>
+    @*<h2>Controller Name : @Model.ControllerName</h2>
+    <h2>Action Name  : @Model.ActionName</h2>
+    <h2>Exception Details : @Model.Exception</h2>*@
+</body>
+</html>
