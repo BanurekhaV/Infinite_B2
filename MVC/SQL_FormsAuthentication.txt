@@ -1,0 +1,31 @@
+create database AuthenticationDB
+
+-- let us create required tables
+create table Employee(
+  Eid int primary key identity,
+  Ename varchar(50),
+  Designation varchar(40),
+  Salary float)
+
+-- users in the organization
+  create table Users
+  (UserId int primary key identity,
+  UserName varchar(40),
+  UserPassword varchar(40))
+
+  -- to have roles in the organization
+  create table Roles(
+  Rid int primary key identity,
+  RoleName varchar(30))
+
+  -- to map the users to the roles
+  create table UserRoles(
+  URId int primary key,
+  UserId int references Users(UserId),
+  RoleId int references Roles(Rid))
+
+
+  select * from users
+  select * from employee
+
+

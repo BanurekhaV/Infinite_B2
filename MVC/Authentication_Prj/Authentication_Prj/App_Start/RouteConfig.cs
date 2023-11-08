@@ -16,7 +16,7 @@ namespace Authentication_Prj
             routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",
-                defaults: new { controller = "Employees", action = "Index", id = UrlParameter.Optional }
+                defaults: new { controller = "Accounts", action = "Login", id = UrlParameter.Optional }
             );
         }
     }
