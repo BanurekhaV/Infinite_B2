@@ -38,5 +38,32 @@ Problems with the Predefined HandleError attribute :
   3. Scenario-Based exceptions cannot be handled 
 
 The solution to the above problems can be solved using Custom Filters
+Example - Exception_Prj
+
+
+Secure Web Application : 
+Authentication and Authorization
+
+Types of Authentication :
+1. None  - No authentication . allow anonymous
+2. Forms Authentication : user to provide credentials
+3. Windows Authentication : using windows user account
+4. PassPort Authentication : is a paid service centralised authentication for single sign-on
+
+
+Forms Authentication
+
+1. Login Form to login
+2. SignUp form to register
+3. SignOut if logged in
+
+After an Empty -MVC Application is created
+- Use the ADO.Net Entity Model and bring all the enties into the Edmx/context using DB first approach
+- Create an Entity Controller and bind it to a Model (Employee)
+
+Steps for Forms Authentication : Class is available in System.Web.Security
+  1. Authentication Mode to Forms in Web.Config File
+  2. FormsAuthentication.SetAuthCookie is to be used for storing the cookie data of login
+  3. FormsAuthentication.SignOut for logout
 
 
