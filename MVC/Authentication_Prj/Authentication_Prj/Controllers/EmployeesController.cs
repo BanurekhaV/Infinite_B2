@@ -10,17 +10,20 @@ using Authentication_Prj.Models;
 
 namespace Authentication_Prj.Controllers
 {
-    [Authorize]
+    //[Authorize]
+    //[AllowAnonymous]
     public class EmployeesController : Controller
     {
         private AuthenticationDBContext db = new AuthenticationDBContext();
 
         // GET: Employees
+        [Authorize(Roles ="Admin,Guest,Customers,Users")]
         public ActionResult Index()
         {
             return View(db.Employees.ToList());
         }
 
+        [Authorize(Roles ="Customers,Guest")]
         // GET: Employees/Details/5
         public ActionResult Details(int? id)
         {
@@ -35,7 +38,7 @@ namespace Authentication_Prj.Controllers
             }
             return View(employee);
         }
-
+        [Authorize(Roles="Admin")]
         // GET: Employees/Create
         public ActionResult Create()
         {
@@ -58,7 +61,7 @@ namespace Authentication_Prj.Controllers
 
             return View(employee);
         }
-
+        [Authorize(Roles ="Admin,Users")]
         // GET: Employees/Edit/5
         public ActionResult Edit(int? id)
         {
@@ -89,7 +92,7 @@ namespace Authentication_Prj.Controllers
             }
             return View(employee);
         }
-
+        [Authorize(Roles ="Admin")]
         // GET: Employees/Delete/5
         public ActionResult Delete(int? id)
         {

@@ -1,0 +1,32 @@
+Assessment type: Create MVC web application - Group Assignment
+
+
+Assessment topic: Create an MVC web application 
+
+Task details: King’s Own Institute would like to organize a series of online seminars for the students focusing on the new IT technologies. You are appointed as web developer to develop a system to support organizing different types of seminars including students’ seminars, faculty seminars, instructors’ seminars, and employees’ seminars. You will design and develop a seminar management system for KOI that allows seminar organizers to create seminars and registrations. The application should store seminar details, organizer details for each seminar, attendee details and their seminar registration.
+
+Specific requirements:
+
+Model Design Requirements:
+
+o Design your own entity relationship diagram (ERD) for the classes based on your understanding about complex entity relationships including one-to-one, one-to-many, and many-to-many relationships.
+
+o The web application should store the information of every class and relationship using forms. For example, Person class may have properties such as ID, Name, DOB, etc.
+
+o Justify the entity relationship diagram and the selected classes in the report.
+
+o Use appropriate data annotation and input validations for the html elements in the MVC forms. You can either use customer or default error messages.
+
+Application Requirements:
+
+o Create an ASP.net MVC web application.
+
+o Home page must show group details including student ID and student full names in a table.
+
+o Create model classes that are specific in ERD 
+
+o All the pages should have a KOI logo and a customer navigation menu. If the users click on the logo, they will be directed to the KOI website.
+
+o Use CSS to use your custom design for the web pages.
+
+o The web application must be ready to run without any additional configurations
