@@ -4,9 +4,11 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
+using WebApi_1.Models;
 
 namespace WebApi_1.Controllers
 {
+    [RoutePrefix("api/demo")]
     public class DemoController : ApiController
     {
         static List<string> continents = new List<string> { "Asia","Africa","Anatartica",
@@ -26,6 +28,11 @@ namespace WebApi_1.Controllers
         }
 
         //Post using a Model Object
+        public IEnumerable<string>Post([FromBody] sampleModel sm)
+        {
+            continents.Add(sm.continentname);
+            return continents;
+        }
 
         //Put : api/Demo/Id
         [HttpPut]

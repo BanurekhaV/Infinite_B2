@@ -44,3 +44,6 @@ Constraints that need to be followed while developing RestFul Services
 4. Uniform Interface Constraint : All Restful Resources are nothing but Data Entities. These should be always be made accessible only thru URI's
 5. Content Negotiation : 
 6. Layered System : Deploying the Resources in a Server, storing the data in another, validation logic in a third server etc. The client will not know where and how it is connected to the server
+
+
+To get the response from the Http Methods of the Web Api, we can either use HttpResponseMessage as a return type or IHttpActionresult
