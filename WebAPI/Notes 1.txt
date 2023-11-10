@@ -1,0 +1,46 @@
+1. Immediate vs Deferred LInQ - Demo
+2. Bundling and Minification - demo 
+
+Web-API : is a Framework that helps to build Http based RESTFul services.
+
+Clients of WebAPI : 
+ Browsers
+ Mobiles
+ Desktops
+ IoT's
+
+Rest Apis:
+ - RestFul Architectute that uses Representational State Transfer(REST) principles, which emphasizes usining the datandars Http Methods/verbs(Get,Post,Put,Patch,Delete etc.)
+ - Routing : Attribute Routing (allows us to define routes for the endpoints, making it easy to map the Http requests to specific action methods
+ - Content negotiation : Allows clients to request data in different formars (Json,Xml,Html/text). Accept Header/Response headers
+ - Model Binding
+ - Authentication and Authorization
+ - Action Filters
+ - Dependency Injection 
+ - Test WebApi using various tools (Swagger,Postman,Fiddler)
+
+REST  is an architectural pattern, for exchange of data over distributed environment. All the services are available as 
+resources for the client to access using the http verbs
+
+HTTP Verbs/Methods
+ HttpGet : Requests a representation of the specified resource
+
+ HttpPost : is used to make a new entry ( a new resource)
+
+ HttpPut : is used to update all the properties of the resource
+
+ HttpPatch : is used to update few properties of the resource
+
+ HttpDelete : is used to delete a resource
+     Soft Delete : Not removing the resource permanently but making some alternative means to inform that this resource is not active
+                   We can instead have a column like IsAvailable, IsActive,Rewmarks which gets updated to specify the resource is no longer in use.
+     Hard Delete : Delete permanently
+
+Constraints that need to be followed while developing RestFul Services
+
+1. Client-Server Constraint: Client Logic is developed seperately from the server side logic. The client need to know only the URI's
+2. Stateless Constraint : Client Information should not be stored in the server. All requests are treated independently.
+3. Cachable Constraint : When there is server data that does not undergo frequent changes,then the client can decide how long the data should be cached, so as to avoid going to the server frequently.
+4. Uniform Interface Constraint : All Restful Resources are nothing but Data Entities. These should be always be made accessible only thru URI's
+5. Content Negotiation : 
+6. Layered System : Deploying the Resources in a Server, storing the data in another, validation logic in a third server etc. The client will not know where and how it is connected to the server
