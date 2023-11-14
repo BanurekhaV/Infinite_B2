@@ -28,7 +28,7 @@ namespace WebApi_1.Controllers
         }
 
         //Post using a Model Object
-        public IEnumerable<string>Post([FromBody] sampleModel sm)
+        public IEnumerable<string>Post([FromUri] sampleModel sm)
         {
             continents.Add(sm.continentname);
             return continents;

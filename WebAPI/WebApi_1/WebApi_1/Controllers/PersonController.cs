@@ -31,7 +31,7 @@ namespace WebApi_1.Controllers
         public HttpResponseMessage GetAllPersons()
         {
             HttpResponseMessage response = Request.CreateResponse(HttpStatusCode.OK, personlist);
-            response.Content = new StringContent("Hello All");
+         //   response.Content = new StringContent("Hello All");
            
             return response;
         }
@@ -58,6 +58,51 @@ namespace WebApi_1.Controllers
                 return NotFound();
             }
             return Ok(uname);
+        }
+
+        //Post 1
+        [HttpPost]
+        [Route("justpost")]
+        public Person Post([FromBody]Person p)
+        {
+            personlist.Add(p);
+            return p;
+        }
+
+        //post 2
+        [HttpPost]
+        [Route("AllPost")]
+        public List<Person>PostAll([FromBody] Person person)
+        {
+            personlist.Add(person);
+            return personlist;
+        }
+
+        [HttpPost]
+        [Route("personpost")]
+        public void PersonPost([FromUri] int Id, string name,string desig)
+        {
+            Person person = new Person();
+            person.Id = Id;
+            person.PersonName = name;
+            person.Designation = desig;
+            personlist.Add(person);
+        }
+
+        //Put
+        [HttpPut]
+        [Route("updperson")]
+        public void Put(int id,[FromUri] Person p)
+        {
+            personlist[id - 1] = p;
+
+        }
+
+        //delete
+        [Route("del")]
+        public void Delete(int id)
+        {
+            personlist.RemoveAt(id - 1);
         }
     }
 }
