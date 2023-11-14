@@ -52,7 +52,7 @@ namespace WebApi_EF.Controllers
                 db.Entry(p).State = System.Data.Entity.EntityState.Modified;
                 db.SaveChanges();
             }
-            return Ok("Recors Updated");
+            return Ok("Record Updated");
         }
 
     }

@@ -1,0 +1,13 @@
+Client application to consume the web api services:
+
+1. Create a MVC Template web application
+2. Add required Models that represents the actual API models/data
+3. Add an empty controller
+4. Add required action methods
+5. Include Newtonsoft.Json package thru nuget
+6. Include Newtonsoft.Json namespace
+7. Include HttpClient thru the System.Net.Http namespace
+8. Add Microsoft.Aspnet.WebApi.Client package thru nuget
+9. Write Logics for the Action methods and create corresponding views
+10.Test the Client
+ 
