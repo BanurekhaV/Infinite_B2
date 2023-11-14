@@ -1,0 +1,9 @@
+Web Api Assignment :
+
+1. Create a Model called Country under Models Folder.
+2. Add Properties in the country model as 
+   ID, CountryName, Capital
+
+3. Create an Empty api controller called Country
+
+4. Perform CRUD operations using either (HTTPResponseMessage/ IHttpActionResult / others) and show the changes to the user using Swagger

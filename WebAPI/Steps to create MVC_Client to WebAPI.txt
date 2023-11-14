@@ -11,3 +11,20 @@ Client application to consume the web api services:
 9. Write Logics for the Action methods and create corresponding views
 10.Test the Client
  
+
+LINQ Queries
+
+Deferred Query Executition/Lazy Operator     vs        Immediate /Greedy Operator
+
+1. Query is not Executed at the Point of its      Query is Executed at the Point of its declaration
+   declaration
+
+2. Projection Operators                          Aggregate Function - Count,Average etc.
+    Select,SelectMany                            Element Operators - First,Last, ToList,ToArray,Tostring
+  Restriction Operators
+    Where,
+    Take, Skip
+3. It is Reevaluated when we re-enumerate         It forces the Linq query to execute and get the results
+                                                  immediately
+
+ 
