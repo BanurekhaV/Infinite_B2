@@ -1,0 +1,32 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@model JobApplication
+@{
+    ViewData["Title"] = "Accepted";
+}
+<h1>Application Accepted</h1>
+
+<table class=" table table-bordered">
+    <tr>
+        <th>Name  :</th>
+        <td>@Model.Name</td>
+    </tr>
+    <tr>
+        <th>Date of Birth :</th>
+        <td>@Model.DOB.ToString("d")</td>
+    </tr>
+    <tr>
+        <th>gender  :</th>
+        <td>@Model.Gender</td>
+    </tr>
+    <tr>
+        <th>Experience :</th>
+        <td>@Model.Experience</td>
+    </tr>
+    <tr>
+        <th>Have Yoy Accepted the Terms? :</th>
+        <td>@Model.TermsAccept</td>
+    </tr>
+</table>
+<a class="btn btn-success" asp-action="Index">Back</a>

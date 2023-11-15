@@ -1,0 +1,8 @@
+{
+  "runtimeOptions": {
+    "additionalProbingPaths": [
+      "C:\\Users\\Banurekha\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\Banurekha\\.nuget\\packages"
+    ]
+  }
+}
