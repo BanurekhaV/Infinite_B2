@@ -1,0 +1,57 @@
+.Net Core :
+ - New version of dot net framework that is completely rewritten from scratch
+ - Modular
+ - Fast
+ - Cross Platform
+ - Light Weight
+ - Free and Open Source
+ - Supports different types of application possible(desktop,console,web, windows, mobile,cloud,Iot,ML,Microservices, Games etc...)
+ - Supports Multiple languages
+ - CLI Tools support (Command Line Interface)
+
+It is both an exe and a dll based application
+
+Architecture:
+ Services : is a component that is intended for common consumption in an application, which can be injected into the dependant object either thru constructor,method,property
+
+Middlewares : Components of application that performs asynchromous login on httpcontext, They can invoke the next middleware in the pipeline or terminate the request
+
+Hosting Model : We In-process and Out-of process
+
+When to Use .Net Core :
+1. need for cross platform
+2. Modern development practices viz. microservices, containeraization
+3. Cloud-Native
+4. IOT,ML
+5. Migration of .net framework project
+
+Program.cs class file: Is the entry Point for ASP.net Core Appln.. This contains the startupcode which
+
+  1. configures the web host 
+  2. configures and registers the services required by the application (MVC,Razor,Pages,etc)
+  3. Register the Middlewares - request pipeline
+  4. Start the application to listen to the Http Request
+
+Hosting Model refers to how the application is launched/hosted and executed.
+It Defines how the application starts, requests and responses are processed 
+There are 2 types of Hosting Models
+
+1. In-process : Our Asp.net core application will be hosted inside of the IIS Worker Process(w3wp.exe). It is only the IIS server that will handle all the incoming request.
+Our Application is allowed to run in the same process as that of the IIS web server
+
+
+
+Templates for Core Applications:
+1. Asp.Net Core Empty :
+2. Asp.Net Core WebApp : using Razor Pages
+3. Asp.net Core WebAPI : RestFul services
+4. ASp.Net Core Web App (Model, view controller): also can be used for restful services
+
+
+Kestrel Web Server
+Cross Platform web server : Is used to host the web application when we invoke it through the Projecr profile seen in launchsettings.json file
+
+WWWRoot : is a folder 
+
+
+
