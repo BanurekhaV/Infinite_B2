@@ -6,7 +6,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Content Include="MyStatic\Doll.jpg" />
+    <Content Include="MyStatic\Ourdoll.jpg" />
     <Content Include="MyStatic\htmlpage.html" />
   </ItemGroup>
 

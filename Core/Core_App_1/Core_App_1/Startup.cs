@@ -16,7 +16,7 @@ namespace Core_App_1
         // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddMvc();
+            //services.AddMvc();
            // services.AddControllersWithViews();
         }
 
@@ -53,9 +53,21 @@ namespace Core_App_1
             //{
             //    await context.Response.WriteAsync("Middle Ware 3 : Both Request and Response \n");
             //});
-           // app.UseStaticFiles();
-           // app.UseRouting();
+            //Inorder to make the Index.html as the start page
+            //DefaultFilesOptions dfo = new DefaultFilesOptions();
+            //dfo.DefaultFileNames.Clear();
+            //dfo.DefaultFileNames.Add("Index.html");
+            //app.UseDefaultFiles(dfo);
             // app.UseStaticFiles();
+
+            //In the above,we are using 2 Middlewares viz. defaultfiles, staticfiles
+            //we can avoid the above and instead use a single middleware FileServerOptions
+            FileServerOptions fso = new FileServerOptions();
+            fso.DefaultFilesOptions.DefaultFileNames.Clear();
+            fso.DefaultFilesOptions.DefaultFileNames.Add("Index.html");
+            app.UseFileServer(fso);
+           // app.UseRouting();
+           
 
             //app.UseEndpoints(endpoints =>
             //{

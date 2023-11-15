@@ -51,7 +51,15 @@ Templates for Core Applications:
 Kestrel Web Server
 Cross Platform web server : Is used to host the web application when we invoke it through the Projecr profile seen in launchsettings.json file
 
-WWWRoot : is a folder 
+WWWRoot : is a folder in the application, which is used to store any static files.
+
+Whenever we use the UseStaticFiles() Middleware, these static files can be served to the user
+
+The application always seraches the wwwroot folder for static files. We can change the name of the folder. If we change the folder name, then we have to specify the new folder name as a webroot property in the program.cs file
+
+- Default fileOptions and FileServerOptions classes are meant to serve static files as well as a default static file
+
+- WebApplication using Model view Controller 
 
 
 

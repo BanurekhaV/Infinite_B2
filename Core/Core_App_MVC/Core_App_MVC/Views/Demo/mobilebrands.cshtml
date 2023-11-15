@@ -1,0 +1,18 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = "Mobile Brands";
+}
+<h1>Various Mobile Brands</h1>
+<h2>Mobiles Thru ViewData</h2>
+@foreach (var item in ViewData["androids"] as List<string>)
+{
+    <li>@item</li>
+}
+<hr />
+<h2>Mobiles Thru ViewBag</h2>
+@foreach (var item in ViewBag.mobilebag)
+{
+    <li>@item</li>
+}
