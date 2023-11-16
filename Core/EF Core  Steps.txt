@@ -31,3 +31,23 @@ PM> Scaffold-DbContext "Server=Laptop-tjj7d977;Database=InfiniteDB;Trusted_Conne
 whenever there are any changes made to the tables, then retype the above command with -Force option as below:
 
 PM> Scaffold-DbContext "Server=Laptop-tjj7d977;Database=InfiniteDB;Trusted_Connection=true;" Microsoft.EntityFrameworkCore.SqlServer -outputDir Models -F
+
+
+Code First Approach : 
+1. Create an MVC templated Core web application
+2. Add all the Packages same as the dbfirst above
+3. Under Models folder, create required class/classes
+4. Then create a DBContext class and include Dbset<>, Constructor with DbContextOptions(refer the demo project)
+5. Create Repository Patterns (Interface with methods, class with implementation)
+6. Make an entry in the appsettings.json file with the new name of the database
+7. Register the DbContext Services with UseSqlServer Middleware (refer the startip.cs)
+8. Regsiter the Repository services (refer startup.cs)
+9. Add a controller 
+10. Inject the Contect Object in the controllers constructor
+11. Make calls to the various Interface methods using the action methods
+12. Create respective Views for all the action methods
+13. Goto PmConsole and type PM>add-migration <some meaningfulname>
+14. next type PM>update-database
+15. Observe the new database getting created
+
+Then do crud operations
