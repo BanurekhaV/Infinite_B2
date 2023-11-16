@@ -46,8 +46,19 @@ namespace Basic_Crud.Controllers
         public IActionResult Create(Student s)
         {
             List<Student>newlist=isr.Create(s);
-            return View("Index",newlist);
-           
+            return View("Index",newlist);           
+        }
+        public IActionResult Update(int id)
+        {
+            Student std = isr.GetByStudentId(id);
+            return View(std);
+        }
+
+        [HttpPost]
+        public IActionResult Update(int id, Student s)
+        {
+            Student std_upd = isr.Update(id, s);
+            return View("Updated",std_upd);
         }
     }
 }

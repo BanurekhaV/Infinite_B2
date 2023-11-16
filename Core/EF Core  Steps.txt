@@ -1,0 +1,33 @@
+EF Core :
+
+-Select WebApplication core (Model view Controller) templated project
+
+To work with the EFCore, we need to include the below packages
+
+Microsoft.EntityFrameworkCore  (5.0.0)
+Microsoft.EntityFramework.Relational
+Microsoft.EntityFramework.SqlServer
+
+In the absence of ado.net entity data model(wizard), we will include
+ Microsoft.EntityFrameworkCore.Tools
+
+
+For MVC applications, we need to include another package called as
+ Microsoft.EntityFrameworkCore.Design
+
+
+-For Database First Approach : Give an exixting database name along with other details in the appsettings.json file after allowed Hosts as below :
+
+ "AllowedHosts": "*",
+  "ConnectionStrings": {
+    "Infinitedbconn": "Server=Laptop-tjj7d977;Database=InfiniteDB;Trusted_Connection=true;"
+  }
+
+After making an entry in the appsettings.json file as above, go to the PM Concole and type as below :
+ 
+
+PM> Scaffold-DbContext "Server=Laptop-tjj7d977;Database=InfiniteDB;Trusted_Connection=true;" Microsoft.EntityFrameworkCore.SqlServer -outputDir Models
+
+whenever there are any changes made to the tables, then retype the above command with -Force option as below:
+
+PM> Scaffold-DbContext "Server=Laptop-tjj7d977;Database=InfiniteDB;Trusted_Connection=true;" Microsoft.EntityFrameworkCore.SqlServer -outputDir Models -F
