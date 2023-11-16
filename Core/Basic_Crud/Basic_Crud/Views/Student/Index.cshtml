@@ -1,0 +1,49 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@model IEnumerable<Basic_Crud.Models.Student>
+@{
+}
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.StdId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.StdName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Gender)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Dept)
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+            {
+        <tr>
+            <td>
+                @Html.DisplayFor(moditem => item.StdId)
+            </td>
+            <td>
+                @Html.DisplayFor(moditem => item.StdName)
+            </td>
+            <td>
+                @Html.DisplayFor(moditem => item.Gender)
+            </td>
+            <td>
+                @Html.DisplayFor(moditem => item.Dept)
+            </td>
+            <td>
+                @Html.ActionLink("Edit","Update",new {id=item.StdId}) |
+            </td>
+        </tr>
+            }
+    </tbody>
+</table>

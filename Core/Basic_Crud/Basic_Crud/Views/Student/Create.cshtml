@@ -1,0 +1,34 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@model Student
+@{
+    ViewData["Title"] = "Create";
+}
+<h1>New Student Record</h1>
+<form method="post">
+    <p>
+        <label asp-for="StdId">Student ID :</label>
+        <input asp-for="StdId" />
+    </p>
+    <p>
+        <label asp-for="StdName">Student Name :</label>
+        <input asp-for="StdName" />
+    </p>
+    <p>
+        <label asp-for="Gender">Gender :</label>
+        <input asp-for="Gender" type="radio" value="M" /> Male
+        <input type="radio" asp-for="Gender" value="F"/>Female
+    </p>
+    <p>
+        <label asp-for="Dept">Department :</label>
+        <select asp-for="Dept">
+            <option value="CSC">Computer Science</option>
+            <option value="IT">IT</option>
+            <option value="ECE">Electronics n Comm.</option>
+        </select>
+    </p>
+    <p>
+        <button type="submit">Submit</button>
+    </p>
+</form>
