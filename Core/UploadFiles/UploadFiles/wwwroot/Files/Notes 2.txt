@@ -1,0 +1,81 @@
+Operators:
+  Arithemtic Operators
+  Relational Operators
+  Logical Operators
+  Assignment Operators
+  Null Coalescing Operator
+  Misc. Operators
+     sizeof(), typeof(), ? etc.
+
+Methods and Parameters :
+   .Value : Calling a function by passing a copy of the     		variable.
+      	Any Changes happening at the called function will not 	effect the caller function
+
+   .Reference : Calling a function by passing the refernce and 	not the value
+       We do so by using a keyword 'ref'
+       Any Changes the called function makes will affect the 	caller function
+
+   .Out : When we expect more values from a function)
+       Case: Give 2 nos., we want the addition, subtraction,multiplication and division values
+
+   
+   .Param Array (Parameter Array): Helps to provide zero or varying number of arguments/parameters to a function
+          'params' is the keyword that helps in giving variable number of arguments, seperated by a comma
+           params keyword should be the last in the argument 	  list
+          Only one params keyword is allowed/function
+
+
+
+Programming Constructs:
+  - Decision making :
+       - if ... else..
+       - switch
+
+
+  -Iteration
+     - Do While
+     - While Do
+     - For
+     - Foreach
+
+   - Jump Statements
+       Break
+       continue
+       return
+       goto
+       throw
+
+Arrays : are continous memory allocations
+         are of the same data type
+         will have fixed size
+
+ C# supports 3 types of Arrays
+      1. Single-Dimension
+      2. Two/MultiDimension
+      3. Jagged - An array of array
+                  An element of a jagged array itsels is an array
+
+Array Instantiation:
+     datatype [] <nameofthevariable>=new datatype[size]
+
+ex: int[]a=new int[5];
+   a[0]=4; a[1]=6
+   string[]words=new string[3];
+int [] data = new int[5]{11,2,32,4,5}; // assign values while declaring itself
+
+int [] data1 = new int[]{11,21,31,41};
+
+
+
+Implicit Data Types :
+
+   var : is type that converts itself to the type of an assigned value
+        We have to assign a value while declaring a var datatype
+        once assigned, we cannot change the type
+
+   dynamic :Is an object type that is used to assign any type, whose conversion happens at the run time
+           -To minimize the usage of Dynamic types in our applications.
+
+
+  
+

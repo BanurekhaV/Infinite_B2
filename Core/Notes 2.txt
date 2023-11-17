@@ -1,0 +1,15 @@
+IFormFile Interface : represents the transmitted files thru an http request. 
+- This also gives an access to the meta data info like Filename,Contenttype etc..
+- Provides methods to store files, and also read the contents of the file via a stream
+
+
+Client Side : Java scripts
+
+Server Side : Server code
+
+IValidatableObject : is an interface with Validate method that enables custom validations
+
+
+
+
+

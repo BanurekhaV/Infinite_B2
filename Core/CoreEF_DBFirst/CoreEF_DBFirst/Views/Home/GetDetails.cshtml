@@ -6,11 +6,14 @@
     ViewData["header"] = "GetDetails";
 }
 <h1>Employees List</h1>
-@foreach(var item in Model)
-            {
-                <li>@item.Eid</li>
-                <li>@item.Ename</li>
-                <li>@item.Salary</li>
-                <li>@item.DeptId</li>
-             @*  <li>@item.Dept.Deptname</li>-->*@
-            }
+@foreach (var item in Model)
+{
+    <li>@item.Eid</li>
+    <li>@item.Ename</li>
+    <li>@item.Salary</li>
+    //<li>@item.DeptId</li>
+    <li>@item.Dept.Deptname</li>
+    <br />
+
+}
+

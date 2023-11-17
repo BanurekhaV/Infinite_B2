@@ -40,7 +40,7 @@ Code First Approach :
 4. Then create a DBContext class and include Dbset<>, Constructor with DbContextOptions(refer the demo project)
 5. Create Repository Patterns (Interface with methods, class with implementation)
 6. Make an entry in the appsettings.json file with the new name of the database
-7. Register the DbContext Services with UseSqlServer Middleware (refer the startip.cs)
+7. Register the DbContext Services with UseSqlServer Middleware (refer the startup.cs)
 8. Regsiter the Repository services (refer startup.cs)
 9. Add a controller 
 10. Inject the Contect Object in the controllers constructor
@@ -51,3 +51,8 @@ Code First Approach :
 15. Observe the new database getting created
 
 Then do crud operations
+
+
+
+
+providerOptions => providerOptions.EnableRetryOnFailure()

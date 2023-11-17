@@ -1,5 +1,6 @@
 ﻿using CoreEF_DBFirst.Models;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
@@ -40,8 +41,9 @@ namespace CoreEF_DBFirst.Controllers
 
         public IActionResult GetDetails()
         {
-            List<TblEmployee> emplist = db.TblEmployees.ToList();
-            return View(emplist);
+            List<TblEmployee> emplist = db.TblEmployees.Include(d=>d.Dept).ToList();
+            
+            return View(emplist);       
         }
 
     }

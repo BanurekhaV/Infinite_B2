@@ -1,0 +1,39 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@model MultipleFileModel
+@{
+    ViewData["Title"] = "Multiple Files Upload";
+}
+
+<form asp-action="MultiFiles" asp-controller="Upload" method="post"
+      enctype="multipart/form-data">
+    @if (Model.IsResponse)
+    {
+        if (Model.IsSuccess)
+        {
+            <div class="alert alert-success">
+                @Model.Message
+            </div>
+        }
+        else
+        {
+            <div class="alert alert-danger">
+                @Model.Message
+            </div>
+        }
+    }
+     <div class="row mt-2">
+         <div class="col-12">
+             <label class="col-form-label">Select Many Files</label>
+             <input asp-for="File" class="form-control" multiple/>
+             <span asp-validation-for="File" class="text-danger"></span>
+         </div>
+     </div>
+
+    <div class=" row mt-2">
+        <div class="col-12">
+            <button type="submit" class="btn btn-primary">Upload Files</button>
+        </div>
+    </div>
+</form>

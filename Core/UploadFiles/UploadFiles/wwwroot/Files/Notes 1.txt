@@ -1,0 +1,110 @@
+CSharp : is a modern, general purpose object oriented programming lang. developed by Microsoft
+
+Was developed by Anders Hejlsberg and his team during the development of .Net Framework
+
+Is designed for Common Lang Infrastructure(CLI), which consists of executable code and runtime environment that allows use of various high level languages on different computer platforms with different OS
+
+Namespace : Is a logical way to organize our programs
+            Provides assistance in avoiding name clashes
+            It is a collection of Classes, Interfaces, Events, Delegates, Structures, Enums and also other namespaces
+            
+
+Object Oriented Approach :
+ - All executable piece of code has to be inside a function only.
+ - All functions have to be inside a class only and cannot lie outside a class including Main Function() which is the entry point of the application
+ - Functions that needs to be executed, have to be called within the Main Function()
+
+Data Types : Are basically either Value Types or Reference Types
+
+ - Value Types : All integral/primitive/fundamental/systemic data types( int,char,float,decimal etc..)
+   - Value types hold values directly
+   - Are stored in Stack Memory
+
+ Eg: int x= 10;
+
+ - Reference Types : All Arrays, objects of classes,interface,delegates etc.
+  - Reference types will only hold the reference/location of a place where the value is
+  - Reference types are stored in Heap Memory
+
+ 
+eg: 1
+
+string str;
+str="hey";
+
+2.
+
+class c
+{
+   public void NewFunc()
+{
+   ...
+ }
+  
+ public static void Main()
+{
+  c obj = new c();
+ obj.NewFunc();
+}
+ 
+  }
+ 
+
+Literals in C#
+
+String Literals - characters
+Integer Literals - whole numbers
+Real Literals - numbers & decimals
+Null Literals - special type
+Character Literal - single character
+Boolean Literal - True/False
+
+Operators :
+
+  Unary - One Operand  ptr++  = ptr= ptr + 1
+  Binary 2 operands  a + b
+  Ternary - 3 operands (one to validate, 2 and 3 to agree or disagree on the validation)
+
+  x=5;
+ if(x>5) then good
+ else bad
+
+Any Function
+  - will have to have a name
+  - will have a return type
+  - May or may not take parameters/arguments 
+  - All functions by default will have only one return type
+
+All the above put together is termed as function signature
+
+Conversions and Typecastings: 1) within value types
+ - Implicit : Compiler converts automatically ( from lower datatype to higher type)
+ - Explicit : Compiler does not convert and expects the developer to explicitly convert using :
+ - typecasting   [()]
+ - or conversion functions (using Convert class functions)
+
+   2) Between Reference Types or between Value and reference types
+   reference to reference = implicit
+   value to reference type = boxing   
+   reference to value type = unboxing
+
+
+Nullable Concept : 
+
+-- All reference types are nullable by default
+-- All value types are not nullable by default
+
+Nullable Types : Where a value type is made, a nullable type to assign null values using '?' symbol
+
+Nullcoalescing operator : ?? which works like  a ternary operator to deal with null values
+
+
+//  Class Methods and Instance Methods
+
+Class consists of
+  - Functions/Methods / Member functions
+  - Fields / Data Members
+  
+
+  
+
