@@ -151,3 +151,7 @@ C:\Banu\Infinite\B2\Core\CoreEF_CodeFirst\CoreEF_CodeFirst\obj\Debug\netcoreapp3
 C:\Banu\Infinite\B2\Core\CoreEF_CodeFirst\CoreEF_CodeFirst\obj\Debug\netcoreapp3.1\CoreEF_CodeFirst.genruntimeconfig.cache
 C:\Banu\Infinite\B2\Core\CoreEF_CodeFirst\CoreEF_CodeFirst\obj\Debug\netcoreapp3.1\Razor\Views\Employee\Index.cshtml.g.cs
 C:\Banu\Infinite\B2\Core\CoreEF_CodeFirst\CoreEF_CodeFirst\obj\Debug\netcoreapp3.1\Razor\Views\Employee\AddEmployee.cshtml.g.cs
+C:\Banu\Infinite\B2\Core\CoreEF_CodeFirst\CoreEF_CodeFirst\obj\Debug\netcoreapp3.1\CoreEF_CodeFirst.csproj.AssemblyReference.cache
+C:\Banu\Infinite\B2\Core\CoreEF_CodeFirst\CoreEF_CodeFirst\obj\Debug\netcoreapp3.1\Razor\Views\Employee\Edit.cshtml.g.cs
+C:\Banu\Infinite\B2\Core\CoreEF_CodeFirst\CoreEF_CodeFirst\obj\Debug\netcoreapp3.1\Razor\Views\Employee\Delete.cshtml.g.cs
+C:\Banu\Infinite\B2\Core\CoreEF_CodeFirst\CoreEF_CodeFirst\obj\Debug\netcoreapp3.1\Razor\Views\Employee\GetEmployeeById.cshtml.g.cs

@@ -37,7 +37,8 @@ namespace CoreEF_CodeFirst.Controllers
         public IActionResult GetEmployeeById(int id)
         {
             Employee e = emprepo.GetEmployeeById(id);
-            return RedirectToAction("Index");
+            //  return RedirectToAction("Index");
+            return View("GetEmployeeById",e);
         }
 
         public IActionResult Edit(int id)
