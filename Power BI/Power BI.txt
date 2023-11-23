@@ -1,0 +1,29 @@
+Power BI : is a Microsoft Business Intelligence Tool. It helps to clean, convert and visualize data in different formats (Dash Board)
+-is a power driven Bi tool.
+-It is a combination of Data Analytics, data Visualization, and the best practices that helps the organization to make data-driven decisions
+- Interactive UI/UX
+- integration with excel
+
+ETL - Extract, Transform, Load
+
+BI a package
+ 1. Power BI desktop - A developer tool
+ 2. PowerBI Service - online cloud version for sharing nd collaboration
+
+Why Power BI - 
+ Increase in usage across last 5 yrs(as per google report)
+ Maximum features(1200 functions and abt 280 visual charts)
+ Cheaper tool
+ Access to volumes of data
+ Compression algiorithms that helps in import,cache etc
+ 
+Components :
+ 1. Power Query (ETL tool to structure the data) - It acts like a middle layer between Power BI and the Original Data
+ 2. Power Pivot (Data modelling,Relationships)
+ 3. Power View (for Visualization)
+ 4. Power BI Services 
+
+
+
+To associate more than one query, use merge queries options under Combine menu item
+

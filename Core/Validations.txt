@@ -1,0 +1,22 @@
+Validations using Ivalidatable Interface's Validate() method - refer example in core folder
+
+Client Side Validation : helps avoid round trips to the server.
+                         reduces wait time
+                         can give immediate feedback to the user
+                         load on the server can be reduced
+
+There are 2 ways to create client side validations
+
+1. Using Javascripts : time consuming and tedious
+                       can accept junk values if javascripts are disabled in browser
+
+2. Use Unobtrusive client side validation libraries : Is a predefined js in jquery library. This library uses the server side validation attributes and uses them to implementclient-side validations. So we dont have to write even a single line of custom javascript code. 
+We Just need to include the libraries in the specified order
+
+  <script src="~/lib/jquery/jquery.js"></script>
+<script src="~/lib/jquery-validation/dist/jquery.validate.min.js"></script>
+<script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
+
+Custom Validations : refer example in core folder
+
+Remote Validations : Ckecking if the provided email is already used by other user. Such validations can be done only on the server

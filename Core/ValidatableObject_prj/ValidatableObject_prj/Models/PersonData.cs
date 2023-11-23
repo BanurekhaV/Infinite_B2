@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.AspNetCore.Mvc;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
@@ -17,6 +18,10 @@ namespace ValidatableObject_prj.Models
         [Required]
         [DataType(DataType.MultilineText)]
         public string Message { get; set; }
+        [Required]
+        [EmailAddress]
+        [Remote(action:"IsEmailInUse",controller:"Home")]
+        public string Mail { get; set; }
 
 
         public IEnumerable<ValidationResult> Validate(ValidationContext validationContext)
@@ -31,5 +36,7 @@ namespace ValidatableObject_prj.Models
                 yield return new ValidationResult("Date of Birth cannot be too past",property);
             }
         }
+
+        public string FindByMail
     }
 }

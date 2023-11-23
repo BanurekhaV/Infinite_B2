@@ -110,3 +110,4 @@ C:\Banu\Infinite\B2\Core\ValidatableObject_prj\ValidatableObject_prj\bin\Debug\n
 C:\Banu\Infinite\B2\Core\ValidatableObject_prj\ValidatableObject_prj\bin\Debug\netcoreapp3.1\zh-Hans\Microsoft.CodeAnalysis.Workspaces.resources.dll
 C:\Banu\Infinite\B2\Core\ValidatableObject_prj\ValidatableObject_prj\bin\Debug\netcoreapp3.1\zh-Hant\Microsoft.CodeAnalysis.Workspaces.resources.dll
 C:\Banu\Infinite\B2\Core\ValidatableObject_prj\ValidatableObject_prj\obj\Debug\netcoreapp3.1\Razor\Views\Person\Index.cshtml.g.cs
+C:\Banu\Infinite\B2\Core\ValidatableObject_prj\ValidatableObject_prj\obj\Debug\netcoreapp3.1\Razor\Views\Home\UserData.cshtml.g.cs
