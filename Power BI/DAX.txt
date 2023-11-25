@@ -1,0 +1,131 @@
+DAX : Data Analysis Expressions. That drives the calculations to be performed on the Power BI. It allows to create new tables to the data model, columns to the table. Can be reused in multiple places of the visual or in other DAX formulas
+Customisation formulas to perform analysis of business data
+
+DAX formulas are made up of 3 core components
+
+Syntax: made of variety of elements, that are common to all the formulas
+
+Functions : are predefined formulas that take parameters to perform specific actions
+
+Context: Determines which rows are to be used for calculation
+
+The 3 different ways with which we can use DAX formulas are
+1. Calculated Tables: This can add an additional table to the already existing report (based on formula)
+2. Calculate Columns: This will add an addtional col to the table
+3. Measures : This is the calculations that can add a summary or aggregator, iterator to a table, and can run across datamodels
+
+A simple DAX formula consists of 
+
+1. The name of the measure or a calculated column
+2. The '=' operator indicating the start of the formula
+3. DAX function
+4. Opening and closing parenthesis
+5. Columns/Tables to refer
+6. Each function can be seperated with a ','
+
+Some common DAX functions:
+1. Simple calculations : min, max, sum, avg , count etc..
+2. Summarise : Returns a table that can be used for further aggregations/calculations
+3. Calculate : Performs an aggregate along with one or more filters. If the filter is true then the calculate returns data
+4. IF: it is based on logical condition, that has a true or false (works like case when in sql)
+5. IfError: Looks for any errors in a function and return specific results
+6. Date and Time : Date and time functions
+7. IsBlank: returns if a column against a row is blank (true or false)
+8. EOMonth:returns the last day of the month on a given date
+
+1. How many cookies are sold
+2. How many orders are available
+3. To Find Profit 
+    Create a measure
+   Total profit = Sum(orders[Revenue])- Sum(Orders[Cost])
+
+We can also make use of the below 2 methods to calculate profit
+
+1.
+In order to calculate profit, we can go to home and click quick measure
+It opens a dialog box. It is the fast way to build dax formulas
+Show the drop down in the calculation box. and select subtraction
+It asks for the base value. This is basically the revenue in the orders table
+So drag and drop the revenue from the orders table
+Next the value to subtract (for this drag and drop cost)
+This creates a new measure Revenue minus cost with the same formula as above
+See the way the measure is created
+
+2. 
+Instead of giving a measure, we can add a column
+Open the table in the data view and check for table tools->new column
+Give the title as 
+Profit=Orders[Reveune] - Orders[Cost]
+You can now see a new column as profit with all values
+
+But this way the new column would take up more space, wheras a measure would not
+But with a new column we can apply slicer, filters etc
+
+So can use what we are looking out for
+
+Next we will create another measure for division
+Go to report view
+We will use a measure inside another measure
+We will find the profit margin ( which is total profit over total revenue) as a percentage
+
+Profit Margin % =[Total Profit] ( which is a earlier measure)/ sum(orders[revenue])
+Create a matrix
+Drag and drop cookie type and then the measure profit margin %
+
+We can see which cookie type is giving a higher % profit
+
+Now we can format it to show % symbol
+For that,select the measure profit margin % and then click the % symbol and observe the symbol added
+
+All the above examples were working on aggregators
+
+If we want to work on a row by row basis then we can use iterators
+
+Click cookie types on the right hand side and see that in order to get the correct profit we would take revenue per cookie minus cost per cookie, and then multiply by units sold
+
+
+Sum all Revenue and sum all cost and then subtract
+
+So we want to calculate row by row profit
+So let us go to report view
+Go to cookie types, add a new measure and type
+
+sumx - is an iterator. This supporst all functions viz count,min,max etc with an x suffix
+Total Profit = sumx ('cookie types','cookie types[Units Sold]*('cookie types'[revenue per cookie] - 'cookie types'[Cost per cookie]))
+
+Time and Date Functions
+
+How many cookies are sold on monday,tuesday etc. or week end
+
+Add a new column by going to table tools and create a new column and access the date functions as below
+Day of Week = weekday(orders[Date],1)  (assuming sunday is 0)
+
+Go to report view and select day of the week measure and check the box to see the visual
+But there is no break up day wise
+for that drag and drop the measure on the Axis
+see the tool tip
+
+Logical operations:
+
+Next we want all products that contain chocolate in them
+
+So once again create a new column in the dataview of the orders using table tools->new column
+Has chocolate = find("chocolate",orders[product],1,0)
+
+Next if statement
+
+Has chocolate = if(find("chocolate",orders[product],1,0)>0,"Has Chocolate","No Chocolate")
+
+Next Calculate function - a very powerful function where we could apply different criteria and filters
+
+How many orders for chocolate chip above 500 ?
+go to report view
+click orders and add a new measure
+
+Chocolate Chip with over 500 units = calculate(countrows(orders),orders[units sold]>500,orders[product]=="Chocolate Chip")
+select matrix visual
+
+
+We have to count the number of rows to find how many orders, so we are using countrows, after that we need to tell which table has to be counted,so we give the table name. next close parenthesis and enter expression with filter. For this we will use ',' and check the first filter which is over 500 units sold. Next we have to check if it contains chocolate chip as the name. Thats how our new measure is created
+
+So using meaure, we can calculate complicated queries also
